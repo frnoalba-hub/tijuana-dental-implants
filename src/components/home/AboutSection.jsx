@@ -1,0 +1,103 @@
+import React from 'react';
+import { motion } from "framer-motion";
+import { Award, GraduationCap, Users, CheckCircle2 } from "lucide-react";
+
+export default function AboutSection() {
+    const credentials = [
+        "Board Certified Dental Surgeon",
+        "Dental Implant Instructor",
+        "Advanced Implantology Training",
+        "Fluent in English & Spanish"
+    ];
+
+    const stats = [
+        { icon: Award, value: "15+", label: "Years Experience" },
+        { icon: Users, value: "5000+", label: "Successful Implants" },
+        { icon: GraduationCap, value: "50+", label: "Dentists Trained" },
+    ];
+
+    return (
+        <section id="about" className="py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    {/* Image Side */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="relative"
+                    >
+                        <div className="absolute -inset-4 bg-gradient-to-br from-[#1a365d]/10 to-[#d4a574]/10 rounded-3xl" />
+                        <div className="relative">
+                            <img 
+                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6878725ae2384abaf6424082/3ccb2c0c8_image.png"
+                                alt="Doctor Portrait"
+                                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
+                            />
+                            {/* Floating Stats Card */}
+                            <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center">
+                                        <Award className="w-6 h-6 text-[#d4a574]" />
+                                    </div>
+                                    <div>
+                                        <p className="text-2xl font-bold text-[#1a365d]">15+</p>
+                                        <p className="text-sm text-gray-500">Years of Excellence</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Content Side */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">About the Doctor</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mt-3 mb-6">
+                            Meet [Doctor Name],
+                            <span className="block text-gray-600 font-normal text-2xl mt-2">Your Implant Specialist</span>
+                        </h2>
+
+                        <p className="text-gray-600 leading-relaxed mb-6">
+                            With over 15 years of experience in dental implantology, [Doctor Name] is not 
+                            only a skilled surgeon but also a respected instructor who trains other dentists 
+                            in advanced implant techniques. His commitment to excellence and patient care 
+                            has made him a trusted choice for patients traveling from the USA.
+                        </p>
+
+                        <p className="text-gray-600 leading-relaxed mb-8">
+                            Using state-of-the-art technology and premium materials from leading manufacturers, 
+                            [Doctor Name] delivers results that meet and exceed US standards—at a fraction of the cost.
+                        </p>
+
+                        {/* Credentials */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                            {credentials.map((item, index) => (
+                                <div key={index} className="flex items-center gap-3">
+                                    <CheckCircle2 className="w-5 h-5 text-[#d4a574] flex-shrink-0" />
+                                    <span className="text-gray-700 text-sm">{item}</span>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Stats */}
+                        <div className="grid grid-cols-3 gap-6 p-6 bg-gray-50 rounded-2xl">
+                            {stats.map((stat, index) => (
+                                <div key={index} className="text-center">
+                                    <stat.icon className="w-6 h-6 text-[#d4a574] mx-auto mb-2" />
+                                    <p className="text-2xl font-bold text-[#1a365d]">{stat.value}</p>
+                                    <p className="text-xs text-gray-500">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+}
