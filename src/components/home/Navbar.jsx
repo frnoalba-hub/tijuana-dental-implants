@@ -44,7 +44,7 @@ export default function Navbar() {
                         <span className={`text-xl font-semibold tracking-tight transition-colors duration-300 ${
                             isScrolled ? 'text-[#1a365d]' : 'text-white'
                         }`}>
-                            [Clinic Name]
+                            Dr. Jose Luis Arias
                         </span>
                     </a>
 

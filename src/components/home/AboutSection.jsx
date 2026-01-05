@@ -59,12 +59,12 @@ export default function AboutSection() {
                     >
                         <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">About the Doctor</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mt-3 mb-6">
-                            Meet [Doctor Name],
+                            Meet Dr. Jose Luis Arias,
                             <span className="block text-gray-600 font-normal text-2xl mt-2">Your Implant Specialist</span>
                         </h2>
 
                         <p className="text-gray-600 leading-relaxed mb-6">
-                            With over 15 years of experience in dental implantology, [Doctor Name] is not 
+                            With over 15 years of experience in dental implantology, Dr. Arias is not 
                             only a skilled surgeon but also a respected instructor who trains other dentists 
                             in advanced implant techniques. His commitment to excellence and patient care 
                             has made him a trusted choice for patients traveling from the USA.
@@ -72,7 +72,7 @@ export default function AboutSection() {
 
                         <p className="text-gray-600 leading-relaxed mb-8">
                             Using state-of-the-art technology and premium materials from leading manufacturers, 
-                            [Doctor Name] delivers results that meet and exceed US standards—at a fraction of the cost.
+                            Dr. Arias delivers results that meet and exceed US standards—at a fraction of the cost.
                         </p>
 
                         {/* Credentials */}

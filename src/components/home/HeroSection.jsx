@@ -95,7 +95,7 @@ export default function HeroSection() {
                                     className="w-full aspect-[4/5] object-cover rounded-2xl mb-4"
                                 />
                                 <div className="text-center">
-                                    <h3 className="text-xl font-semibold text-white">[Doctor Name]</h3>
+                                    <h3 className="text-xl font-semibold text-white">Dr. Jose Luis Arias</h3>
                                     <p className="text-[#d4a574] font-medium">DDS, Implant Specialist</p>
                                     <p className="text-white/60 text-sm mt-1">Tijuana, Mexico</p>
                                 </div>

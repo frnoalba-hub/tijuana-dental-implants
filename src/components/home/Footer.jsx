@@ -12,9 +12,9 @@ export default function Footer() {
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">D</span>
+                                <span className="text-white font-bold text-lg">JLA</span>
                             </div>
-                            <span className="text-xl font-semibold">[Clinic Name]</span>
+                            <span className="text-xl font-semibold">Dr. Jose Luis Arias</span>
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-6">
                             World-class dental implants in Tijuana, Mexico. 
@@ -64,10 +64,10 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/40 text-sm">
-                        © {currentYear} [Clinic Name]. All rights reserved.
+                        © {currentYear} Dr. Jose Luis Arias. All rights reserved.
                     </p>
                     <p className="text-white/40 text-sm">
-                        [Website URL]
+                        Tijuana, Mexico
                     </p>
                 </div>
             </div>
