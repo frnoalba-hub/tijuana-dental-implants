@@ -16,6 +16,7 @@ export default function Home() {
             <AboutSection />
             <ServicesSection />
             <GallerySection />
+            <ExpertiseSection />
             <WhyTijuanaSection />
             <ContactSection />
             <Footer />

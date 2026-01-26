@@ -35,6 +35,21 @@ export default function GallerySection() {
             src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/57c56acf6_image4.png",
             alt: "Teaching session",
             caption: "Instructing advanced techniques"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/b8f550e1c_image12.png",
+            alt: "University Implant Educators course",
+            caption: "Advanced course instruction"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/d809bc389_image13.png",
+            alt: "Surgical mastery course",
+            caption: "Teaching cutting-edge techniques"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7988d856c_image14.png",
+            alt: "Team surgical training",
+            caption: "Collaborative surgical learning"
         }
     ];
 
