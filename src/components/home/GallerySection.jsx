@@ -7,19 +7,34 @@ export default function GallerySection() {
 
     const images = [
         {
-            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6878725ae2384abaf6424082/153cb4620_471506277_10160715170732724_7096974755451825985_n.jpg",
-            alt: "Surgery in progress",
-            caption: "Advanced implant surgery"
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/4b2fe752d_image2-Copy.png",
+            alt: "Dr. Arias performing surgery",
+            caption: "Precision implant placement"
         },
         {
-            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6878725ae2384abaf6424082/f8a9968af_74371329_10156556333207724_8508575391584092160_n.jpg",
-            alt: "Precision work",
-            caption: "Precision dental work"
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/776406629_image6.png",
+            alt: "Surgical procedure",
+            caption: "Advanced surgical techniques"
         },
         {
-            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6878725ae2384abaf6424082/8a2f6b74d_474327284_18482019268045269_3930544013866435665_n.jpg",
-            alt: "Modern facility",
-            caption: "State-of-the-art facility"
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7f14ec98e_image9.png",
+            alt: "Dr. Arias teaching",
+            caption: "Training fellow dentists"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/754213e63_image10.png",
+            alt: "Team surgery",
+            caption: "International surgical collaboration"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/1848d3f02_image5.png",
+            alt: "Surgical demonstration",
+            caption: "Hands-on training session"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/57c56acf6_image4.png",
+            alt: "Teaching session",
+            caption: "Instructing advanced techniques"
         }
     ];
 
@@ -45,7 +60,7 @@ export default function GallerySection() {
                 </motion.div>
 
                 {/* Gallery Grid */}
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {images.map((image, index) => (
                         <motion.div
                             key={index}

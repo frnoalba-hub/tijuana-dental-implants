@@ -9,8 +9,8 @@ export default function HeroSection() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6878725ae2384abaf6424082/8a2f6b74d_474327284_18482019268045269_3930544013866435665_n.jpg"
-                    alt="Modern dental surgery"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/0df1fd154_image11.png"
+                    alt="Dr. Arias performing surgery"
                     className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1a365d]/95 via-[#1a365d]/80 to-[#1a365d]/40" />
@@ -90,8 +90,8 @@ export default function HeroSection() {
                             <div className="absolute -inset-4 bg-gradient-to-br from-[#d4a574]/30 to-transparent rounded-3xl blur-2xl" />
                             <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6">
                                 <img 
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6878725ae2384abaf6424082/3ccb2c0c8_image.png"
-                                    alt="Doctor Profile"
+                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/25edfd391_image3-Copy.png"
+                                    alt="Dr. Jose Luis Arias"
                                     className="w-full aspect-[4/5] object-cover rounded-2xl mb-4"
                                 />
                                 <div className="text-center">
