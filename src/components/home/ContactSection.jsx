@@ -23,20 +23,20 @@ export default function ContactSection() {
         {
             icon: Phone,
             label: "Phone",
-            value: "[Phone Number]",
+            value: "+52 664 385 49 87",
             subtext: "Call or WhatsApp"
         },
         {
             icon: Mail,
             label: "Email",
-            value: "[email@placeholder.com]",
+            value: "blaze.dental@gmail.com",
             subtext: "We reply within 24 hours"
         },
         {
             icon: MapPin,
             label: "Location",
-            value: "Tijuana, Mexico",
-            subtext: "Near the US Border"
+            value: "Paseo del Centenario 10310",
+            subtext: "Edificio Cazzar, Tijuana B.C"
         },
         {
             icon: Clock,

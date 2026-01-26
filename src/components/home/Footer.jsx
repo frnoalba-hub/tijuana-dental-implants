@@ -47,15 +47,15 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <li className="flex items-center gap-3 text-white/60">
                                 <Phone className="w-4 h-4 text-[#d4a574]" />
-                                [Phone Number]
+                                +52 664 385 49 87
                             </li>
                             <li className="flex items-center gap-3 text-white/60">
                                 <Mail className="w-4 h-4 text-[#d4a574]" />
-                                [email@placeholder.com]
+                                blaze.dental@gmail.com
                             </li>
                             <li className="flex items-center gap-3 text-white/60">
                                 <MapPin className="w-4 h-4 text-[#d4a574]" />
-                                Tijuana, Mexico
+                                Paseo del Centenario 10310, Edificio Cazzar, Tijuana B.C
                             </li>
                         </ul>
                     </div>
