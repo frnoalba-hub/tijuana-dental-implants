@@ -100,6 +100,46 @@ export default function GallerySection() {
             src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/cb9e02449_image30.png",
             alt: "Surgical procedure in progress",
             caption: "Advanced implant surgery"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/9802c402f_image34.png",
+            alt: "Dr. Arias with colleague",
+            caption: "Professional networking"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/0d610e7c1_image35.png",
+            alt: "MINEC America collaboration",
+            caption: "International education partnership"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/a76af698e_image36.png",
+            alt: "Surgical team operation",
+            caption: "Complex surgical procedure"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/8ccd60ebd_image37.png",
+            alt: "Dr. Arias with fellow surgeon",
+            caption: "International collaboration"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/f580acbdb_image38.png",
+            alt: "Welcoming international guests",
+            caption: "Personalized patient care"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/e4ac61740_image39.png",
+            alt: "Focused surgical procedure",
+            caption: "Meticulous surgical care"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/35c3db519_image40.png",
+            alt: "Professional collaboration",
+            caption: "Sharing expertise"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7787bd987_image41.png",
+            alt: "MINEC team photo",
+            caption: "MegaGen International Network"
         }
     ];
 
