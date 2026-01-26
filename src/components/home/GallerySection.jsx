@@ -50,6 +50,36 @@ export default function GallerySection() {
             src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7988d856c_image14.png",
             alt: "Team surgical training",
             caption: "Collaborative surgical learning"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/064d11c59_image21.png",
+            alt: "Advanced Implant Education certification",
+            caption: "AIE certification achievement"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/757ade1b1_image22.png",
+            alt: "Supervised surgical training",
+            caption: "Mentoring dental professionals"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/8e14e2aad_image23.png",
+            alt: "Dr. Arias with team and patient",
+            caption: "Patient care excellence"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/eb2e9e610_image24.png",
+            alt: "Professional networking dinner",
+            caption: "Building international connections"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/0e1987243_image25.png",
+            alt: "Dr. Arias with happy patient",
+            caption: "Successful procedure celebration"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/430c8fee4_image26.png",
+            alt: "Dr. Arias performing implant surgery",
+            caption: "Precision implant placement"
         }
     ];
 
