@@ -170,6 +170,31 @@ export default function GallerySection() {
             src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/69a74a04e_image47.png",
             alt: "Implant Surgical Program Directors",
             caption: "Industry leadership & recognition"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/086c866b2_image49.png",
+            alt: "Surgical team in action",
+            caption: "Advanced surgical procedure"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/9d1486a76_image50.png",
+            alt: "Dr. Arias performing surgery",
+            caption: "Precision implant surgery"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/0c131e7b2_image51.png",
+            alt: "Digital dentistry planning",
+            caption: "Advanced treatment planning"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/8f2de5261_image52.png",
+            alt: "Clinical instruction",
+            caption: "Teaching surgical techniques"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/d9f45fdc7_image53.png",
+            alt: "AIE Recognition of Achievement",
+            caption: "Professional certification"
         }
     ];
 
