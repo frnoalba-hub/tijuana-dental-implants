@@ -1,35 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { Sparkles, CircleDot, Layers, RefreshCw, ArrowRight } from "lucide-react";
+import { Stethoscope, Sparkles, Smile, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
-    const services = [
-        {
-            icon: CircleDot,
-            title: "Single Tooth Implants",
-            description: "Replace a missing tooth with a natural-looking, permanent implant that functions just like your real teeth.",
-            price: "Starting at $999"
+    const [activeCategory, setActiveCategory] = useState("surgical");
+
+    const serviceCategories = {
+        surgical: {
+            icon: Stethoscope,
+            title: "Surgical Services",
+            services: [
+                "Implant for individual Crown",
+                "Implant w/ temporary Crown",
+                "Immediate implants (Extraction + implant at the same visit)",
+                "ALL ON 4",
+                "ALL ON 5",
+                "ALL ON 6",
+                "Guided Bone Regeneration",
+                "Wisdom tooth extractions",
+                "Ridge split",
+                "Sinus lift - Crestal approach",
+                "Sinus lift - Lateral approach",
+                "Bone grafting",
+                "Soft tissue graft",
+                "Implants for overdenture"
+            ]
         },
-        {
-            icon: Layers,
-            title: "All-on-4 / All-on-6",
-            description: "Full arch restoration with just 4-6 implants. Get a complete smile transformation in one procedure.",
-            price: "Starting at $8,999"
+        general: {
+            icon: Smile,
+            title: "General Services",
+            services: [
+                "Regular cleaning",
+                "Deep cleaning",
+                "Surgical cleaning (per quadrant)",
+                "Fillings",
+                "Crowns",
+                "Root canal",
+                "Build ups",
+                "Endo post",
+                "Others"
+            ]
         },
-        {
+        cosmetic: {
             icon: Sparkles,
-            title: "Implant-Supported Dentures",
-            description: "Secure your dentures with implants for improved stability, comfort, and confidence.",
-            price: "Starting at $4,999"
+            title: "Cosmetic Services",
+            services: [
+                "Veneers",
+                "DSD (Digital Smile Design)",
+                "Composite veneers",
+                "Full mouth rehabilitation",
+                "Whitening"
+            ]
         },
-        {
-            icon: RefreshCw,
-            title: "Bone Grafting",
-            description: "Prepare your jaw for implants with advanced bone grafting techniques when needed.",
-            price: "Varies by case"
+        prosthesis: {
+            icon: Package,
+            title: "Prosthesis",
+            services: [
+                "Screw retained crown for implants",
+                "Cemented retained crown for implants",
+                "Crowns for individual natural tooth",
+                "Acrylic dentures (regular)",
+                "Acrylic dentures (locators for implants / snap on)",
+                "Temporary for individual natural tooth",
+                "Temporary for individual implant",
+                "Flippers",
+                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - PMMA",
+                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - Hybrid",
+                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - Zirconia",
+                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - Toronto"
+            ]
         }
-    ];
+    };
+
+    const currentCategory = serviceCategories[activeCategory];
 
     return (
         <section id="services" className="py-24 bg-gray-50">
@@ -44,58 +88,85 @@ export default function ServicesSection() {
                 >
                     <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Our Services</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mt-3 mb-6">
-                        Premium Dental Implant Solutions
+                        Comprehensive Dental Care
+                        <span className="block">Tailored to Your Needs</span>
                     </h2>
                     <p className="text-gray-600 leading-relaxed">
-                        We specialize in advanced implant procedures using top-quality materials 
-                        from renowned manufacturers. All prices are significantly lower than US averages 
-                        while maintaining the same exceptional standards.
+                        From surgical implants to cosmetic enhancements, we offer a full range of dental services 
+                        using the latest technology and techniques.
                     </p>
                 </motion.div>
 
-                {/* Services Grid */}
-                <div className="grid md:grid-cols-2 gap-6">
-                    {services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100"
-                        >
-                            <div className="flex items-start gap-5">
-                                <div className="w-14 h-14 bg-gradient-to-br from-[#1a365d] to-[#2d4a7c] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                    <service.icon className="w-7 h-7 text-white" />
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold text-[#1a365d] mb-2">{service.title}</h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-[#d4a574] font-semibold">{service.price}</span>
-                                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#d4a574] group-hover:translate-x-1 transition-all" />
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                {/* Category Tabs */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    {Object.keys(serviceCategories).map((category) => {
+                        const cat = serviceCategories[category];
+                        const Icon = cat.icon;
+                        return (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 ${
+                                    activeCategory === category
+                                        ? 'bg-[#1a365d] text-white shadow-lg'
+                                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                                }`}
+                            >
+                                <Icon className="w-5 h-5" />
+                                {cat.title}
+                            </button>
+                        );
+                    })}
                 </div>
+
+                {/* Services List */}
+                <motion.div
+                    key={activeCategory}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100"
+                >
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center">
+                            <currentCategory.icon className="w-6 h-6 text-[#d4a574]" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-[#1a365d]">{currentCategory.title}</h3>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {currentCategory.services.map((service, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                            >
+                                <div className="w-2 h-2 bg-[#d4a574] rounded-full mt-2 flex-shrink-0" />
+                                <span className="text-gray-700">{service}</span>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
 
                 {/* CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.6 }}
                     className="text-center mt-12"
                 >
-                    <p className="text-gray-500 mb-4">Not sure which option is right for you?</p>
                     <Button 
                         size="lg"
-                        className="bg-[#1a365d] hover:bg-[#2d4a7c] text-white px-8 py-6 rounded-full font-medium"
+                        className="bg-[#d4a574] hover:bg-[#c49464] text-white h-14 px-10 rounded-xl text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                     >
-                        Get a Free Assessment
+                        Request Consultation & Pricing
                     </Button>
+                    <p className="text-sm text-gray-500 mt-4">
+                        Contact us for personalized quotes and treatment plans
+                    </p>
                 </motion.div>
             </div>
         </section>
