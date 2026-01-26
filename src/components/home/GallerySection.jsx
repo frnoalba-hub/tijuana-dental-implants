@@ -80,6 +80,26 @@ export default function GallerySection() {
             src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/430c8fee4_image26.png",
             alt: "Dr. Arias performing implant surgery",
             caption: "Precision implant placement"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/5bc3b53b1_image27.png",
+            alt: "Dr. Arias focused surgical work",
+            caption: "Detailed surgical precision"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/a8324749f_image28.png",
+            alt: "Dr. Arias with surgical team",
+            caption: "Expert team collaboration"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/8141aed8a_image29.png",
+            alt: "Dr. Arias in clinic",
+            caption: "Dental implant expert"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/cb9e02449_image30.png",
+            alt: "Surgical procedure in progress",
+            caption: "Advanced implant surgery"
         }
     ];
 
