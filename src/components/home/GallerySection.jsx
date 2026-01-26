@@ -140,6 +140,36 @@ export default function GallerySection() {
             src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7787bd987_image41.png",
             alt: "MINEC team photo",
             caption: "MegaGen International Network"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/5f3373ea6_image42.png",
+            alt: "Precision surgical work",
+            caption: "Advanced surgical focus"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/6bffcf4c5_image43.png",
+            alt: "Dr. Arias operating",
+            caption: "High-precision implantology"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/d840d1faf_image44.png",
+            alt: "Surgical team in action",
+            caption: "Expert team environment"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/a4b030abd_image45.png",
+            alt: "Advanced surgical procedure",
+            caption: "Collaborative patient care"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/31485251c_image46.png",
+            alt: "University Implant Educators team",
+            caption: "Implant education leadership"
+        },
+        {
+            src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/69a74a04e_image47.png",
+            alt: "Implant Surgical Program Directors",
+            caption: "Industry leadership & recognition"
         }
     ];
 
