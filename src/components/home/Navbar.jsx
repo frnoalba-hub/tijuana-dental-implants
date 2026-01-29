@@ -30,7 +30,7 @@ export default function Navbar() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
                 isScrolled 
-                    ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+                    ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-white/10' 
                     : 'bg-transparent'
             }`}
         >
@@ -38,14 +38,11 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full bg-gradient-to-br from-[#1a365d] to-[#2d4a7c] flex items-center justify-center`}>
-                            <span className="text-white font-bold text-lg">D</span>
-                        </div>
-                        <span className={`text-xl font-semibold tracking-tight transition-colors duration-300 ${
-                            isScrolled ? 'text-[#1a365d]' : 'text-white'
-                        }`}>
-                            Dr. Jose Luis Arias
-                        </span>
+                        <img 
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/c531472a0_1a9e59f6-50a3-48fa-9c67-0eba52a01ce2.jpg" 
+                            alt="BLAZE Dental" 
+                            className="h-10 w-auto rounded-md"
+                        />
                     </a>
 
                     {/* Desktop Navigation */}
@@ -54,9 +51,7 @@ export default function Navbar() {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] ${
-                                    isScrolled ? 'text-gray-700' : 'text-white/90'
-                                }`}
+                                className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] text-white/90`}
                             >
                                 {link.name}
                             </a>
@@ -72,9 +67,7 @@ export default function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className={`lg:hidden p-2 rounded-lg transition-colors ${
-                            isScrolled ? 'text-[#1a365d]' : 'text-white'
-                        }`}
+                        className={`lg:hidden p-2 rounded-lg transition-colors text-white`}
                     >
                         {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -88,7 +81,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-white border-t"
+                        className="lg:hidden bg-black border-t border-white/10"
                     >
                         <div className="px-6 py-6 space-y-4">
                             {navLinks.map((link) => (
@@ -96,7 +89,7 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block text-gray-700 font-medium py-2 hover:text-[#d4a574] transition-colors"
+                                    className="block text-gray-300 font-medium py-2 hover:text-[#d4a574] transition-colors"
                                 >
                                     {link.name}
                                 </a>

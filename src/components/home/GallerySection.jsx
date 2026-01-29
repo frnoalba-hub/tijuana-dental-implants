@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ZoomIn } from "lucide-react";
+import { X, ZoomIn, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function GallerySection() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [visibleCount, setVisibleCount] = useState(9);
 
     const images = [
         {
@@ -199,7 +201,7 @@ export default function GallerySection() {
     ];
 
     return (
-        <section id="gallery" className="py-24 bg-white">
+        <section id="gallery" className="py-24 bg-black">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -210,10 +212,10 @@ export default function GallerySection() {
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
                     <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Our Work</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mt-3 mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
                         See Our Expertise in Action
                     </h2>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                         Take a look inside our modern facility and see the precision and care 
                         that goes into every procedure.
                     </p>
@@ -221,7 +223,7 @@ export default function GallerySection() {
 
                 {/* Gallery Grid */}
                 <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    {images.map((image, index) => (
+                    {images.slice(0, visibleCount).map((image, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -249,6 +251,20 @@ export default function GallerySection() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Load More Button */}
+                {visibleCount < images.length && (
+                    <div className="flex justify-center mt-12">
+                        <Button
+                            variant="outline"
+                            onClick={() => setVisibleCount(prev => prev + 9)}
+                            className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white px-8 py-6 rounded-full"
+                        >
+                            Load More Photos
+                            <ChevronDown className="ml-2 w-4 h-4" />
+                        </Button>
+                    </div>
+                )}
 
                 {/* Lightbox */}
                 <AnimatePresence>

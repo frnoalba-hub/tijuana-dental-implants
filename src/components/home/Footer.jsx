@@ -5,16 +5,17 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-[#1a365d] text-white">
+        <footer className="bg-black text-white border-t border-white/10">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
                 <div className="grid md:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">JLA</span>
-                            </div>
-                            <span className="text-xl font-semibold">Dr. Jose Luis Arias</span>
+                            <img 
+                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/c531472a0_1a9e59f6-50a3-48fa-9c67-0eba52a01ce2.jpg" 
+                                alt="BLAZE Dental" 
+                                className="h-10 w-auto rounded-md"
+                            />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-6">
                             World-class dental implants in Tijuana, Mexico. 
