@@ -76,7 +76,7 @@ export default function ServicesSection() {
     const currentCategory = serviceCategories[activeCategory];
 
     return (
-        <section id="services" className="py-24 bg-gray-50">
+        <section id="services" className="py-24 bg-neutral-950">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -87,11 +87,11 @@ export default function ServicesSection() {
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
                     <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Our Services</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mt-3 mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
                         Comprehensive Dental Care
                         <span className="block">Tailored to Your Needs</span>
                     </h2>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                         From surgical implants to cosmetic enhancements, we offer a full range of dental services 
                         using the latest technology and techniques.
                     </p>
@@ -108,8 +108,8 @@ export default function ServicesSection() {
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 ${
                                     activeCategory === category
-                                        ? 'bg-[#1a365d] text-white shadow-lg'
-                                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                                        ? 'bg-white text-black shadow-lg'
+                                        : 'bg-neutral-900 text-gray-400 hover:bg-neutral-800 border border-neutral-800'
                                 }`}
                             >
                                 <Icon className="w-5 h-5" />
@@ -125,13 +125,13 @@ export default function ServicesSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100"
+                    className="bg-neutral-900 rounded-3xl shadow-xl p-8 md:p-12 border border-neutral-800"
                 >
                     <div className="flex items-center gap-4 mb-8">
                         <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center">
                             <currentCategory.icon className="w-6 h-6 text-[#d4a574]" />
                         </div>
-                        <h3 className="text-2xl font-bold text-[#1a365d]">{currentCategory.title}</h3>
+                        <h3 className="text-2xl font-bold text-white">{currentCategory.title}</h3>
                     </div>
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -141,10 +141,10 @@ export default function ServicesSection() {
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                                className="flex items-start gap-3 p-4 rounded-lg hover:bg-neutral-800 transition-colors"
                             >
                                 <div className="w-2 h-2 bg-[#d4a574] rounded-full mt-2 flex-shrink-0" />
-                                <span className="text-gray-700">{service}</span>
+                                <span className="text-gray-300">{service}</span>
                             </motion.div>
                         ))}
                     </div>

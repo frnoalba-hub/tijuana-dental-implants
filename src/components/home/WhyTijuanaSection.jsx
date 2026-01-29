@@ -37,7 +37,7 @@ export default function WhyTijuanaSection() {
     ];
 
     return (
-        <section id="why-tijuana" className="py-24 bg-[#1a365d] relative overflow-hidden">
+        <section id="why-tijuana" className="py-24 bg-black relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
@@ -90,22 +90,22 @@ export default function WhyTijuanaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-16 bg-white rounded-3xl p-8 md:p-12"
+                    className="mt-16 bg-neutral-900 border border-neutral-800 rounded-3xl p-8 md:p-12"
                 >
-                    <h3 className="text-2xl font-bold text-[#1a365d] text-center mb-8">Price Comparison</h3>
+                    <h3 className="text-2xl font-bold text-white text-center mb-8">Price Comparison</h3>
                     <div className="grid md:grid-cols-3 gap-6">
-                        <div className="text-center p-6 bg-gray-50 rounded-2xl">
-                            <p className="text-gray-500 text-sm mb-2">Single Implant in USA</p>
-                            <p className="text-3xl font-bold text-gray-400 line-through">$3,000 - $5,000</p>
+                        <div className="text-center p-6 bg-neutral-800 rounded-2xl">
+                            <p className="text-gray-400 text-sm mb-2">Single Implant in USA</p>
+                            <p className="text-3xl font-bold text-gray-500 line-through">$3,000 - $5,000</p>
                         </div>
-                        <div className="text-center p-6 bg-[#1a365d] rounded-2xl transform md:scale-110">
+                        <div className="text-center p-6 bg-black border border-white/10 rounded-2xl transform md:scale-110 relative z-10 shadow-2xl">
                             <p className="text-white/70 text-sm mb-2">Single Implant with Us</p>
                             <p className="text-3xl font-bold text-white">$999</p>
                             <p className="text-[#d4a574] font-medium mt-2">Save up to 70%</p>
                         </div>
-                        <div className="text-center p-6 bg-gray-50 rounded-2xl">
-                            <p className="text-gray-500 text-sm mb-2">All-on-4 in USA</p>
-                            <p className="text-3xl font-bold text-gray-400 line-through">$20,000 - $30,000</p>
+                        <div className="text-center p-6 bg-neutral-800 rounded-2xl">
+                            <p className="text-gray-400 text-sm mb-2">All-on-4 in USA</p>
+                            <p className="text-3xl font-bold text-gray-500 line-through">$20,000 - $30,000</p>
                         </div>
                     </div>
                 </motion.div>

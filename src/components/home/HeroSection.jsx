@@ -13,8 +13,8 @@ export default function HeroSection() {
                     alt="Dr. Arias performing surgery"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1a365d]/95 via-[#1a365d]/80 to-[#1a365d]/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             {/* Content */}
