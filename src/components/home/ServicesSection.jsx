@@ -160,7 +160,7 @@ export default function ServicesSection() {
                 >
                     <Button 
                         size="lg"
-                        className="bg-[#d4a574] hover:bg-[#c49464] text-white h-14 px-10 rounded-xl text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="bg-white text-black hover:bg-white/90 h-14 px-10 rounded-full text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300"
                     >
                         Request Consultation & Pricing
                     </Button>

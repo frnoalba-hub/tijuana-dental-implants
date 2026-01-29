@@ -1,103 +1,141 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Award, Star } from "lucide-react";
+import { ArrowRight, Shield, Award, Star, Play } from "lucide-react";
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <img 
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/0df1fd154_image11.png"
                     alt="Dr. Arias performing surgery"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover opacity-40"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
+            </div>
+
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+                <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+                    className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full border border-white/5"
+                />
+                <motion.div 
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+                    className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] rounded-full border border-[#d4a574]/10"
+                />
             </div>
 
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
                     >
                         {/* Badge */}
                         <motion.div 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#d4a574]/20 to-transparent backdrop-blur-sm border border-[#d4a574]/30 rounded-full px-5 py-2.5 mb-8"
                         >
-                            <Award className="w-4 h-4 text-[#d4a574]" />
-                            <span className="text-white/90 text-sm font-medium">Board Certified Implant Specialist & Instructor</span>
+                            <span className="flex h-2 w-2 relative">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#d4a574] opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d4a574]"></span>
+                            </span>
+                            <span className="text-white/90 text-sm font-medium tracking-wide">Board Certified Implant Specialist</span>
                         </motion.div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
                             World-Class
-                            <span className="block text-[#d4a574]">Dental Implants</span>
-                            in Tijuana
+                            <span className="block bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] bg-clip-text text-transparent">Dental Implants</span>
+                            <span className="text-white/60 text-4xl md:text-5xl lg:text-6xl font-light">in Tijuana</span>
                         </h1>
 
-                        <p className="text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
+                        <p className="text-xl text-white/60 mb-10 max-w-lg leading-relaxed font-light">
                             Experience exceptional dental care with a renowned implant surgeon. 
-                            Save up to 70% compared to US prices while receiving the same premium 
-                            quality materials and expertise.
+                            Save up to <span className="text-[#d4a574] font-medium">70%</span> compared to US prices.
                         </p>
 
-                        {/* Trust Badges */}
-                        <div className="flex flex-wrap gap-6 mb-10">
-                            <div className="flex items-center gap-2 text-white/80">
-                                <Shield className="w-5 h-5 text-[#d4a574]" />
-                                <span className="text-sm">USA-Grade Materials</span>
+                        {/* Stats Row */}
+                        <div className="flex items-center gap-8 mb-10 pb-10 border-b border-white/10">
+                            <div>
+                                <p className="text-4xl font-bold text-white">15+</p>
+                                <p className="text-sm text-white/50">Years Experience</p>
                             </div>
-                            <div className="flex items-center gap-2 text-white/80">
-                                <Star className="w-5 h-5 text-[#d4a574]" />
-                                <span className="text-sm">15+ Years Experience</span>
+                            <div className="w-px h-12 bg-white/10" />
+                            <div>
+                                <p className="text-4xl font-bold text-white">5000+</p>
+                                <p className="text-sm text-white/50">Implants Placed</p>
+                            </div>
+                            <div className="w-px h-12 bg-white/10" />
+                            <div>
+                                <p className="text-4xl font-bold text-[#d4a574]">70%</p>
+                                <p className="text-sm text-white/50">Cost Savings</p>
                             </div>
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-wrap items-center gap-6">
                             <Button 
                                 size="lg"
-                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-8 py-6 rounded-full text-lg font-medium shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                                className="bg-white text-black hover:bg-white/90 px-8 py-7 rounded-full text-base font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300 group"
                             >
-                                Free Consultation
+                                Book Free Consultation
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <Button 
-                                size="lg"
-                                variant="outline"
-                                className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-6 rounded-full text-lg font-medium backdrop-blur-sm transition-all duration-300"
-                            >
-                                View Our Work
-                            </Button>
+                            <button className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
+                                <span className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:border-[#d4a574] group-hover:bg-[#d4a574]/10 transition-all">
+                                    <Play className="w-5 h-5 ml-1" />
+                                </span>
+                                <span className="font-medium">Watch Our Story</span>
+                            </button>
                         </div>
                     </motion.div>
 
                     {/* Doctor Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
                         className="hidden lg:block"
                     >
                         <div className="relative">
-                            <div className="absolute -inset-4 bg-gradient-to-br from-[#d4a574]/30 to-transparent rounded-3xl blur-2xl" />
-                            <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6">
+                            {/* Glow Effect */}
+                            <div className="absolute -inset-8 bg-gradient-to-br from-[#d4a574]/20 via-transparent to-transparent rounded-[3rem] blur-3xl" />
+                            
+                            {/* Card */}
+                            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] p-4 overflow-hidden">
+                                {/* Decorative Corner */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#d4a574]/20 to-transparent rounded-bl-[4rem]" />
+                                
                                 <img 
                                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/25edfd391_image3-Copy.png"
                                     alt="Dr. Jose Luis Arias"
-                                    className="w-full aspect-[4/5] object-cover rounded-2xl mb-4"
+                                    className="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
                                 />
-                                <div className="text-center">
-                                    <h3 className="text-xl font-semibold text-white">Dr. Jose Luis Arias</h3>
-                                    <p className="text-[#d4a574] font-medium">DDS, Implant Specialist</p>
-                                    <p className="text-white/60 text-sm mt-1">Tijuana, Mexico</p>
+                                
+                                {/* Info Overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+                                    <div className="flex items-end justify-between">
+                                        <div>
+                                            <p className="text-[#d4a574] text-sm font-medium tracking-wider uppercase mb-1">Lead Surgeon</p>
+                                            <h3 className="text-2xl font-bold text-white">Dr. Jose Luis Arias</h3>
+                                            <p className="text-white/60 text-sm mt-1">DDS, Implant Specialist</p>
+                                        </div>
+                                        <div className="flex gap-1">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star key={i} className="w-4 h-4 fill-[#d4a574] text-[#d4a574]" />
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,12 +143,8 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {/* Bottom Wave */}
-            <div className="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z" fill="white"/>
-                </svg>
-            </div>
+            {/* Bottom Gradient Fade */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neutral-950 to-transparent" />
         </section>
     );
 }

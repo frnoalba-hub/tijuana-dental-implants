@@ -28,7 +28,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="absolute -inset-4 bg-gradient-to-br from-white/5 to-[#d4a574]/10 rounded-3xl" />
+                        <div className="absolute -inset-4 bg-gradient-to-br from-[#d4a574]/20 to-transparent rounded-3xl blur-2xl" />
                         <div className="relative">
                             <img 
                                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/36557f99c_image8.png"

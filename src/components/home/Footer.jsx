@@ -21,12 +21,12 @@ export default function Footer() {
                             World-class dental implants in Tijuana, Mexico. 
                             Experience exceptional care at affordable prices.
                         </p>
-                        <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d4a574] transition-colors">
-                                <Instagram className="w-5 h-5" />
+                        <div className="flex gap-3">
+                            <a href="#" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
+                                <Instagram className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d4a574] transition-colors">
-                                <Facebook className="w-5 h-5" />
+                            <a href="#" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
+                                <Facebook className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
