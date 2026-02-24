@@ -11,7 +11,7 @@ export default function AboutSection() {
     ];
 
     const stats = [
-        { icon: Award, value: "15+", label: "Years Experience" },
+        { icon: Award, value: "10+", label: "Years Experience" },
         { icon: Users, value: "5000+", label: "Successful Implants" },
         { icon: GraduationCap, value: "50+", label: "Dentists Trained" },
     ];
@@ -42,7 +42,7 @@ export default function AboutSection() {
                                         <Award className="w-6 h-6 text-[#d4a574]" />
                                     </div>
                                     <div>
-                                        <p className="text-2xl font-bold text-white">15+</p>
+                                        <p className="text-2xl font-bold text-white">10+</p>
                                         <p className="text-sm text-gray-400">Years of Excellence</p>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@ export default function AboutSection() {
                         </h2>
 
                         <p className="text-gray-400 leading-relaxed mb-6">
-                            With over 15 years of experience in dental implantology, Dr. Arias is not 
+                            With over 10 years of experience in dental implantology, Dr. Arias is not 
                             only a skilled surgeon but also a respected instructor who trains other dentists 
                             in advanced implant techniques. His commitment to excellence and patient care 
                             has made him a trusted choice for patients traveling from the USA.
