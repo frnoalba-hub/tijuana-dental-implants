@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import LogoIcon from "./LogoIcon";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -10,12 +11,12 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <div className="flex items-center gap-3 mb-4">
-                            <img 
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/c531472a0_1a9e59f6-50a3-48fa-9c67-0eba52a01ce2.jpg" 
-                                alt="BLAZE Dental" 
-                                className="h-10 w-auto rounded-md"
-                            />
+                        <div className="flex items-center gap-3 mb-6">
+                            <LogoIcon className="h-10 w-10 text-white" />
+                            <div className="flex flex-col">
+                                <span className="text-xl font-light tracking-widest text-white leading-none">BLAZE</span>
+                                <span className="text-[0.60rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
+                            </div>
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-6">
                             World-class dental implants in Tijuana, Mexico. 

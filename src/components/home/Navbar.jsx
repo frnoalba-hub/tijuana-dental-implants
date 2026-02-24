@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import LogoIcon from "./LogoIcon";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -38,13 +39,12 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
-                        <div className="flex items-center gap-2">
-                            <img 
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7227093e8_Gemini_Generated_Image_d3i7p9d3i7p9d3i7.png"
-                                alt="BLAZE Dental"
-                                className="h-12 w-auto"
-                            />
-                            <span className="text-xs font-semibold tracking-[0.3em] text-[#d4a574] uppercase">Dental</span>
+                        <div className="flex items-center gap-3">
+                            <LogoIcon className="h-12 w-12 text-white" />
+                            <div className="flex flex-col">
+                                <span className="text-2xl font-light tracking-widest text-white leading-none">BLAZE</span>
+                                <span className="text-[0.65rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
+                            </div>
                         </div>
                     </a>
 
