@@ -2,36 +2,44 @@ import React from 'react';
 
 export default function LogoIcon({ className }) {
   return (
-    <svg 
-      viewBox="0 0 100 100" 
-      className={className} 
-      fill="none" 
-      stroke="currentColor" 
+    <svg
+      viewBox="0 0 120 130"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeLinejoin="round"
+      strokeLinecap="round"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Left tooth section - outer roof line */}
-      <path 
-        d="M 12 38 L 25 20 L 45 20 L 64 39" 
-        strokeWidth="3" 
+      {/* ── LEFT CUSP (outer shape) ── */}
+      <polyline
+        points="18,52 30,18 56,28 72,52 56,72 30,80 18,52"
+        strokeWidth="3.5"
       />
-      
-      {/* Left tooth section - main body */}
-      <path 
-        d="M 18 40 L 25 30 L 35 30 L 50 55 L 40 75 L 35 85 L 28 80 L 24 60 Z" 
-        strokeWidth="3" 
+
+      {/* ── RIGHT CUSP (inner / overlapping diamond) ── */}
+      <polyline
+        points="44,24 72,14 88,38 72,52 56,28 44,24"
+        strokeWidth="3.5"
       />
-      
-      {/* Right tooth section */}
-      <path 
-        d="M 48 35 L 60 20 L 75 20 L 88 38 L 80 60 L 63 60 Z" 
-        strokeWidth="3" 
+
+      {/* ── LEFT TOOTH BODY – tapers down from the two cusps ── */}
+      <path
+        d="M 30,80 L 26,100 L 34,112 L 42,100 L 56,72"
+        strokeWidth="3.5"
       />
-      
-      {/* Implant bars */}
-      <path 
-        d="M 65 66 L 78 66 M 66.5 73 L 76.5 73 M 68 80 L 75 80 M 69.5 87 L 73.5 87" 
-        strokeWidth="4" 
-      />
+
+      {/* ── IMPLANT SCREW BARS (right side, below right cusp) ── */}
+      {/* bar 1 */}
+      <line x1="72" y1="62" x2="90" y2="62" strokeWidth="5" />
+      {/* bar 2 */}
+      <line x1="74" y1="73" x2="88" y2="73" strokeWidth="5" />
+      {/* bar 3 */}
+      <line x1="76" y1="83" x2="86" y2="83" strokeWidth="5" />
+      {/* bar 4 */}
+      <line x1="78" y1="93" x2="84" y2="93" strokeWidth="5" />
+      {/* tip */}
+      <line x1="80" y1="103" x2="82" y2="103" strokeWidth="5" />
     </svg>
   );
 }
