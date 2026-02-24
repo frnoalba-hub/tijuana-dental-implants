@@ -132,7 +132,7 @@ export default function HeroSection() {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#d4a574]/20 to-transparent rounded-bl-[4rem]" />
                                 
                                 <img 
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/3b2183d9c_7f14ec98e_image9.png"
+                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/36557f99c_image8.png"
                                     alt="Dr. Jose Luis Arias"
                                     className="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
                                 />
