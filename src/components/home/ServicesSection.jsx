@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button";
 export default function ServicesSection() {
     const [activeCategory, setActiveCategory] = useState("surgical");
 
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     const serviceCategories = {
         surgical: {
             icon: Stethoscope,
@@ -150,6 +157,7 @@ export default function ServicesSection() {
                     className="text-center mt-8 sm:mt-12"
                 >
                     <Button 
+                        onClick={scrollToContact}
                         size="lg"
                         className="bg-white text-black hover:bg-white/90 h-12 sm:h-14 px-6 sm:px-10 rounded-full text-base sm:text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300"
                     >
