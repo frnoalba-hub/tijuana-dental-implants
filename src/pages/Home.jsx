@@ -19,6 +19,7 @@ export default function Home() {
             <ServicesSection />
             <GallerySection />
             <ExpertiseSection />
+            <VideoSection />
             <WhyTijuanaSection />
             <ContactSection />
             <Footer />
