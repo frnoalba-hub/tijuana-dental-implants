@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Navbar from '@/components/home/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
-import GallerySection from '@/components/home/GallerySection';
-import ExpertiseSection from '@/components/home/ExpertiseSection';
-import WhyTijuanaSection from '@/components/home/WhyTijuanaSection';
-import ContactSection from '@/components/home/ContactSection';
-import Footer from '@/components/home/Footer';
-import VideoSection from '@/components/home/VideoSection';
+
+const GallerySection = lazy(() => import('@/components/home/GallerySection'));
+const ExpertiseSection = lazy(() => import('@/components/home/ExpertiseSection'));
+const WhyTijuanaSection = lazy(() => import('@/components/home/WhyTijuanaSection'));
+const VideoSection = lazy(() => import('@/components/home/VideoSection'));
+const ContactSection = lazy(() => import('@/components/home/ContactSection'));
+const Footer = lazy(() => import('@/components/home/Footer'));
+
+const LoadingFallback = () => <div className="h-screen bg-black" />;
 
 export default function Home() {
     return (
@@ -17,12 +20,24 @@ export default function Home() {
             <HeroSection />
             <AboutSection />
             <ServicesSection />
-            <GallerySection />
-            <ExpertiseSection />
-            <VideoSection />
-            <WhyTijuanaSection />
-            <ContactSection />
-            <Footer />
+            <Suspense fallback={<LoadingFallback />}>
+                <GallerySection />
+            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>
+                <ExpertiseSection />
+            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>
+                <VideoSection />
+            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>
+                <WhyTijuanaSection />
+            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>
+                <ContactSection />
+            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>
+                <Footer />
+            </Suspense>
         </div>
     );
 }
