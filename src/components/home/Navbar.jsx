@@ -38,13 +38,11 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <a href="#" className="flex items-center gap-3">
-                        <div className="flex items-center gap-3">
-                            <LogoIcon className="h-14 w-14 text-white" />
-                            <div className="flex flex-col">
-                                <span className="text-2xl font-light tracking-widest text-white leading-none">BLAZE</span>
-                                <span className="text-[0.65rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
-                            </div>
+                    <a href="#" className="flex items-center gap-2">
+                        <LogoIcon className="h-10 w-auto" />
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-light tracking-widest text-white leading-none">BLAZE</span>
+                            <span className="text-[0.65rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">DENTAL</span>
                         </div>
                     </a>
 
