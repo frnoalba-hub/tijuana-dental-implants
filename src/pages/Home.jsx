@@ -8,6 +8,7 @@ import ExpertiseSection from '@/components/home/ExpertiseSection';
 import WhyTijuanaSection from '@/components/home/WhyTijuanaSection';
 import ContactSection from '@/components/home/ContactSection';
 import Footer from '@/components/home/Footer';
+import VideoSection from '@/components/home/VideoSection';
 
 export default function Home() {
     return (

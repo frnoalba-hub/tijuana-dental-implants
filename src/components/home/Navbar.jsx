@@ -38,11 +38,10 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
-                        <img 
-                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/c531472a0_1a9e59f6-50a3-48fa-9c67-0eba52a01ce2.jpg" 
-                            alt="BLAZE Dental" 
-                            className="h-10 w-auto rounded-md"
-                        />
+                        <div className="flex items-center gap-2">
+                            <span className="text-2xl font-black tracking-widest text-white">BLAZE</span>
+                            <span className="text-xs font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
+                        </div>
                     </a>
 
                     {/* Desktop Navigation */}
