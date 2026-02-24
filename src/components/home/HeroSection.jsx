@@ -82,12 +82,12 @@ export default function HeroSection() {
                         {/* Stats Row */}
                         <div className="flex items-center gap-8 mb-10 pb-10 border-b border-white/10">
                             <div>
-                                <p className="text-4xl font-bold text-white">15+</p>
+                                <p className="text-4xl font-bold text-white">7+</p>
                                 <p className="text-sm text-white/50">Years Experience</p>
                             </div>
                             <div className="w-px h-12 bg-white/10" />
                             <div>
-                                <p className="text-4xl font-bold text-white">5000+</p>
+                                <p className="text-4xl font-bold text-white">10,000+</p>
                                 <p className="text-sm text-white/50">Implants Placed</p>
                             </div>
                             <div className="w-px h-12 bg-white/10" />
