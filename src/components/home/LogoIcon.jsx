@@ -9,44 +9,28 @@ export default function LogoIcon({ className }) {
       stroke="currentColor" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Left tooth section - outer line */}
+      {/* Left tooth section - outer roof line */}
       <path 
-        d="M 17 38 L 25 22 L 45 28 L 55 38" 
-        strokeWidth="3.5" 
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M 12 38 L 25 20 L 45 20 L 64 39" 
+        strokeWidth="3" 
       />
       
       {/* Left tooth section - main body */}
       <path 
-        d="M 20 48 L 28 32 L 43 37 L 62 54 L 48 62 L 38 85 L 34 88 L 28 80 L 23 60 Z" 
-        strokeWidth="3.5" 
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M 18 40 L 25 30 L 35 30 L 50 55 L 40 75 L 35 85 L 28 80 L 24 60 Z" 
+        strokeWidth="3" 
       />
       
       {/* Right tooth section */}
       <path 
-        d="M 43 37 L 72 24 L 84 42 L 74 54 L 62 54" 
-        strokeWidth="3.5" 
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      
-      {/* Right tooth section tail */}
-      <path 
-        d="M 74 54 L 72 61" 
-        strokeWidth="3.5" 
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M 48 35 L 60 20 L 75 20 L 88 38 L 80 60 L 63 60 Z" 
+        strokeWidth="3" 
       />
       
       {/* Implant bars */}
       <path 
-        d="M 56 64 L 72 64 M 57.5 70 L 69.5 70 M 59 76 L 67 76 M 60.5 82 L 64.5 82 M 61.5 88 L 63.5 88" 
+        d="M 65 66 L 78 66 M 66.5 73 L 76.5 73 M 68 80 L 75 80 M 69.5 87 L 73.5 87" 
         strokeWidth="4" 
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
     </svg>
   );
