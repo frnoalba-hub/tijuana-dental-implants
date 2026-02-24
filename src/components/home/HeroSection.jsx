@@ -68,7 +68,7 @@ export default function HeroSection() {
                             <span className="text-white/90 text-sm font-medium tracking-wide">Board Certified Implant Specialist</span>
                         </motion.div>
 
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 sm:mb-8 tracking-tight">
                             World-Class
                             <span className="block bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] bg-clip-text text-transparent">Dental Implants</span>
                             <span className="text-white/60 text-4xl md:text-5xl lg:text-6xl font-light">in Tijuana</span>
