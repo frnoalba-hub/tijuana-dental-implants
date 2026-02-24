@@ -9,34 +9,45 @@ export default function LogoIcon({ className }) {
       stroke="currentColor" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Left tooth section - angular geometric outline */}
+      {/* Left tooth section - outer line */}
       <path 
-        d="M 22 28 L 32 20 L 42 24 L 47 35 L 48 50 L 45 68 L 40 82 L 34 87 L 28 82 L 24 68 L 22 50 L 23 35 Z" 
-        strokeWidth="2.8" 
+        d="M 17 38 L 25 22 L 45 28 L 55 38" 
+        strokeWidth="3.5" 
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       
-      {/* Right tooth section - angular geometric outline */}
+      {/* Left tooth section - main body */}
       <path 
-        d="M 53 24 L 63 17 L 74 21 L 79 29 L 81 39 L 81 54 L 77 69 L 70 81 L 64 85 L 58 81 L 53 67 L 51 49 L 52 34 Z" 
-        strokeWidth="2.8" 
+        d="M 20 48 L 28 32 L 43 37 L 62 54 L 48 62 L 38 85 L 34 88 L 28 80 L 23 60 Z" 
+        strokeWidth="3.5" 
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       
-      {/* Top connecting line between tooth sections */}
+      {/* Right tooth section */}
       <path 
-        d="M 42 24 L 53 24" 
-        strokeWidth="2.8" 
+        d="M 43 37 L 72 24 L 84 42 L 74 54 L 62 54" 
+        strokeWidth="3.5" 
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
       
-      {/* Implant screw - horizontal thread lines */}
-      <line x1="56" y1="52" x2="72" y2="52" strokeWidth="3" strokeLinecap="round" />
-      <line x1="58" y1="60" x2="70" y2="60" strokeWidth="3" strokeLinecap="round" />
-      <line x1="60" y1="68" x2="68" y2="68" strokeWidth="3" strokeLinecap="round" />
-      <line x1="62" y1="76" x2="66" y2="76" strokeWidth="3" strokeLinecap="round" />
+      {/* Right tooth section tail */}
+      <path 
+        d="M 74 54 L 72 61" 
+        strokeWidth="3.5" 
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      
+      {/* Implant bars */}
+      <path 
+        d="M 56 64 L 72 64 M 57.5 70 L 69.5 70 M 59 76 L 67 76 M 60.5 82 L 64.5 82 M 61.5 88 L 63.5 88" 
+        strokeWidth="4" 
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
