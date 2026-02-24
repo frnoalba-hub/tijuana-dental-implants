@@ -96,20 +96,23 @@ export default function ServicesSection() {
                     {Object.keys(serviceCategories).map((category) => {
                         const cat = serviceCategories[category];
                         const Icon = cat.icon;
+                        const isActive = activeCategory === category;
                         return (
-                            <button
+                            <motion.button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.98 }}
                                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 flex items-center gap-2 ${
-                                    activeCategory === category
-                                        ? 'bg-white text-black shadow-lg'
-                                        : 'bg-neutral-900 text-gray-400 hover:bg-neutral-800 border border-neutral-800'
+                                    isActive
+                                        ? 'bg-white text-black shadow-lg shadow-white/20'
+                                        : 'bg-neutral-900 text-gray-400 hover:bg-neutral-800 border border-neutral-800 hover:border-[#d4a574]/50'
                                 }`}
                             >
                                 <Icon className="w-4 sm:w-5 h-4 sm:h-5" />
                                 <span className="hidden sm:inline">{cat.title}</span>
                                 <span className="sm:hidden">{cat.title.split(' ')[0]}</span>
-                            </button>
+                            </motion.button>
                         );
                     })}
                 </div>
@@ -139,9 +142,10 @@ export default function ServicesSection() {
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/30 group"
+                                whileHover={{ x: 4 }}
+                                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/40 group cursor-pointer"
                             >
-                                <div className="w-2 h-2 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm" />
+                                <div className="w-2 h-2 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm group-hover:scale-125 transition-transform duration-300" />
                                 <span className="text-base sm:text-lg text-gray-300 group-hover:text-white transition-colors leading-relaxed">{service}</span>
                             </motion.div>
                         ))}

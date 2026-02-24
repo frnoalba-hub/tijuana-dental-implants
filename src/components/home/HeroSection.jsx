@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Award, Star, Play } from "lucide-react";
+import AnimatedCounter from "./AnimatedCounter";
 
 function HeroSectionContent() {
     const scrollToContact = () => {
@@ -89,12 +90,12 @@ function HeroSectionContent() {
                         {/* Stats Row */}
                         <div className="flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10 overflow-x-auto">
                             <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white">10+</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="10" suffix="+" /></p>
                                 <p className="text-xs sm:text-sm text-white/50">Years</p>
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />
                             <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white">7,500+</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="7500" suffix="+" /></p>
                                 <p className="text-xs sm:text-sm text-white/50">Implants Placed</p>
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />

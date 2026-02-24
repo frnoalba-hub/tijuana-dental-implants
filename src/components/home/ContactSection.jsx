@@ -90,56 +90,80 @@ export default function ContactSection() {
                             <h3 className="text-xl font-semibold text-white mb-6">Tell Us About Your Smile</h3>
                             
                             <form onSubmit={handleSubmit} className="space-y-5">
-                                <div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.3 }}
+                                >
                                     <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
                                     <Input
                                         type="text"
                                         placeholder="John Doe"
                                         value={formData.name}
                                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574]"
+                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300"
                                     />
-                                </div>
+                                </motion.div>
 
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3, delay: 0.1 }}
+                                    >
                                         <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
                                         <Input
                                             type="email"
                                             placeholder="john@email.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({...formData, email: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574]"
+                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300"
                                         />
-                                    </div>
-                                    <div>
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3, delay: 0.2 }}
+                                    >
                                         <label className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
                                         <Input
                                             type="tel"
                                             placeholder="+1 (555) 000-0000"
                                             value={formData.phone}
                                             onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574]"
+                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300"
                                         />
-                                    </div>
+                                    </motion.div>
                                 </div>
 
-                                <div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.3, delay: 0.3 }}
+                                >
                                     <label className="block text-sm font-medium text-gray-300 mb-2">Tell us about your dental needs</label>
                                     <Textarea
                                         placeholder="I'm interested in dental implants..."
                                         value={formData.message}
                                         onChange={(e) => setFormData({...formData, message: e.target.value})}
-                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] resize-none"
+                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300 resize-none"
                                     />
-                                </div>
+                                </motion.div>
 
-                                <Button 
-                                    type="submit"
-                                    size="lg"
-                                    disabled={isSubmitting}
-                                    className="w-full bg-white text-black hover:bg-white/90 h-14 rounded-full text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300 disabled:opacity-50"
+                                <motion.div
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
                                 >
+                                    <Button 
+                                        type="submit"
+                                        size="lg"
+                                        disabled={isSubmitting}
+                                        className="w-full bg-white text-black hover:bg-white/90 h-14 rounded-full text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300 disabled:opacity-50"
+                                    >
                                     {submitStatus === 'success' ? (
                                         <>
                                             <CheckCircle2 className="w-5 h-5 mr-2" />
@@ -151,7 +175,8 @@ export default function ContactSection() {
                                             {isSubmitting ? 'Sending...' : 'Send Message'}
                                         </>
                                     )}
-                                </Button>
+                                    </Button>
+                                </motion.div>
 
                                 {submitStatus === 'error' && (
                                     <p className="text-center text-sm text-red-400">Something went wrong. Please try again.</p>

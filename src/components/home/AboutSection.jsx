@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Users, CheckCircle2 } from "lucide-react";
+import AnimatedCounter from "./AnimatedCounter";
 
 export default function AboutSection() {
     const credentials = [
@@ -88,9 +89,13 @@ export default function AboutSection() {
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-6 p-6 bg-neutral-900 rounded-2xl border border-neutral-800">
                             {stats.map((stat, index) => (
-                                <div key={index} className="text-center">
-                                    <stat.icon className="w-6 h-6 text-[#d4a574] mx-auto mb-2" />
-                                    <p className="text-2xl font-bold text-white">{stat.value}</p>
+                                <div key={index} className="text-center group">
+                                    <stat.icon className="w-6 h-6 text-[#d4a574] mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                                    <p className="text-2xl font-bold text-white">
+                                        {stat.value.includes('+') ? (
+                                            <><AnimatedCounter value={stat.value.replace('+', '')} suffix="+" /></>
+                                        ) : stat.value}
+                                    </p>
                                     <p className="text-xs text-gray-500">{stat.label}</p>
                                 </div>
                             ))}

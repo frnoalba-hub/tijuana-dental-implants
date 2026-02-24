@@ -226,17 +226,22 @@ export default function GallerySection() {
                     {images.slice(0, visibleCount).map((image, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.95 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            transition={{ duration: 0.5, delay: Math.min(index * 0.08, 0.4) }}
+                            whileHover={{ scale: 1.02 }}
                             className="group relative overflow-hidden rounded-2xl cursor-pointer"
                             onClick={() => setSelectedImage(image)}
                         >
-                            <div className="aspect-square">
-                                <img 
+                            <div className="aspect-square relative">
+                                <motion.img 
                                     src={image.src}
                                     alt={image.alt}
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4 }}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                                 />
                             </div>
