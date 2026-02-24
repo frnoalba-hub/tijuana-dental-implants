@@ -39,8 +39,12 @@ export default function Navbar() {
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
                         <div className="flex items-center gap-2">
-                            <span className="text-2xl font-black tracking-widest text-white">BLAZE</span>
-                            <span className="text-xs font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
+                            <img 
+                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7227093e8_Gemini_Generated_Image_d3i7p9d3i7p9d3i7.png"
+                                alt="BLAZE Dental"
+                                className="h-12 w-auto"
+                            />
+                            <span className="text-xs font-semibold tracking-[0.3em] text-[#d4a574] uppercase">Dental</span>
                         </div>
                     </a>
 
