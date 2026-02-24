@@ -96,16 +96,18 @@ export default function WhyTijuanaSection() {
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="text-center p-6 bg-neutral-800 rounded-2xl">
                             <p className="text-gray-400 text-sm mb-2">Single Implant in USA</p>
-                            <p className="text-3xl font-bold text-gray-500 line-through">$3,000 - $5,000</p>
+                            <p className="text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
+                            <p className="text-xs text-gray-500 mt-2">Average market price</p>
                         </div>
-                        <div className="text-center p-6 bg-black border border-white/10 rounded-2xl transform md:scale-110 relative z-10 shadow-2xl">
-                            <p className="text-white/70 text-sm mb-2">Single Implant with Us</p>
-                            <p className="text-3xl font-bold text-white">$999</p>
-                            <p className="text-[#d4a574] font-medium mt-2">Save up to 70%</p>
+                        <div className="text-center p-6 bg-black border border-[#d4a574]/30 rounded-2xl transform md:scale-110 relative z-10 shadow-2xl shadow-[#d4a574]/20">
+                            <p className="text-[#d4a574] text-xs font-semibold uppercase tracking-wider mb-2">Our Price</p>
+                            <p className="text-3xl font-bold text-white">$1,299</p>
+                            <p className="text-[#d4a574] font-semibold mt-2">Save 65-70%</p>
                         </div>
                         <div className="text-center p-6 bg-neutral-800 rounded-2xl">
                             <p className="text-gray-400 text-sm mb-2">All-on-4 in USA</p>
-                            <p className="text-3xl font-bold text-gray-500 line-through">$20,000 - $30,000</p>
+                            <p className="text-3xl font-bold text-gray-500 line-through">$20,000 - $35,000</p>
+                            <p className="text-xs text-gray-500 mt-2">Full mouth implants</p>
                         </div>
                     </div>
                 </motion.div>

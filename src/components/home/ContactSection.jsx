@@ -68,54 +68,26 @@ export default function ContactSection() {
     return (
         <section id="contact" className="py-24 bg-neutral-950">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-16">
-                    {/* Left Side - Info */}
+                <div className="flex justify-center">
+                    {/* Form - Centered */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
+                        className="w-full max-w-2xl"
                     >
-                        <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Get In Touch</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
-                            Start Your Journey to a
-                            <span className="block">Beautiful Smile</span>
-                        </h2>
-                        <p className="text-gray-400 leading-relaxed mb-10">
-                            Ready to transform your smile? Contact us for a free consultation. 
-                            We'll review your case, answer your questions, and provide a detailed 
-                            treatment plan with transparent pricing.
-                        </p>
-
-                        {/* Contact Cards */}
-                        <div className="grid grid-cols-2 gap-4">
-                            {contactInfo.map((item, index) => (
-                                <div 
-                                    key={index}
-                                    className="bg-neutral-900 p-5 rounded-xl border border-neutral-800 hover:shadow-lg transition-shadow duration-300"
-                                >
-                                    <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center mb-3">
-                                        <item.icon className="w-5 h-5 text-white" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 uppercase tracking-wider">{item.label}</p>
-                                    <p className="font-semibold text-white mt-1">{item.value}</p>
-                                    <p className="text-xs text-gray-500 mt-1">{item.subtext}</p>
-                                </div>
-                            ))}
+                        <div className="text-center mb-12">
+                            <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Get In Touch</span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
+                                Request Your Free Consultation
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed">
+                                Ready to transform your smile? Contact us today. We'll review your case, answer your questions, and provide a detailed treatment plan.
+                            </p>
                         </div>
-
-
-                    </motion.div>
-
-                    {/* Right Side - Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
                         <div className="bg-neutral-900 rounded-3xl shadow-xl p-8 md:p-10 border border-neutral-800">
-                            <h3 className="text-xl font-semibold text-white mb-6">Request Free Consultation</h3>
+                            <h3 className="text-xl font-semibold text-white mb-6">Tell Us About Your Smile</h3>
                             
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div>

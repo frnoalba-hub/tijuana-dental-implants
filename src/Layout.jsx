@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function Layout({ children }) {
-    return (
-        <div className="min-h-screen bg-black">
+        return (
+            <div className="min-h-screen bg-black w-screen overflow-x-hidden">
             <style>{`
                 /* Hide scrollbar completely */
                 ::-webkit-scrollbar {

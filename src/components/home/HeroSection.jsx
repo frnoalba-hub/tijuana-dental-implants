@@ -26,7 +26,7 @@ export default function HeroSection() {
                 <img 
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/0df1fd154_image11.png"
                     alt="Dr. Arias performing surgery"
-                    className="w-full h-full object-cover opacity-40"
+                    className="w-full h-full object-cover object-center opacity-40"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
@@ -82,7 +82,7 @@ export default function HeroSection() {
                         {/* Stats Row */}
                         <div className="flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10 overflow-x-auto">
                             <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white">15+</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-white">10+</p>
                                 <p className="text-xs sm:text-sm text-white/50">Years</p>
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />
