@@ -12,7 +12,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <LogoIcon className="h-10 w-10 text-white" />
+                            <LogoIcon className="h-14 w-14 text-white" />
                             <div className="flex flex-col">
                                 <span className="text-xl font-light tracking-widest text-white leading-none">BLAZE</span>
                                 <span className="text-[0.60rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>

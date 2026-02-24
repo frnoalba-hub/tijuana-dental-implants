@@ -40,7 +40,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
                         <div className="flex items-center gap-3">
-                            <LogoIcon className="h-12 w-12 text-white" />
+                            <LogoIcon className="h-14 w-14 text-white" />
                             <div className="flex flex-col">
                                 <span className="text-2xl font-light tracking-widest text-white leading-none">BLAZE</span>
                                 <span className="text-[0.65rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
