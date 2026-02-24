@@ -201,7 +201,7 @@ export default function GallerySection() {
     ];
 
     return (
-        <section id="gallery" className="py-24 bg-black">
+        <section id="gallery" className="py-16 sm:py-24 bg-black">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -209,20 +209,20 @@ export default function GallerySection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center max-w-3xl mx-auto mb-16"
+                    className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Our Work</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
+                    <span className="text-[#d4a574] font-semibold tracking-wider text-xs sm:text-sm uppercase">Our Work</span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
                         See Our Expertise in Action
                     </h2>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                         Take a look inside our modern facility and see the precision and care 
                         that goes into every procedure.
                     </p>
                 </motion.div>
 
                 {/* Gallery Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
                     {images.slice(0, visibleCount).map((image, index) => (
                         <motion.div
                             key={index}
@@ -237,12 +237,12 @@ export default function GallerySection() {
                                 <img 
                                     src={image.src}
                                     alt={image.alt}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                                 />
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="absolute bottom-0 left-0 right-0 p-6">
-                                    <p className="text-white font-medium">{image.caption}</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                                    <p className="text-white font-semibold text-sm sm:text-base leading-snug">{image.caption}</p>
                                 </div>
                             </div>
                             <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -254,11 +254,11 @@ export default function GallerySection() {
 
                 {/* Load More Button */}
                 {visibleCount < images.length && (
-                    <div className="flex justify-center mt-12">
+                    <div className="flex justify-center mt-8 sm:mt-12">
                         <Button
                             variant="outline"
                             onClick={() => setVisibleCount(prev => prev + 9)}
-                            className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white px-8 py-6 rounded-full"
+                            className="bg-white/5 border-white/20 text-white hover:bg-white/15 hover:border-white/40 hover:text-white px-6 sm:px-8 py-4 sm:py-6 rounded-full text-sm sm:text-base transition-all"
                         >
                             Load More Photos
                             <ChevronDown className="ml-2 w-4 h-4" />
