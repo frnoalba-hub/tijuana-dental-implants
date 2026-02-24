@@ -81,19 +81,19 @@ export default function HeroSection() {
 
                         {/* Stats Row */}
                         <div className="flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10 overflow-x-auto">
-                            <div>
-                                <p className="text-4xl font-bold text-white">7+</p>
-                                <p className="text-sm text-white/50">Years Experience</p>
+                            <div className="shrink-0">
+                                <p className="text-3xl sm:text-4xl font-bold text-white">7+</p>
+                                <p className="text-xs sm:text-sm text-white/50">Years</p>
                             </div>
-                            <div className="w-px h-12 bg-white/10" />
-                            <div>
-                                <p className="text-4xl font-bold text-white">10,000+</p>
-                                <p className="text-sm text-white/50">Implants Placed</p>
+                            <div className="w-px h-12 bg-white/10 shrink-0" />
+                            <div className="shrink-0">
+                                <p className="text-3xl sm:text-4xl font-bold text-white">10,000+</p>
+                                <p className="text-xs sm:text-sm text-white/50">Implants Placed</p>
                             </div>
-                            <div className="w-px h-12 bg-white/10" />
-                            <div>
-                                <p className="text-4xl font-bold text-[#d4a574]">70%</p>
-                                <p className="text-sm text-white/50">Cost Savings</p>
+                            <div className="w-px h-12 bg-white/10 shrink-0" />
+                            <div className="shrink-0">
+                                <p className="text-3xl sm:text-4xl font-bold text-[#d4a574]">70%</p>
+                                <p className="text-xs sm:text-sm text-white/50">Cost Savings</p>
                             </div>
                         </div>
 
