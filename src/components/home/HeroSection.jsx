@@ -4,6 +4,21 @@ import { motion } from "framer-motion";
 import { ArrowRight, Shield, Award, Star, Play } from "lucide-react";
 
 export default function HeroSection() {
+    const handleWatchStory = () => {
+        const videoSection = document.querySelector('#video-section');
+        if (videoSection) {
+            videoSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Wait for scroll to complete, then play the video
+            setTimeout(() => {
+                const iframe = videoSection.querySelector('iframe');
+                if (iframe) {
+                    // Use Vimeo Player API to play
+                    iframe.contentWindow.postMessage('{"method":"play"}', '*');
+                }
+            }, 800);
+        }
+    };
+
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
             {/* Background Image with Overlay */}
