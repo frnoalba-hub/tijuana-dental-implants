@@ -80,7 +80,7 @@ export default function HeroSection() {
                         </p>
 
                         {/* Stats Row */}
-                        <div className="flex items-center gap-8 mb-10 pb-10 border-b border-white/10">
+                        <div className="flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10 overflow-x-auto">
                             <div>
                                 <p className="text-4xl font-bold text-white">7+</p>
                                 <p className="text-sm text-white/50">Years Experience</p>
