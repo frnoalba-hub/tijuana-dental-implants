@@ -106,7 +106,7 @@ export default function HeroSection() {
                                 Book Free Consultation
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <button className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
+                            <button onClick={handleWatchStory} className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
                                 <span className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:border-[#d4a574] group-hover:bg-[#d4a574]/10 transition-all">
                                     <Play className="w-5 h-5 ml-1" />
                                 </span>
