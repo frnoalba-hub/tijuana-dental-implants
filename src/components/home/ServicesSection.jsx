@@ -13,15 +13,12 @@ export default function ServicesSection() {
             services: [
                 "Implant for individual Crown",
                 "Implant w/ temporary Crown",
-                "Immediate implants (Extraction + implant at the same visit)",
-                "ALL ON 4",
-                "ALL ON 5",
-                "ALL ON 6",
+                "Immediate implants",
+                "ALL ON 4 / ALL ON 5 / ALL ON 6",
                 "Guided Bone Regeneration",
                 "Wisdom tooth extractions",
                 "Ridge split",
-                "Sinus lift - Crestal approach",
-                "Sinus lift - Lateral approach",
+                "Sinus lift",
                 "Bone grafting",
                 "Soft tissue graft",
                 "Implants for overdenture"
@@ -31,15 +28,12 @@ export default function ServicesSection() {
             icon: Smile,
             title: "General Services",
             services: [
-                "Regular cleaning",
+                "Professional cleaning",
                 "Deep cleaning",
-                "Surgical cleaning (per quadrant)",
                 "Fillings",
                 "Crowns",
                 "Root canal",
-                "Build ups",
-                "Endo post",
-                "Others"
+                "Build ups"
             ]
         },
         cosmetic: {
@@ -47,28 +41,21 @@ export default function ServicesSection() {
             title: "Cosmetic Services",
             services: [
                 "Veneers",
-                "DSD (Digital Smile Design)",
-                "Composite veneers",
+                "Digital Smile Design",
                 "Full mouth rehabilitation",
-                "Whitening"
+                "Teeth whitening"
             ]
         },
         prosthesis: {
             icon: Package,
             title: "Prosthesis",
             services: [
-                "Screw retained crown for implants",
-                "Cemented retained crown for implants",
-                "Crowns for individual natural tooth",
-                "Acrylic dentures (regular)",
-                "Acrylic dentures (locators for implants / snap on)",
-                "Temporary for individual natural tooth",
-                "Temporary for individual implant",
-                "Flippers",
-                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - PMMA",
-                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - Hybrid",
-                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - Zirconia",
-                "Screw retained prosthesis (ALL ON 4 – ALL ON 5 – ALL ON 6) - Toronto"
+                "Screw retained crowns",
+                "Cemented retained crowns",
+                "Acrylic dentures",
+                "Hybrid prosthesis",
+                "Zirconia prosthesis",
+                "Toronto prosthesis"
             ]
         }
     };
@@ -126,26 +113,29 @@ export default function ServicesSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-neutral-900 rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-8 md:p-12 border border-neutral-800"
+                    className="bg-gradient-to-br from-neutral-900 to-neutral-950 rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 border border-neutral-800/50"
                 >
-                    <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-                        <div className="w-10 sm:w-12 h-10 sm:h-12 bg-[#d4a574]/10 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                            <currentCategory.icon className="w-5 sm:w-6 h-5 sm:h-6 text-[#d4a574]" />
+                    <div className="flex items-center gap-4 mb-10">
+                        <div className="w-14 h-14 bg-gradient-to-br from-[#d4a574] to-[#c49464] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <currentCategory.icon className="w-7 h-7 text-white" />
                         </div>
-                        <h3 className="text-lg sm:text-2xl font-bold text-white">{currentCategory.title}</h3>
+                        <div>
+                            <h3 className="text-2xl sm:text-3xl font-bold text-white">{currentCategory.title}</h3>
+                            <p className="text-xs text-[#d4a574] font-semibold tracking-wider uppercase mt-1">Select your service</p>
+                        </div>
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         {currentCategory.services.map((service, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className="flex items-start gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg hover:bg-neutral-800 transition-colors"
+                                className="flex items-start gap-3 p-4 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/30 group"
                             >
-                                <div className="w-1.5 h-1.5 bg-[#d4a574] rounded-full mt-2 flex-shrink-0" />
-                                <span className="text-sm sm:text-base text-gray-300">{service}</span>
+                                <div className="w-2 h-2 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm" />
+                                <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors">{service}</span>
                             </motion.div>
                         ))}
                     </div>
