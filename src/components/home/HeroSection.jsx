@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Award, Star, Play } from "lucide-react";
 
+function HeroSection() {
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+}
+
 function HeroSectionContent() {
     const handleWatchStory = () => {
         const videoSection = document.querySelector('#video-section');
