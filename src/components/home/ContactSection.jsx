@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Send, MessageCircle, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Clock, CheckCircle2 } from "lucide-react";
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -13,13 +13,29 @@ export default function ContactSection() {
         message: ''
     });
 
-    const handleSubmit = (e) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('');
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Open WhatsApp with pre-filled message
-        const message = `Hi, I'm interested in dental implants. Name: ${formData.name}, Email: ${formData.email}, Phone: ${formData.phone}, Details: ${formData.message}`;
-        const whatsappUrl = `https://wa.me/526643854987?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setIsSubmitting(true);
+        
+        try {
+            const { base44 } = await import('@/api/base44Client');
+            await base44.integrations.Core.SendEmail({
+                to: 'blaze.dental@gmail.com',
+                subject: `New Consultation Request from ${formData.name}`,
+                body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+            });
+            setSubmitStatus('success');
+            setFormData({ name: '', email: '', phone: '', message: '' });
+            setTimeout(() => setSubmitStatus(''), 3000);
+        } catch (error) {
+            setSubmitStatus('error');
+            setTimeout(() => setSubmitStatus(''), 3000);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const contactInfo = [
@@ -88,18 +104,7 @@ export default function ContactSection() {
                             ))}
                         </div>
 
-                        {/* WhatsApp CTA */}
-                        <div className="mt-8 p-6 bg-green-950/20 rounded-2xl border border-green-900/30">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                                    <MessageCircle className="w-6 h-6 text-white" />
-                                </div>
-                                <div>
-                                    <p className="font-semibold text-white">Prefer WhatsApp?</p>
-                                    <p className="text-sm text-gray-400">Message us directly for quick responses</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </motion.div>
 
                     {/* Right Side - Form */}
@@ -160,11 +165,25 @@ export default function ContactSection() {
                                 <Button 
                                     type="submit"
                                     size="lg"
-                                    className="w-full bg-white text-black hover:bg-white/90 h-14 rounded-full text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-white text-black hover:bg-white/90 h-14 rounded-full text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300 disabled:opacity-50"
                                 >
-                                    <Send className="w-5 h-5 mr-2" />
-                                    Send Message
+                                    {submitStatus === 'success' ? (
+                                        <>
+                                            <CheckCircle2 className="w-5 h-5 mr-2" />
+                                            Sent!
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send className="w-5 h-5 mr-2" />
+                                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                                        </>
+                                    )}
                                 </Button>
+
+                                {submitStatus === 'error' && (
+                                    <p className="text-center text-sm text-red-400">Something went wrong. Please try again.</p>
+                                )}
 
                                 <p className="text-center text-xs text-gray-500">
                                     By submitting, you agree to receive communications from us.

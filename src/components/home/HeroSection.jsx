@@ -82,7 +82,7 @@ export default function HeroSection() {
                         {/* Stats Row */}
                         <div className="flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10 overflow-x-auto">
                             <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white">7+</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-white">15+</p>
                                 <p className="text-xs sm:text-sm text-white/50">Years</p>
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />
