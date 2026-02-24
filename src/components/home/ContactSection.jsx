@@ -15,8 +15,11 @@ export default function ContactSection() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Form submission logic will be added later
-        console.log('Form submitted:', formData);
+        // Open WhatsApp with pre-filled message
+        const message = `Hi, I'm interested in dental implants. Name: ${formData.name}, Email: ${formData.email}, Phone: ${formData.phone}, Details: ${formData.message}`;
+        const whatsappUrl = `https://wa.me/526643854987?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        setFormData({ name: '', email: '', phone: '', message: '' });
     };
 
     const contactInfo = [

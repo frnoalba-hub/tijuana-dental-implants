@@ -57,12 +57,14 @@ export default function Navbar() {
                                 {link.name}
                             </a>
                         ))}
-                        <Button 
-                            className="bg-[#d4a574] hover:bg-[#c49464] text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-                        >
-                            <Phone className="w-4 h-4 mr-2" />
-                            Book Consultation
-                        </Button>
+                        <a href="#contact">
+                            <Button 
+                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                            >
+                                <Phone className="w-4 h-4 mr-2" />
+                                Book Consultation
+                            </Button>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -95,12 +97,14 @@ export default function Navbar() {
                                     {link.name}
                                 </a>
                             ))}
-                            <Button 
-                                className="w-full bg-[#d4a574] hover:bg-[#c49464] text-white py-3 rounded-full font-medium mt-4"
-                            >
-                                <Phone className="w-4 h-4 mr-2" />
-                                Book Consultation
-                            </Button>
+                            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
+                                <Button 
+                                    className="w-full bg-[#d4a574] hover:bg-[#c49464] text-white py-3 rounded-full font-medium mt-4"
+                                >
+                                    <Phone className="w-4 h-4 mr-2" />
+                                    Book Consultation
+                                </Button>
+                            </a>
                         </div>
                     </motion.div>
                 )}
