@@ -52,20 +52,20 @@ export default function WhyTijuanaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center max-w-3xl mx-auto mb-16"
+                    className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Why Choose Us</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
+                    <span className="text-[#d4a574] font-semibold tracking-wider text-xs sm:text-sm uppercase">Why Choose Us</span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
                         Why Patients Choose Tijuana
                     </h2>
-                    <p className="text-white/70 leading-relaxed">
+                    <p className="text-sm sm:text-base text-white/70 leading-relaxed">
                         Thousands of Americans cross the border each year for quality dental care. 
                         Here's why Tijuana has become a top destination for dental implants.
                     </p>
                 </motion.div>
 
                 {/* Reasons Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {reasons.map((reason, index) => (
                         <motion.div
                             key={index}
@@ -73,13 +73,13 @@ export default function WhyTijuanaSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300"
+                            className="bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#d4a574]/50 hover:bg-white/12 transition-all duration-300 group"
                         >
-                            <div className="w-12 h-12 bg-[#d4a574] rounded-xl flex items-center justify-center mb-4">
-                                <reason.icon className="w-6 h-6 text-white" />
+                            <div className="w-14 h-14 bg-gradient-to-br from-[#d4a574] to-[#c49464] rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:shadow-[#d4a574]/30 transition-shadow">
+                                <reason.icon className="w-7 h-7 text-white" />
                             </div>
-                            <h3 className="text-lg font-semibold text-white mb-2">{reason.title}</h3>
-                            <p className="text-white/60 text-sm leading-relaxed">{reason.description}</p>
+                            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#d4a574] transition-colors">{reason.title}</h3>
+                            <p className="text-white/60 text-sm leading-relaxed group-hover:text-white/70 transition-colors">{reason.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -90,24 +90,24 @@ export default function WhyTijuanaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-16 bg-neutral-900 border border-neutral-800 rounded-3xl p-8 md:p-12"
+                    className="mt-12 sm:mt-16 bg-gradient-to-b from-neutral-900 to-neutral-950 border border-neutral-800/50 rounded-3xl p-6 sm:p-10 md:p-12"
                 >
-                    <h3 className="text-2xl font-bold text-white text-center mb-8">Price Comparison</h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="text-center p-6 bg-neutral-800 rounded-2xl">
-                            <p className="text-gray-400 text-sm mb-2">Single Implant in USA</p>
-                            <p className="text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
-                            <p className="text-xs text-gray-500 mt-2">Average market price</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white text-center mb-8 sm:mb-10">Price Comparison</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                        <div className="text-center p-6 sm:p-8 bg-neutral-800/50 rounded-2xl border border-neutral-700/50">
+                            <p className="text-gray-400 text-xs sm:text-sm mb-3">Single Implant in USA</p>
+                            <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
+                            <p className="text-xs text-gray-500 mt-3">Average market price</p>
                         </div>
-                        <div className="text-center p-6 bg-black border border-[#d4a574]/30 rounded-2xl transform md:scale-110 relative z-10 shadow-2xl shadow-[#d4a574]/20">
-                            <p className="text-[#d4a574] text-xs font-semibold uppercase tracking-wider mb-2">Our Price</p>
-                            <p className="text-3xl font-bold text-white">$1,299</p>
-                            <p className="text-[#d4a574] font-semibold mt-2">Save 65-70%</p>
+                        <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-black to-neutral-900 border border-[#d4a574]/40 rounded-2xl transform sm:scale-105 relative z-10 shadow-2xl shadow-[#d4a574]/30">
+                            <p className="text-[#d4a574] text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
+                            <p className="text-3xl sm:text-4xl font-bold text-white mb-1">$1,299</p>
+                            <p className="text-[#d4a574] font-semibold">Save 65-70%</p>
                         </div>
-                        <div className="text-center p-6 bg-neutral-800 rounded-2xl">
-                            <p className="text-gray-400 text-sm mb-2">All-on-4 in USA</p>
-                            <p className="text-3xl font-bold text-gray-500 line-through">$20,000 - $35,000</p>
-                            <p className="text-xs text-gray-500 mt-2">Full mouth implants</p>
+                        <div className="text-center p-6 sm:p-8 bg-neutral-800/50 rounded-2xl border border-neutral-700/50">
+                            <p className="text-gray-400 text-xs sm:text-sm mb-3">All-on-4 in USA</p>
+                            <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$20,000 - $35,000</p>
+                            <p className="text-xs text-gray-500 mt-3">Full mouth implants</p>
                         </div>
                     </div>
                 </motion.div>
