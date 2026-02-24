@@ -71,7 +71,7 @@ export default function HeroSection() {
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 sm:mb-8 tracking-tight">
                             World-Class
                             <span className="block bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] bg-clip-text text-transparent">Dental Implants</span>
-                            <span className="text-white/60 text-4xl md:text-5xl lg:text-6xl font-light">in Tijuana</span>
+                            <span className="text-white/60 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">in Tijuana</span>
                         </h1>
 
                         <p className="text-xl text-white/60 mb-10 max-w-lg leading-relaxed font-light">
