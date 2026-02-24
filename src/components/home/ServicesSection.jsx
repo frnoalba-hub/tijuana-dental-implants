@@ -125,17 +125,17 @@ export default function ServicesSection() {
                         </div>
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                         {currentCategory.services.map((service, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className="flex items-start gap-3 p-4 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/30 group"
+                                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/30 group"
                             >
                                 <div className="w-2 h-2 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm" />
-                                <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors">{service}</span>
+                                <span className="text-base sm:text-lg text-gray-300 group-hover:text-white transition-colors leading-relaxed">{service}</span>
                             </motion.div>
                         ))}
                     </div>

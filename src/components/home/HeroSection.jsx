@@ -87,7 +87,7 @@ export default function HeroSection() {
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />
                             <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white">10,000+</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-white">7,500+</p>
                                 <p className="text-xs sm:text-sm text-white/50">Implants Placed</p>
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />

@@ -12,7 +12,7 @@ export default function AboutSection() {
 
     const stats = [
         { icon: Award, value: "10+", label: "Years Experience" },
-        { icon: Users, value: "5000+", label: "Successful Implants" },
+        { icon: Users, value: "7,500+", label: "Successful Implants" },
         { icon: GraduationCap, value: "50+", label: "Dentists Trained" },
     ];
 
