@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Award, Star, Play } from "lucide-react";
 
-export default function HeroSection() {
+function HeroSectionContent() {
     const handleWatchStory = () => {
         const videoSection = document.querySelector('#video-section');
         if (videoSection) {
@@ -100,6 +100,7 @@ export default function HeroSection() {
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap items-center gap-6">
                             <Button 
+                                onClick={scrollToContact}
                                 size="lg"
                                 className="bg-white text-black hover:bg-white/90 px-8 py-7 rounded-full text-base font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300 group"
                             >
@@ -163,3 +164,5 @@ export default function HeroSection() {
         </section>
     );
 }
+
+export default HeroSection;
