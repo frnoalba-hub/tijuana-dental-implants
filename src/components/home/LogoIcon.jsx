@@ -9,23 +9,34 @@ export default function LogoIcon({ className }) {
       stroke="currentColor" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Left part of the tooth */}
+      {/* Left tooth section - angular geometric outline */}
       <path 
-        d="M 28 28 L 45 28 L 60 43 L 50 48 L 42 70 L 28 50 Z" 
-        strokeWidth="3.5" 
+        d="M 22 28 L 32 20 L 42 24 L 47 35 L 48 50 L 45 68 L 40 82 L 34 87 L 28 82 L 24 68 L 22 50 L 23 35 Z" 
+        strokeWidth="2.8" 
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* Right part of the tooth */}
+      
+      {/* Right tooth section - angular geometric outline */}
       <path 
-        d="M 50 28 L 62 28 L 70 38 L 65 43 Z" 
-        strokeWidth="3.5" 
+        d="M 53 24 L 63 17 L 74 21 L 79 29 L 81 39 L 81 54 L 77 69 L 70 81 L 64 85 L 58 81 L 53 67 L 51 49 L 52 34 Z" 
+        strokeWidth="2.8" 
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* Implant screw threads */}
-      <path d="M 55 48 L 67 48 L 65 53 L 57 53 Z" fill="currentColor" stroke="none" />
-      <path d="M 56 55 L 64 55 L 62 60 L 58 60 Z" fill="currentColor" stroke="none" />
-      <path d="M 57 62 L 63 62 L 61 67 L 59 67 Z" fill="currentColor" stroke="none" />
-      <path d="M 58 69 L 62 69 L 61 74 L 59 74 Z" fill="currentColor" stroke="none" />
+      
+      {/* Top connecting line between tooth sections */}
+      <path 
+        d="M 42 24 L 53 24" 
+        strokeWidth="2.8" 
+        strokeLinecap="round"
+      />
+      
+      {/* Implant screw - horizontal thread lines */}
+      <line x1="56" y1="52" x2="72" y2="52" strokeWidth="3" strokeLinecap="round" />
+      <line x1="58" y1="60" x2="70" y2="60" strokeWidth="3" strokeLinecap="round" />
+      <line x1="60" y1="68" x2="68" y2="68" strokeWidth="3" strokeLinecap="round" />
+      <line x1="62" y1="76" x2="66" y2="76" strokeWidth="3" strokeLinecap="round" />
     </svg>
   );
 }
