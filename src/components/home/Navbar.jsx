@@ -47,12 +47,12 @@ export default function Navbar() {
                     </a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center gap-10">
+                    <div className="hidden lg:flex items-center flex-1 justify-end gap-8 ml-12">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-base font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] text-white/90`}
+                                className={`text-lg font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] text-white/90`}
                             >
                                 {link.name}
                             </a>
