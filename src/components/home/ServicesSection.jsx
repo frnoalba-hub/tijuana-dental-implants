@@ -70,8 +70,8 @@ export default function ServicesSection() {
     const currentCategory = serviceCategories[activeCategory];
 
     return (
-        <section id="services" className="py-16 sm:py-20 bg-neutral-950">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section id="services" className="py-32 bg-neutral-950">
+            <div className="max-w-6xl mx-auto px-6 lg:px-12">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
