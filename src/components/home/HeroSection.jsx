@@ -32,7 +32,7 @@ function HeroSectionContent() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/acb666434_image.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/2f00ed19a_generated_image.png"
                     alt="Dr. Arias performing surgery"
                     className="w-full h-full object-cover object-center opacity-60"
                 />
