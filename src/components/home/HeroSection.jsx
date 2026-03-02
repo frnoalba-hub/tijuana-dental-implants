@@ -34,7 +34,7 @@ function HeroSectionContent() {
                 <img 
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/acb666434_image.png"
                     alt="Dr. Arias performing surgery"
-                    className="w-full h-full object-cover object-center opacity-40"
+                    className="w-full h-full object-cover object-center opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
