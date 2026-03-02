@@ -34,7 +34,7 @@ export default function AboutSection() {
                             <img 
                                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/ea512e3a0_BlazeDental.png"
                                 alt="Dr. Jose Luis Arias"
-                                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
+                                className="w-full rounded-3xl shadow-2xl object-cover aspect-[4/3]"
                             />
                             {/* Floating Stats Card */}
                             <div className="absolute -bottom-6 -right-6 bg-neutral-900 rounded-2xl shadow-xl p-6 border border-neutral-800">
