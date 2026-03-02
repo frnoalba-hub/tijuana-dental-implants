@@ -35,33 +35,33 @@ export default function Navbar() {
                     : 'bg-transparent'
             }`}
         >
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
+            <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
+                <div className="flex items-center justify-between h-24">
                     {/* Logo */}
                     <a href="#" className="flex items-center">
-                        <LogoIcon className="h-12 w-auto" />
+                        <LogoIcon className="h-14 w-auto" />
                         <div className="flex flex-col -ml-4">
-                            <span className="text-2xl font-light tracking-widest text-white leading-none">BLAZE</span>
-                            <span className="text-[0.65rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">DENTAL</span>
+                            <span className="text-3xl font-light tracking-widest text-white leading-none">BLAZE</span>
+                            <span className="text-[0.7rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">DENTAL</span>
                         </div>
                     </a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center gap-8">
+                    <div className="hidden lg:flex items-center gap-10">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] text-white/90`}
+                                className={`text-base font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] text-white/90`}
                             >
                                 {link.name}
                             </a>
                         ))}
                         <a href="#contact">
                             <Button 
-                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-8 py-6 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-[#d4a574]/20 transition-all duration-300"
                             >
-                                <Phone className="w-4 h-4 mr-2" />
+                                <Phone className="w-5 h-5 mr-2" />
                                 Book Consultation
                             </Button>
                         </a>
