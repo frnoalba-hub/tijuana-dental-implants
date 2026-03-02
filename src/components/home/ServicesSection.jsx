@@ -145,8 +145,8 @@ export default function ServicesSection() {
                                 whileHover={{ x: 4 }}
                                 className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/40 group cursor-pointer"
                             >
-                                <div className="w-2.5 h-2.5 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm group-hover:scale-125 transition-transform duration-300" />
-                                <span className="text-lg sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors leading-relaxed">{service}</span>
+                                <div className="w-2 h-2 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm group-hover:scale-125 transition-transform duration-300" />
+                                <span className="text-base sm:text-lg text-gray-300 group-hover:text-white transition-colors leading-relaxed">{service}</span>
                             </motion.div>
                         ))}
                     </div>
