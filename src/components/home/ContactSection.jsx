@@ -67,7 +67,7 @@ export default function ContactSection() {
 
     return (
         <section id="contact" className="py-24 bg-neutral-950">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 lg:px-16">
                 <div className="flex justify-center">
                     {/* Form - Centered */}
                     <motion.div
