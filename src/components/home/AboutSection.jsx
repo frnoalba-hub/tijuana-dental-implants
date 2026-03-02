@@ -36,18 +36,7 @@ export default function AboutSection() {
                                 alt="Dr. Jose Luis Arias"
                                 className="w-full rounded-3xl shadow-2xl object-cover aspect-[4/3]"
                             />
-                            {/* Floating Stats Card */}
-                            <div className="absolute -bottom-6 -right-6 bg-neutral-900 rounded-2xl shadow-xl p-6 border border-neutral-800">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center">
-                                        <Award className="w-6 h-6 text-[#d4a574]" />
-                                    </div>
-                                    <div>
-                                        <p className="text-2xl font-bold text-white">10+</p>
-                                        <p className="text-sm text-gray-400">Years of Excellence</p>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </motion.div>
 
