@@ -36,8 +36,8 @@ function HeroSectionContent() {
                     alt="Dr. Arias performing surgery"
                     className="w-full h-full object-cover object-center opacity-60"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
             </div>
 
             {/* Animated Background Elements */}
