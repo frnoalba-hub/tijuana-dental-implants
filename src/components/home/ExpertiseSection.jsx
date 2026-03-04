@@ -14,7 +14,7 @@ export default function ExpertiseSection() {
             icon: Users,
             title: "International Instructor",
             description: "Trains dentists from multiple countries in advanced implant placement and bone grafting techniques",
-            image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/51afceae0_image17.png"
+            image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/9a3ac0a5a_028eb11c-2f57-4114-913f-864468b4c0ad.jpg"
         },
         {
             icon: Award,
