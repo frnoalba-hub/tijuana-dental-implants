@@ -87,25 +87,6 @@ export default function ExpertiseSection() {
                     })}
                 </div>
 
-                        </div>
-
-                {/* Courses Photo - Full Width */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="mt-8 -mx-6 lg:-mx-8"
-                >
-                    <img
-                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/5f153ad22_image.png"
-                        alt="Dr. Arias teaching implant course"
-                        className="w-full object-cover max-h-[520px]"
-                    />
-                </motion.div>
-
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
                 {/* Trust Message */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
