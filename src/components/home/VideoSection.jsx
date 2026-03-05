@@ -49,7 +49,7 @@ export default function VideoSection() {
                         transition={{ duration: 0.7, delay: 0.15 }}
                         className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
                     >
-                        <div style={{ padding: '75% 0 0 0', position: 'relative' }}>
+                        <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                             <iframe
                                 src="https://player.vimeo.com/video/1170470738?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
                                 frameBorder="0"
