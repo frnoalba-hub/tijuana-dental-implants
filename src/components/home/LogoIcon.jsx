@@ -8,7 +8,7 @@ export default function LogoIcon({ className, wrapperClassName }) {
   return (
     <span
       className={cn(
-        'inline-flex items-center justify-center bg-black shrink-0',
+        'inline-flex items-center justify-center shrink-0',
         wrapperClassName
       )}
     >
