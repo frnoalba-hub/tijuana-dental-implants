@@ -1,14 +1,14 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 
-/** Full lockup on black. File is JPEG (use .jpg — many exports are JPEG despite a .png filename). */
-const BLAZE_LOGO_SRC = '/blaze-dental-logo.jpg';
+/** True PNG with transparency — white mark on transparent. Wrap in bg-black so it shows on any section. */
+const BLAZE_LOGO_SRC = '/blaze-dental-logo.png';
 
 export default function LogoIcon({ className, wrapperClassName }) {
   return (
     <span
       className={cn(
-        'inline-flex items-center justify-center shrink-0',
+        'inline-flex items-center justify-center bg-black shrink-0',
         wrapperClassName
       )}
     >
