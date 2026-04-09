@@ -36,10 +36,10 @@ export default function Navbar() {
             }`}
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
-                <div className="flex items-center justify-between h-20 md:h-24">
-                    {/* Logo — middle weight: readable on mobile, strong on desktop */}
+                {/* No fixed height / vertical padding — bar hugs logo so it reads larger without extra headroom */}
+                <div className="flex items-center justify-between py-0">
                     <a href="#" className="flex items-center max-w-[52%] sm:max-w-none">
-                        <LogoIcon className="h-16 w-auto sm:h-[4.5rem] md:h-20 lg:h-24" />
+                        <LogoIcon className="h-[4.5rem] w-auto sm:h-20 md:h-[5.5rem] lg:h-24 xl:h-[6.5rem]" />
                     </a>
 
                     {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ export default function Navbar() {
                         ))}
                         <a href="#contact">
                             <Button 
-                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-8 py-6 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-[#d4a574]/20 transition-all duration-300"
+                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-6 py-2.5 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-[#d4a574]/20 transition-all duration-300"
                             >
                                 <Phone className="w-5 h-5 mr-2" />
                                 Book Consultation
@@ -66,7 +66,7 @@ export default function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className={`lg:hidden p-2 rounded-lg transition-colors text-white`}
+                        className={`lg:hidden p-1 rounded-lg transition-colors text-white`}
                     >
                         {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>

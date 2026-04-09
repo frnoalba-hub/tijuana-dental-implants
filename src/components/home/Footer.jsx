@@ -7,12 +7,12 @@ export default function Footer() {
 
     return (
         <footer className="bg-black text-white border-t border-white/10">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-14">
                 <div className="grid md:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <div className="mb-6">
-                            <LogoIcon className="h-36 w-auto max-w-[260px] sm:h-40 sm:max-w-[300px] md:max-w-[340px]" />
+                        <div className="mb-4">
+                            <LogoIcon className="h-40 w-auto max-w-[280px] sm:h-44 sm:max-w-[320px] md:max-w-[360px]" />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-6">
                             World-class dental implants in Tijuana, Mexico. 
