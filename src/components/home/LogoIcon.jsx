@@ -1,8 +1,8 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 
-/** Full lockup (mark + BLAZE + DENTAL) on black — served from /public. */
-const BLAZE_LOGO_SRC = '/blaze-dental-logo.png';
+/** Full lockup (mark + BLAZE + DENTAL) on black — JPEG asset in /public. */
+const BLAZE_LOGO_SRC = '/blaze-dental-logo.jpg';
 
 export default function LogoIcon({ className, wrapperClassName }) {
   return (
