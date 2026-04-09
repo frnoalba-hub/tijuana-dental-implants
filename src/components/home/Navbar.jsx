@@ -36,10 +36,10 @@ export default function Navbar() {
             }`}
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
-                <div className="flex items-center justify-between h-16 md:h-20">
-                    {/* Logo — compact on mobile, modest on desktop */}
-                    <a href="#" className="flex items-center max-w-[45%] sm:max-w-none">
-                        <LogoIcon className="h-12 w-auto sm:h-14 md:h-16 lg:h-[4.25rem]" />
+                <div className="flex items-center justify-between h-20 md:h-24">
+                    {/* Logo — middle weight: readable on mobile, strong on desktop */}
+                    <a href="#" className="flex items-center max-w-[52%] sm:max-w-none">
+                        <LogoIcon className="h-16 w-auto sm:h-[4.5rem] md:h-20 lg:h-24" />
                     </a>
 
                     {/* Desktop Navigation */}
