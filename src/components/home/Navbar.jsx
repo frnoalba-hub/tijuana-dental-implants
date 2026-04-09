@@ -36,10 +36,10 @@ export default function Navbar() {
             }`}
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
-                <div className="flex items-center justify-between h-24">
+                <div className="flex items-center justify-between h-40">
                     {/* Logo */}
                     <a href="#" className="flex items-center">
-                        <LogoIcon className="h-20 w-auto sm:h-24 md:h-28" />
+                        <LogoIcon className="h-36 w-auto sm:h-40 md:h-44" />
                     </a>
 
                     {/* Desktop Navigation */}
