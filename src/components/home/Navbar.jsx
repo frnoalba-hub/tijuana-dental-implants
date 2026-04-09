@@ -39,11 +39,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-24">
                     {/* Logo */}
                     <a href="#" className="flex items-center">
-                        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/bf1ea2e73_Untitled1.png" alt="Blaze Dental Logo" className="h-20 w-auto -mr-6" />
-                        <div className="flex flex-col">
-                            <span className="text-4xl font-light tracking-widest text-white leading-none">BLAZE</span>
-                            <span className="text-sm font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">DENTAL</span>
-                        </div>
+                        <LogoIcon className="h-14 w-auto sm:h-16 md:h-20" />
                     </a>
 
                     {/* Desktop Navigation */}

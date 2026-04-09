@@ -11,12 +11,8 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <div className="flex items-center gap-3 mb-6">
-                            <LogoIcon className="h-14 w-14 text-white" />
-                            <div className="flex flex-col">
-                                <span className="text-xl font-light tracking-widest text-white leading-none">BLAZE</span>
-                                <span className="text-[0.60rem] font-semibold tracking-[0.3em] text-[#d4a574] uppercase mt-1">Dental</span>
-                            </div>
+                        <div className="mb-6">
+                            <LogoIcon className="h-24 w-auto max-w-[220px]" />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-6">
                             World-class dental implants in Tijuana, Mexico. 
