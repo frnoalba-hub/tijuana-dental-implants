@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 
-/** Full lockup (mark + BLAZE + DENTAL) on black — JPEG asset in /public. */
+/** Full lockup on black. File is JPEG (use .jpg — many exports are JPEG despite a .png filename). */
 const BLAZE_LOGO_SRC = '/blaze-dental-logo.jpg';
 
 export default function LogoIcon({ className, wrapperClassName }) {
