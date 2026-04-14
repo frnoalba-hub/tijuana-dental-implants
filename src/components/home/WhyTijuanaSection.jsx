@@ -37,15 +37,8 @@ export default function WhyTijuanaSection() {
     ];
 
     return (
-        <section id="why-tijuana" className="py-24 bg-black relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                }} />
-            </div>
-
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <section id="why-tijuana" className="py-24 bg-black">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -73,10 +66,10 @@ export default function WhyTijuanaSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#d4a574]/50 hover:bg-white/12 transition-all duration-300 group"
+                            className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#d4a574]/40 transition-colors duration-200 group"
                         >
-                            <div className="w-14 h-14 bg-gradient-to-br from-[#d4a574] to-[#c49464] rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:shadow-[#d4a574]/30 transition-shadow">
-                                <reason.icon className="w-7 h-7 text-white" />
+                            <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center mb-4">
+                                <reason.icon className="w-6 h-6 text-[#d4a574]" />
                             </div>
                             <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#d4a574] transition-colors">{reason.title}</h3>
                             <p className="text-white/60 text-sm leading-relaxed group-hover:text-white/70 transition-colors">{reason.description}</p>
@@ -99,7 +92,7 @@ export default function WhyTijuanaSection() {
                             <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
                             <p className="text-xs text-gray-500 mt-3">Average market price</p>
                         </div>
-                        <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-black to-neutral-900 border border-[#d4a574]/40 rounded-2xl transform sm:scale-105 relative z-10 shadow-2xl shadow-[#d4a574]/30">
+                        <div className="text-center p-6 sm:p-8 bg-neutral-900 border-2 border-[#d4a574]/50 rounded-2xl transform sm:scale-105 relative z-10">
                             <p className="text-[#d4a574] text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
                             <p className="text-3xl sm:text-4xl font-bold text-white mb-1">$1,299</p>
                             <p className="text-[#d4a574] font-semibold">Save 65-70%</p>

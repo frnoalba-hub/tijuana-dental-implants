@@ -196,7 +196,7 @@ export default function ContactSection() {
                                         type="submit"
                                         size="lg"
                                         disabled={isSubmitting}
-                                        className="w-full bg-white text-black hover:bg-white/90 h-14 rounded-full text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300 disabled:opacity-50"
+                                        className="w-full bg-[#d4a574] text-white hover:bg-[#c49464] h-14 rounded-lg text-lg font-semibold transition-colors duration-200 disabled:opacity-50"
                                     >
                                     {submitStatus === 'success' ? (
                                         <>

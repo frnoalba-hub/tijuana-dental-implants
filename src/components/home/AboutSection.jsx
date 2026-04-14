@@ -29,15 +29,11 @@ export default function AboutSection() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="absolute -inset-4 bg-gradient-to-br from-[#d4a574]/20 to-transparent rounded-3xl blur-2xl" />
-                        <div className="relative">
-                            <img 
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/60f0cdae2_unnamed3.png"
-                                alt="Dr. Jose Luis Arias"
-                                className="w-full rounded-3xl shadow-2xl object-cover object-top aspect-[3/4]"
-                            />
-
-                        </div>
+                        <img 
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/60f0cdae2_unnamed3.png"
+                            alt="Dr. Jose Luis Arias"
+                            className="w-full rounded-2xl object-cover object-top aspect-[3/4]"
+                        />
                     </motion.div>
 
                     {/* Content Side */}

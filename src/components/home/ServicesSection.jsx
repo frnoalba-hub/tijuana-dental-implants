@@ -123,11 +123,11 @@ export default function ServicesSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-gradient-to-br from-neutral-900 to-neutral-950 rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 border border-neutral-800/50"
+                    className="bg-neutral-900 rounded-2xl p-6 sm:p-10 md:p-14 border border-neutral-800"
                 >
                     <div className="flex items-center gap-4 mb-10">
-                        <div className="w-14 h-14 bg-gradient-to-br from-[#d4a574] to-[#c49464] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                            <currentCategory.icon className="w-7 h-7 text-white" />
+                        <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <currentCategory.icon className="w-6 h-6 text-[#d4a574]" />
                         </div>
                         <div>
                             <h3 className="text-2xl sm:text-3xl font-bold text-white">{currentCategory.title}</h3>
@@ -145,7 +145,7 @@ export default function ServicesSection() {
                                 whileHover={{ x: 4 }}
                                 className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/40 group cursor-pointer"
                             >
-                                <div className="w-2 h-2 bg-gradient-to-r from-[#d4a574] to-[#e8c9a8] rounded-full mt-2.5 flex-shrink-0 shadow-sm group-hover:scale-125 transition-transform duration-300" />
+                                <div className="w-1.5 h-1.5 bg-[#d4a574] rounded-full mt-3 flex-shrink-0" />
                                 <span className="text-lg sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors leading-relaxed">{service}</span>
                             </motion.div>
                         ))}
@@ -163,7 +163,7 @@ export default function ServicesSection() {
                     <Button 
                         onClick={scrollToContact}
                         size="lg"
-                        className="bg-white text-black hover:bg-white/90 h-12 sm:h-14 px-6 sm:px-10 rounded-full text-base sm:text-lg font-semibold shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300"
+                        className="bg-[#d4a574] text-white hover:bg-[#c49464] h-12 sm:h-14 px-6 sm:px-10 rounded-lg text-base sm:text-lg font-semibold transition-colors duration-200"
                     >
                         Request Consultation & Pricing
                     </Button>

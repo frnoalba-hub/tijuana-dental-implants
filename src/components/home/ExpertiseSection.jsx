@@ -93,7 +93,7 @@ export default function ExpertiseSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-16 bg-gradient-to-br from-white/5 to-[#d4a574]/5 border border-white/10 rounded-3xl p-8 md:p-12 text-center"
+                    className="mt-16 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 md:p-12 text-center"
                 >
                     <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
                         When you choose Dr. Arias, you're choosing not just a surgeon, but an educator recognized internationally 
