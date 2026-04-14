@@ -74,12 +74,11 @@ export default function ContactSection() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">Get In Touch</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
-                        Request Your Free Consultation
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Get in Touch
                     </h2>
-                    <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                        Ready to transform your smile? Contact us today. We'll review your case, answer your questions, and provide a detailed treatment plan.
+                    <p className="text-gray-400 leading-relaxed max-w-xl mx-auto">
+                        Contact us for a free consultation. We'll review your case and provide a detailed treatment plan.
                     </p>
                 </div>
 

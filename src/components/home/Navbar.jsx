@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LogoIcon from "./LogoIcon";
 
@@ -55,9 +55,8 @@ export default function Navbar() {
                         ))}
                         <a href="#contact">
                             <Button 
-                                className="bg-[#C8842D] hover:bg-[#A86E1F] text-white px-6 py-2.5 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-[#C8842D]/20 transition-all duration-300"
+                                className="border border-white/30 bg-transparent hover:bg-white hover:text-black text-white px-5 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                             >
-                                <Phone className="w-5 h-5 mr-2" />
                                 Book Consultation
                             </Button>
                         </a>
@@ -95,9 +94,8 @@ export default function Navbar() {
                             ))}
                             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
                                 <Button 
-                                    className="w-full bg-[#C8842D] hover:bg-[#A86E1F] text-white py-3 rounded-full font-medium mt-4"
+                                    className="w-full border border-white/30 bg-transparent hover:bg-white hover:text-black text-white py-3 rounded-md font-medium mt-4 transition-colors duration-200"
                                 >
-                                    <Phone className="w-4 h-4 mr-2" />
                                     Book Consultation
                                 </Button>
                             </a>

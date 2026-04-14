@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ZoomIn, ChevronDown } from "lucide-react";
+import { X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function GallerySection() {
@@ -201,13 +201,11 @@ export default function GallerySection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <span className="text-[#C8842D] font-semibold tracking-wider text-xs sm:text-sm uppercase">Our Work</span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
-                        See Our Expertise in Action
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
+                        Gallery
                     </h2>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                        Take a look inside our modern facility and see the precision and care 
-                        that goes into every procedure.
+                        Inside our facility and the precision that goes into every procedure.
                     </p>
                 </motion.div>
 
@@ -220,8 +218,7 @@ export default function GallerySection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: Math.min(index * 0.08, 0.4) }}
-                            whileHover={{ scale: 1.02 }}
-                            className="group relative overflow-hidden rounded-2xl cursor-pointer"
+                            className="group relative overflow-hidden rounded-xl cursor-pointer"
                             onClick={() => setSelectedImage(image)}
                         >
                             <div className="aspect-square relative">
@@ -241,9 +238,6 @@ export default function GallerySection() {
                                     <p className="text-white font-semibold text-sm sm:text-base leading-snug">{image.caption}</p>
                                 </div>
                             </div>
-                            <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <ZoomIn className="w-5 h-5 text-white" />
-                            </div>
                         </motion.div>
                     ))}
                 </div>
@@ -254,7 +248,7 @@ export default function GallerySection() {
                         <Button
                             variant="outline"
                             onClick={() => setVisibleCount(prev => prev + 9)}
-                            className="bg-white/5 border-white/20 text-white hover:bg-white/15 hover:border-white/40 hover:text-white px-6 sm:px-8 py-4 sm:py-6 rounded-full text-sm sm:text-base transition-all"
+                            className="border border-white/20 bg-transparent text-white hover:bg-white hover:text-black px-6 py-3 rounded-md text-sm transition-colors duration-200"
                         >
                             Load More Photos
                             <ChevronDown className="ml-2 w-4 h-4" />

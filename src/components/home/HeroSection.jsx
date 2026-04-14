@@ -78,20 +78,17 @@ function HeroSectionContent() {
                         </div>
 
                         {/* CTA */}
-                        <div className="flex flex-wrap items-center gap-5">
+                        <div className="flex flex-wrap items-center gap-4">
                             <Button 
                                 onClick={scrollToContact}
                                 size="lg"
-                                className="bg-[#C8842D] text-white hover:bg-[#A86E1F] px-8 py-7 rounded-lg text-base font-semibold transition-colors duration-200 group"
+                                className="bg-white text-neutral-900 hover:bg-white/90 px-7 py-6 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
                             >
                                 Book Free Consultation
-                                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <button onClick={handleWatchStory} className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
-                                <span className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/40 transition-colors">
-                                    <Play className="w-4 h-4 ml-0.5" />
-                                </span>
-                                <span className="text-sm font-medium">Watch Our Story</span>
+                            <button onClick={handleWatchStory} className="flex items-center gap-2.5 text-white/60 hover:text-white/90 transition-colors">
+                                <Play className="w-4 h-4" />
+                                <span className="text-sm">Watch Our Story</span>
                             </button>
                         </div>
                     </motion.div>

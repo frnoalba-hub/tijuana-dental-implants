@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
 
 export default function VideoSection() {
     return (
@@ -13,13 +12,11 @@ export default function VideoSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">Watch & Learn</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                         See Dr. Arias in Action
                     </h2>
                     <p className="text-gray-400 leading-relaxed">
-                        Watch real procedures and patient transformations performed by Dr. Jose Luis Arias, 
-                        one of the leading implant specialists in North America.
+                        Real procedures and patient transformations from Dr. Jose Luis Arias.
                     </p>
                 </motion.div>
 
@@ -29,7 +26,7 @@ export default function VideoSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                        className="relative rounded-xl overflow-hidden"
                     >
                         <div style={{ position: 'relative', height: '500px' }}>
                             <iframe
@@ -48,7 +45,7 @@ export default function VideoSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.15 }}
-                        className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                        className="relative rounded-xl overflow-hidden"
                     >
                         <div style={{ position: 'relative', height: '500px' }}>
                             <iframe

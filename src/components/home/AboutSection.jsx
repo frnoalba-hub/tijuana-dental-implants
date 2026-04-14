@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { Award, GraduationCap, Users, CheckCircle2 } from "lucide-react";
+import { Award, GraduationCap, Users } from "lucide-react";
 import AnimatedCounter from "./AnimatedCounter";
 
 export default function AboutSection() {
@@ -62,26 +62,25 @@ export default function AboutSection() {
                         </p>
 
                         {/* Credentials */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-10 text-sm text-gray-300">
                             {credentials.map((item, index) => (
-                                <div key={index} className="flex items-center gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-[#C8842D] flex-shrink-0" />
-                                    <span className="text-gray-300 text-sm">{item}</span>
-                                </div>
+                                <li key={index} className="flex items-center gap-2">
+                                    <span className="text-[#C8842D]">--</span>
+                                    {item}
+                                </li>
                             ))}
-                        </div>
+                        </ul>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-6 p-6 bg-neutral-900 rounded-2xl border border-neutral-800">
+                        <div className="flex items-center gap-8 pt-8 border-t border-neutral-800">
                             {stats.map((stat, index) => (
-                                <div key={index} className="text-center group">
-                                    <stat.icon className="w-6 h-6 text-[#C8842D] mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                                <div key={index}>
                                     <p className="text-2xl font-bold text-white">
                                         {stat.value.includes('+') ? (
                                             <><AnimatedCounter value={stat.value.replace('+', '')} suffix="+" /></>
                                         ) : stat.value}
                                     </p>
-                                    <p className="text-xs text-gray-500">{stat.label}</p>
+                                    <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
                                 </div>
                             ))}
                         </div>

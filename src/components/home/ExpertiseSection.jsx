@@ -1,29 +1,23 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { Award, Users, BookOpen, Globe } from "lucide-react";
-
 export default function ExpertiseSection() {
     const credentials = [
         {
-            icon: BookOpen,
             title: "Advanced Implant Educator",
             description: "Teaches cutting-edge surgical techniques to dentists worldwide through University Implant Educators",
             image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/d809bc389_image13.png"
         },
         {
-            icon: Users,
             title: "International Instructor",
             description: "Trains dentists from multiple countries in advanced implant placement and bone grafting techniques",
             image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/9a3ac0a5a_028eb11c-2f57-4114-913f-864468b4c0ad.jpg"
         },
         {
-            icon: Award,
             title: "Published Surgeon",
             description: "Recognized instructor with advanced certifications in implantology and bone regeneration",
             image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/d88bba96f_image15.png"
         },
         {
-            icon: Globe,
             title: "Global Training Program",
             description: "Leads hands-on surgical courses with international recognition from leading dental institutions",
             image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7b104b100_image16.png"
@@ -41,10 +35,8 @@ export default function ExpertiseSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">Expertise & Authority</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
-                        Instructor & Leader
-                        <span className="block text-gray-400 font-normal text-2xl mt-2">in Advanced Implant Surgery</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Instructor & Leader in Advanced Implant Surgery
                     </h2>
                     <p className="text-gray-400 leading-relaxed">
                         Dr. Arias doesn't just perform surgeries—he teaches them. As an instructor with University Implant Educators, 
@@ -55,7 +47,6 @@ export default function ExpertiseSection() {
                 {/* Credentials Grid */}
                 <div className="grid md:grid-cols-2 gap-8">
                     {credentials.map((item, index) => {
-                        const Icon = item.icon;
                         return (
                             <motion.div
                                 key={index}
@@ -74,13 +65,8 @@ export default function ExpertiseSection() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                                 </div>
                                 <div className="p-6">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="w-12 h-12 bg-[#C8842D]/10 rounded-xl flex items-center justify-center">
-                                            <Icon className="w-6 h-6 text-[#C8842D]" />
-                                        </div>
-                                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                                    </div>
-                                    <p className="text-gray-400 leading-relaxed">{item.description}</p>
+                                    <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                                 </div>
                             </motion.div>
                         );

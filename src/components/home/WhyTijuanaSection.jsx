@@ -47,8 +47,7 @@ export default function WhyTijuanaSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
                 >
-                    <span className="text-[#C8842D] font-semibold tracking-wider text-xs sm:text-sm uppercase">Why Choose Us</span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                         Why Patients Choose Tijuana
                     </h2>
                     <p className="text-sm sm:text-base text-white/70 leading-relaxed">
@@ -66,13 +65,11 @@ export default function WhyTijuanaSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#C8842D]/40 transition-colors duration-200 group"
+                            className="bg-neutral-900 border border-neutral-800 rounded-xl p-6"
                         >
-                            <div className="w-12 h-12 bg-[#C8842D]/10 rounded-xl flex items-center justify-center mb-4">
-                                <reason.icon className="w-6 h-6 text-[#C8842D]" />
-                            </div>
-                            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#C8842D] transition-colors">{reason.title}</h3>
-                            <p className="text-white/60 text-sm leading-relaxed group-hover:text-white/70 transition-colors">{reason.description}</p>
+                            <reason.icon className="w-5 h-5 text-[#C8842D] mb-4" />
+                            <h3 className="text-base font-semibold text-white mb-2">{reason.title}</h3>
+                            <p className="text-white/50 text-sm leading-relaxed">{reason.description}</p>
                         </motion.div>
                     ))}
                 </div>

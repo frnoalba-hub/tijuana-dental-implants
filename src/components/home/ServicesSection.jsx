@@ -80,14 +80,11 @@ export default function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <span className="text-[#C8842D] font-semibold tracking-wider text-xs uppercase">Our Services</span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-3 sm:mb-6">
-                        Comprehensive Dental Care
-                        <span className="block">Tailored to Your Needs</span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-6">
+                        Services
                     </h2>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                        From surgical implants to cosmetic enhancements, we offer a full range of dental services 
-                        using the latest technology and techniques.
+                        From surgical implants to cosmetic enhancements -- a full range of dental services.
                     </p>
                 </motion.div>
 
@@ -98,21 +95,18 @@ export default function ServicesSection() {
                         const Icon = cat.icon;
                         const isActive = activeCategory === category;
                         return (
-                            <motion.button
+                            <button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.98 }}
-                                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 flex items-center gap-2 ${
+                                className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-md text-sm font-medium transition-colors duration-200 ${
                                     isActive
-                                        ? 'bg-white text-black shadow-lg shadow-white/20'
-                                        : 'bg-neutral-900 text-gray-400 hover:bg-neutral-800 border border-neutral-800 hover:border-[#C8842D]/50'
+                                        ? 'bg-white text-black'
+                                        : 'text-gray-400 hover:text-white'
                                 }`}
                             >
-                                <Icon className="w-4 sm:w-5 h-4 sm:h-5" />
                                 <span className="hidden sm:inline">{cat.title}</span>
                                 <span className="sm:hidden">{cat.title.split(' ')[0]}</span>
-                            </motion.button>
+                            </button>
                         );
                     })}
                 </div>
@@ -125,28 +119,19 @@ export default function ServicesSection() {
                     transition={{ duration: 0.4 }}
                     className="bg-neutral-900 rounded-2xl p-6 sm:p-10 md:p-14 border border-neutral-800"
                 >
-                    <div className="flex items-center gap-4 mb-10">
-                        <div className="w-12 h-12 bg-[#C8842D]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <currentCategory.icon className="w-6 h-6 text-[#C8842D]" />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl sm:text-3xl font-bold text-white">{currentCategory.title}</h3>
-                            <p className="text-xs text-[#C8842D] font-semibold tracking-wider uppercase mt-1">Select your service</p>
-                        </div>
-                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-8">{currentCategory.title}</h3>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                         {currentCategory.services.map((service, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: -10 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.3, delay: index * 0.05 }}
-                                whileHover={{ x: 4 }}
-                                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#C8842D]/40 group cursor-pointer"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.2, delay: index * 0.03 }}
+                                className="flex items-start gap-3 py-2.5 px-3"
                             >
-                                <div className="w-1.5 h-1.5 bg-[#C8842D] rounded-full mt-3 flex-shrink-0" />
-                                <span className="text-lg sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors leading-relaxed">{service}</span>
+                                <span className="text-[#C8842D] mt-0.5">--</span>
+                                <span className="text-base sm:text-lg text-gray-300">{service}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -163,13 +148,10 @@ export default function ServicesSection() {
                     <Button 
                         onClick={scrollToContact}
                         size="lg"
-                        className="bg-[#C8842D] text-white hover:bg-[#A86E1F] h-12 sm:h-14 px-6 sm:px-10 rounded-lg text-base sm:text-lg font-semibold transition-colors duration-200"
+                        className="border border-white/20 bg-transparent text-white hover:bg-white hover:text-black h-12 px-8 rounded-md text-sm font-medium tracking-wide uppercase transition-colors duration-200"
                     >
                         Request Consultation & Pricing
                     </Button>
-                    <p className="text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4">
-                        Contact us for personalized quotes and treatment plans
-                    </p>
                 </motion.div>
             </div>
         </section>
