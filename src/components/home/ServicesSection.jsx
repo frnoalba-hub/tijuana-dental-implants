@@ -80,7 +80,7 @@ export default function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-xs uppercase">Our Services</span>
+                    <span className="text-[#C8842D] font-semibold tracking-wider text-xs uppercase">Our Services</span>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-3 sm:mb-6">
                         Comprehensive Dental Care
                         <span className="block">Tailored to Your Needs</span>
@@ -106,7 +106,7 @@ export default function ServicesSection() {
                                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 flex items-center gap-2 ${
                                     isActive
                                         ? 'bg-white text-black shadow-lg shadow-white/20'
-                                        : 'bg-neutral-900 text-gray-400 hover:bg-neutral-800 border border-neutral-800 hover:border-[#d4a574]/50'
+                                        : 'bg-neutral-900 text-gray-400 hover:bg-neutral-800 border border-neutral-800 hover:border-[#C8842D]/50'
                                 }`}
                             >
                                 <Icon className="w-4 sm:w-5 h-4 sm:h-5" />
@@ -126,12 +126,12 @@ export default function ServicesSection() {
                     className="bg-neutral-900 rounded-2xl p-6 sm:p-10 md:p-14 border border-neutral-800"
                 >
                     <div className="flex items-center gap-4 mb-10">
-                        <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <currentCategory.icon className="w-6 h-6 text-[#d4a574]" />
+                        <div className="w-12 h-12 bg-[#C8842D]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <currentCategory.icon className="w-6 h-6 text-[#C8842D]" />
                         </div>
                         <div>
                             <h3 className="text-2xl sm:text-3xl font-bold text-white">{currentCategory.title}</h3>
-                            <p className="text-xs text-[#d4a574] font-semibold tracking-wider uppercase mt-1">Select your service</p>
+                            <p className="text-xs text-[#C8842D] font-semibold tracking-wider uppercase mt-1">Select your service</p>
                         </div>
                     </div>
                     
@@ -143,9 +143,9 @@ export default function ServicesSection() {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
                                 whileHover={{ x: 4 }}
-                                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#d4a574]/40 group cursor-pointer"
+                                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-[#C8842D]/40 group cursor-pointer"
                             >
-                                <div className="w-1.5 h-1.5 bg-[#d4a574] rounded-full mt-3 flex-shrink-0" />
+                                <div className="w-1.5 h-1.5 bg-[#C8842D] rounded-full mt-3 flex-shrink-0" />
                                 <span className="text-lg sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors leading-relaxed">{service}</span>
                             </motion.div>
                         ))}
@@ -163,7 +163,7 @@ export default function ServicesSection() {
                     <Button 
                         onClick={scrollToContact}
                         size="lg"
-                        className="bg-[#d4a574] text-white hover:bg-[#c49464] h-12 sm:h-14 px-6 sm:px-10 rounded-lg text-base sm:text-lg font-semibold transition-colors duration-200"
+                        className="bg-[#C8842D] text-white hover:bg-[#A86E1F] h-12 sm:h-14 px-6 sm:px-10 rounded-lg text-base sm:text-lg font-semibold transition-colors duration-200"
                     >
                         Request Consultation & Pricing
                     </Button>

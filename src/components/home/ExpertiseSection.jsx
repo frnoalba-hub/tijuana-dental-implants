@@ -41,7 +41,7 @@ export default function ExpertiseSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Expertise & Authority</span>
+                    <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">Expertise & Authority</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
                         Instructor & Leader
                         <span className="block text-gray-400 font-normal text-2xl mt-2">in Advanced Implant Surgery</span>
@@ -75,8 +75,8 @@ export default function ExpertiseSection() {
                                 </div>
                                 <div className="p-6">
                                     <div className="flex items-center gap-3 mb-4">
-                                        <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center">
-                                            <Icon className="w-6 h-6 text-[#d4a574]" />
+                                        <div className="w-12 h-12 bg-[#C8842D]/10 rounded-xl flex items-center justify-center">
+                                            <Icon className="w-6 h-6 text-[#C8842D]" />
                                         </div>
                                         <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                                     </div>

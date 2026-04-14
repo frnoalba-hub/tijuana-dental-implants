@@ -33,10 +33,10 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-3">
-                            <li><a href="#about" className="text-white/60 hover:text-[#d4a574] transition-colors">About</a></li>
-                            <li><a href="#services" className="text-white/60 hover:text-[#d4a574] transition-colors">Services</a></li>
-                            <li><a href="#gallery" className="text-white/60 hover:text-[#d4a574] transition-colors">Gallery</a></li>
-                            <li><a href="#contact" className="text-white/60 hover:text-[#d4a574] transition-colors">Contact</a></li>
+                            <li><a href="#about" className="text-white/60 hover:text-[#C8842D] transition-colors">About</a></li>
+                            <li><a href="#services" className="text-white/60 hover:text-[#C8842D] transition-colors">Services</a></li>
+                            <li><a href="#gallery" className="text-white/60 hover:text-[#C8842D] transition-colors">Gallery</a></li>
+                            <li><a href="#contact" className="text-white/60 hover:text-[#C8842D] transition-colors">Contact</a></li>
                         </ul>
                     </div>
 
@@ -45,15 +45,15 @@ export default function Footer() {
                         <h4 className="font-semibold mb-4">Contact</h4>
                         <ul className="space-y-3">
                             <li className="flex items-center gap-3 text-white/60">
-                                <Phone className="w-4 h-4 text-[#d4a574]" />
+                                <Phone className="w-4 h-4 text-[#C8842D]" />
                                 +52 664 385 49 87
                             </li>
                             <li className="flex items-center gap-3 text-white/60">
-                                <Mail className="w-4 h-4 text-[#d4a574]" />
+                                <Mail className="w-4 h-4 text-[#C8842D]" />
                                 blaze.dental@gmail.com
                             </li>
                             <li className="flex items-center gap-3 text-white/60">
-                                <MapPin className="w-4 h-4 text-[#d4a574]" />
+                                <MapPin className="w-4 h-4 text-[#C8842D]" />
                                 Paseo del Centenario 10310, Edificio Cazzar, Tijuana B.C
                             </li>
                         </ul>

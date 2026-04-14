@@ -13,7 +13,7 @@ export default function VideoSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Watch & Learn</span>
+                    <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">Watch & Learn</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
                         See Dr. Arias in Action
                     </h2>

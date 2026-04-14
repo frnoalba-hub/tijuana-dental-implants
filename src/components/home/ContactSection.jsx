@@ -74,7 +74,7 @@ export default function ContactSection() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-sm uppercase">Get In Touch</span>
+                    <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">Get In Touch</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
                         Request Your Free Consultation
                     </h2>
@@ -101,10 +101,10 @@ export default function ContactSection() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                                    className="flex items-start gap-4 p-5 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-[#d4a574]/40 transition-colors"
+                                    className="flex items-start gap-4 p-5 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-[#C8842D]/40 transition-colors"
                                 >
-                                    <div className="w-11 h-11 bg-[#d4a574]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <Icon className="w-5 h-5 text-[#d4a574]" />
+                                    <div className="w-11 h-11 bg-[#C8842D]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <Icon className="w-5 h-5 text-[#C8842D]" />
                                     </div>
                                     <div>
                                         <p className="text-white font-semibold text-sm">{item.value}</p>
@@ -151,7 +151,7 @@ export default function ContactSection() {
                                         placeholder="John Doe"
                                         value={formData.name}
                                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300"
+                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300"
                                     />
                                 </div>
 
@@ -163,7 +163,7 @@ export default function ContactSection() {
                                             placeholder="john@email.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({...formData, email: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300"
+                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300"
                                         />
                                     </div>
                                     <div>
@@ -173,7 +173,7 @@ export default function ContactSection() {
                                             placeholder="+1 (555) 000-0000"
                                             value={formData.phone}
                                             onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300"
+                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300"
                                         />
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@ export default function ContactSection() {
                                         placeholder="I'm interested in dental implants..."
                                         value={formData.message}
                                         onChange={(e) => setFormData({...formData, message: e.target.value})}
-                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#d4a574] focus:ring-[#d4a574] focus:ring-2 transition-all duration-300 resize-none"
+                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300 resize-none"
                                     />
                                 </div>
 
@@ -196,7 +196,7 @@ export default function ContactSection() {
                                         type="submit"
                                         size="lg"
                                         disabled={isSubmitting}
-                                        className="w-full bg-[#d4a574] text-white hover:bg-[#c49464] h-14 rounded-lg text-lg font-semibold transition-colors duration-200 disabled:opacity-50"
+                                        className="w-full bg-[#C8842D] text-white hover:bg-[#A86E1F] h-14 rounded-lg text-lg font-semibold transition-colors duration-200 disabled:opacity-50"
                                     >
                                     {submitStatus === 'success' ? (
                                         <>

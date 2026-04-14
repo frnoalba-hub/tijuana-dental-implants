@@ -47,7 +47,7 @@ export default function WhyTijuanaSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-xs sm:text-sm uppercase">Why Choose Us</span>
+                    <span className="text-[#C8842D] font-semibold tracking-wider text-xs sm:text-sm uppercase">Why Choose Us</span>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
                         Why Patients Choose Tijuana
                     </h2>
@@ -66,12 +66,12 @@ export default function WhyTijuanaSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#d4a574]/40 transition-colors duration-200 group"
+                            className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#C8842D]/40 transition-colors duration-200 group"
                         >
-                            <div className="w-12 h-12 bg-[#d4a574]/10 rounded-xl flex items-center justify-center mb-4">
-                                <reason.icon className="w-6 h-6 text-[#d4a574]" />
+                            <div className="w-12 h-12 bg-[#C8842D]/10 rounded-xl flex items-center justify-center mb-4">
+                                <reason.icon className="w-6 h-6 text-[#C8842D]" />
                             </div>
-                            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#d4a574] transition-colors">{reason.title}</h3>
+                            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#C8842D] transition-colors">{reason.title}</h3>
                             <p className="text-white/60 text-sm leading-relaxed group-hover:text-white/70 transition-colors">{reason.description}</p>
                         </motion.div>
                     ))}
@@ -92,10 +92,10 @@ export default function WhyTijuanaSection() {
                             <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
                             <p className="text-xs text-gray-500 mt-3">Average market price</p>
                         </div>
-                        <div className="text-center p-6 sm:p-8 bg-neutral-900 border-2 border-[#d4a574]/50 rounded-2xl transform sm:scale-105 relative z-10">
-                            <p className="text-[#d4a574] text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
+                        <div className="text-center p-6 sm:p-8 bg-neutral-900 border-2 border-[#C8842D]/50 rounded-2xl transform sm:scale-105 relative z-10">
+                            <p className="text-[#C8842D] text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
                             <p className="text-3xl sm:text-4xl font-bold text-white mb-1">$1,299</p>
-                            <p className="text-[#d4a574] font-semibold">Save 65-70%</p>
+                            <p className="text-[#C8842D] font-semibold">Save 65-70%</p>
                         </div>
                         <div className="text-center p-6 sm:p-8 bg-neutral-800/50 rounded-2xl border border-neutral-700/50">
                             <p className="text-gray-400 text-xs sm:text-sm mb-3">All-on-4 in USA</p>

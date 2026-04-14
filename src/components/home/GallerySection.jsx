@@ -201,7 +201,7 @@ export default function GallerySection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <span className="text-[#d4a574] font-semibold tracking-wider text-xs sm:text-sm uppercase">Our Work</span>
+                    <span className="text-[#C8842D] font-semibold tracking-wider text-xs sm:text-sm uppercase">Our Work</span>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
                         See Our Expertise in Action
                     </h2>

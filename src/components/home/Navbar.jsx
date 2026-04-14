@@ -48,14 +48,14 @@ export default function Navbar() {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-[1.15rem] font-medium tracking-wide transition-colors duration-300 hover:text-[#d4a574] text-white/90`}
+                                className={`text-[1.15rem] font-medium tracking-wide transition-colors duration-300 hover:text-[#C8842D] text-white/90`}
                             >
                                 {link.name}
                             </a>
                         ))}
                         <a href="#contact">
                             <Button 
-                                className="bg-[#d4a574] hover:bg-[#c49464] text-white px-6 py-2.5 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-[#d4a574]/20 transition-all duration-300"
+                                className="bg-[#C8842D] hover:bg-[#A86E1F] text-white px-6 py-2.5 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-[#C8842D]/20 transition-all duration-300"
                             >
                                 <Phone className="w-5 h-5 mr-2" />
                                 Book Consultation
@@ -88,14 +88,14 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block text-gray-300 font-medium py-2 hover:text-[#d4a574] transition-colors"
+                                    className="block text-gray-300 font-medium py-2 hover:text-[#C8842D] transition-colors"
                                 >
                                     {link.name}
                                 </a>
                             ))}
                             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
                                 <Button 
-                                    className="w-full bg-[#d4a574] hover:bg-[#c49464] text-white py-3 rounded-full font-medium mt-4"
+                                    className="w-full bg-[#C8842D] hover:bg-[#A86E1F] text-white py-3 rounded-full font-medium mt-4"
                                 >
                                     <Phone className="w-4 h-4 mr-2" />
                                     Book Consultation
