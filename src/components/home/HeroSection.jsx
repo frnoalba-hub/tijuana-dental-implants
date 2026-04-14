@@ -46,17 +46,17 @@ function HeroSectionContent() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                     >
-                        <p className="text-[#C8842D] text-sm font-semibold tracking-wider uppercase mb-6">Board Certified Implant Specialist</p>
+                        <p className="text-[#3A8FB7] text-sm font-semibold tracking-wider uppercase mb-6">Board Certified Implant Specialist</p>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 sm:mb-8 tracking-tight">
                             World-Class
-                            <span className="block text-[#C8842D]">Dental Implants</span>
+                            <span className="block text-[#3A8FB7]">Dental Implants</span>
                             <span className="text-white/50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">in Tijuana</span>
                         </h1>
 
                         <p className="text-lg sm:text-xl text-white/50 mb-10 max-w-lg leading-relaxed">
                             Exceptional dental care with a renowned implant surgeon. 
-                            Save up to <span className="text-[#C8842D] font-semibold">70%</span> compared to US prices.
+                            Save up to <span className="text-[#3A8FB7] font-semibold">70%</span> compared to US prices.
                         </p>
 
                         {/* Stats */}
@@ -72,7 +72,7 @@ function HeroSectionContent() {
                             </div>
                             <div className="w-px h-12 bg-white/10 shrink-0" />
                             <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-[#C8842D]">70%</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-[#3A8FB7]">70%</p>
                                 <p className="text-xs sm:text-sm text-white/40">Cost Savings</p>
                             </div>
                         </div>
@@ -108,7 +108,7 @@ function HeroSectionContent() {
                             />
                             
                             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                                <p className="text-[#C8842D] text-xs font-semibold tracking-wider uppercase mb-1">Lead Surgeon</p>
+                                <p className="text-[#3A8FB7] text-xs font-semibold tracking-wider uppercase mb-1">Lead Surgeon</p>
                                 <h3 className="text-xl font-bold text-white">Dr. Jose Luis Arias</h3>
                                 <p className="text-white/50 text-sm mt-0.5">DDS, Implant Specialist</p>
                             </div>

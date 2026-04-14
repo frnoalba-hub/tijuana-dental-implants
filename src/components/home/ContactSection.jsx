@@ -100,10 +100,10 @@ export default function ContactSection() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                                    className="flex items-start gap-4 p-5 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-[#C8842D]/40 transition-colors"
+                                    className="flex items-start gap-4 p-5 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-[#3A8FB7]/40 transition-colors"
                                 >
-                                    <div className="w-11 h-11 bg-[#C8842D]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <Icon className="w-5 h-5 text-[#C8842D]" />
+                                    <div className="w-11 h-11 bg-[#3A8FB7]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <Icon className="w-5 h-5 text-[#3A8FB7]" />
                                     </div>
                                     <div>
                                         <p className="text-white font-semibold text-sm">{item.value}</p>
@@ -150,7 +150,7 @@ export default function ContactSection() {
                                         placeholder="John Doe"
                                         value={formData.name}
                                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300"
+                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#3A8FB7] focus:ring-[#3A8FB7] focus:ring-2 transition-all duration-300"
                                     />
                                 </div>
 
@@ -162,7 +162,7 @@ export default function ContactSection() {
                                             placeholder="john@email.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({...formData, email: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300"
+                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#3A8FB7] focus:ring-[#3A8FB7] focus:ring-2 transition-all duration-300"
                                         />
                                     </div>
                                     <div>
@@ -172,7 +172,7 @@ export default function ContactSection() {
                                             placeholder="+1 (555) 000-0000"
                                             value={formData.phone}
                                             onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300"
+                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#3A8FB7] focus:ring-[#3A8FB7] focus:ring-2 transition-all duration-300"
                                         />
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@ export default function ContactSection() {
                                         placeholder="I'm interested in dental implants..."
                                         value={formData.message}
                                         onChange={(e) => setFormData({...formData, message: e.target.value})}
-                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#C8842D] focus:ring-[#C8842D] focus:ring-2 transition-all duration-300 resize-none"
+                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-[#3A8FB7] focus:ring-[#3A8FB7] focus:ring-2 transition-all duration-300 resize-none"
                                     />
                                 </div>
 
@@ -195,7 +195,7 @@ export default function ContactSection() {
                                         type="submit"
                                         size="lg"
                                         disabled={isSubmitting}
-                                        className="w-full bg-[#C8842D] text-white hover:bg-[#A86E1F] h-14 rounded-lg text-lg font-semibold transition-colors duration-200 disabled:opacity-50"
+                                        className="w-full bg-[#3A8FB7] text-white hover:bg-[#2B7A9E] h-14 rounded-lg text-lg font-semibold transition-colors duration-200 disabled:opacity-50"
                                     >
                                     {submitStatus === 'success' ? (
                                         <>

@@ -43,7 +43,7 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-[#C8842D] font-semibold tracking-wider text-sm uppercase">About the Doctor</span>
+                        <span className="text-[#3A8FB7] font-semibold tracking-wider text-sm uppercase">About the Doctor</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-6">
                             Meet Dr. Jose Luis Arias,
                             <span className="block text-gray-400 font-normal text-2xl mt-2">Your Implant Specialist</span>
@@ -65,7 +65,7 @@ export default function AboutSection() {
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-10 text-sm text-gray-300">
                             {credentials.map((item, index) => (
                                 <li key={index} className="flex items-center gap-2">
-                                    <span className="text-[#C8842D]">--</span>
+                                    <span className="text-[#3A8FB7]">--</span>
                                     {item}
                                 </li>
                             ))}

@@ -48,7 +48,7 @@ export default function Navbar() {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-[1.15rem] font-medium tracking-wide transition-colors duration-300 hover:text-[#C8842D] text-white/90`}
+                                className={`text-[1.15rem] font-medium tracking-wide transition-colors duration-300 hover:text-[#3A8FB7] text-white/90`}
                             >
                                 {link.name}
                             </a>
@@ -87,7 +87,7 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block text-gray-300 font-medium py-2 hover:text-[#C8842D] transition-colors"
+                                    className="block text-gray-300 font-medium py-2 hover:text-[#3A8FB7] transition-colors"
                                 >
                                     {link.name}
                                 </a>

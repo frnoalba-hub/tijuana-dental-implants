@@ -67,7 +67,7 @@ export default function WhyTijuanaSection() {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="bg-neutral-900 border border-neutral-800 rounded-xl p-6"
                         >
-                            <reason.icon className="w-5 h-5 text-[#C8842D] mb-4" />
+                            <reason.icon className="w-5 h-5 text-[#3A8FB7] mb-4" />
                             <h3 className="text-base font-semibold text-white mb-2">{reason.title}</h3>
                             <p className="text-white/50 text-sm leading-relaxed">{reason.description}</p>
                         </motion.div>
@@ -89,10 +89,10 @@ export default function WhyTijuanaSection() {
                             <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
                             <p className="text-xs text-gray-500 mt-3">Average market price</p>
                         </div>
-                        <div className="text-center p-6 sm:p-8 bg-neutral-900 border-2 border-[#C8842D]/50 rounded-2xl transform sm:scale-105 relative z-10">
-                            <p className="text-[#C8842D] text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
+                        <div className="text-center p-6 sm:p-8 bg-neutral-900 border-2 border-[#3A8FB7]/50 rounded-2xl transform sm:scale-105 relative z-10">
+                            <p className="text-[#3A8FB7] text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
                             <p className="text-3xl sm:text-4xl font-bold text-white mb-1">$1,299</p>
-                            <p className="text-[#C8842D] font-semibold">Save 65-70%</p>
+                            <p className="text-[#3A8FB7] font-semibold">Save 65-70%</p>
                         </div>
                         <div className="text-center p-6 sm:p-8 bg-neutral-800/50 rounded-2xl border border-neutral-700/50">
                             <p className="text-gray-400 text-xs sm:text-sm mb-3">All-on-4 in USA</p>

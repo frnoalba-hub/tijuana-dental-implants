@@ -130,7 +130,7 @@ export default function ServicesSection() {
                                 transition={{ duration: 0.2, delay: index * 0.03 }}
                                 className="flex items-start gap-3 py-2.5 px-3"
                             >
-                                <span className="text-[#C8842D] mt-0.5">--</span>
+                                <span className="text-[#3A8FB7] mt-0.5">--</span>
                                 <span className="text-base sm:text-lg text-gray-300">{service}</span>
                             </motion.div>
                         ))}
