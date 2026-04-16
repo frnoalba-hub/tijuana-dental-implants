@@ -12,7 +12,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <div className="mb-4">
-                            <LogoIcon className="h-[22rem] w-auto max-w-[600px] sm:h-96 sm:max-w-[680px] md:max-w-[760px]" />
+                            <LogoIcon className="h-auto w-auto max-w-full max-h-36 sm:max-h-40 md:max-h-44 max-w-[280px] sm:max-w-[320px] md:max-w-[360px]" />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-6">
                             World-class dental implants in Tijuana, Mexico. 
