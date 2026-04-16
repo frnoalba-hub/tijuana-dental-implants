@@ -59,21 +59,23 @@ function HeroSectionContent() {
                             Save up to <span className="text-blaze-accent font-semibold">70%</span> compared to US prices.
                         </p>
 
-                        {/* Stats */}
-                        <div className="flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10 overflow-x-auto">
-                            <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="10" suffix="+" /></p>
-                                <p className="text-xs sm:text-sm text-white/40">Years</p>
-                            </div>
-                            <div className="w-px h-12 bg-white/10 shrink-0" />
-                            <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="7500" suffix="+" /></p>
-                                <p className="text-xs sm:text-sm text-white/40">Implants Placed</p>
-                            </div>
-                            <div className="w-px h-12 bg-white/10 shrink-0" />
-                            <div className="shrink-0">
-                                <p className="text-3xl sm:text-4xl font-bold text-blaze-accent">70%</p>
-                                <p className="text-xs sm:text-sm text-white/40">Cost Savings</p>
+                        {/* Stats — glass panel for clearer structure (icons/counters unchanged) */}
+                        <div className="mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10">
+                            <div className="flex items-center gap-4 sm:gap-8 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-5 sm:px-7 sm:py-6 shadow-inner shadow-black/20 backdrop-blur-sm ring-1 ring-white/5">
+                                <div className="shrink-0">
+                                    <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="10" suffix="+" /></p>
+                                    <p className="text-xs sm:text-sm text-white/45">Years</p>
+                                </div>
+                                <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent shrink-0" />
+                                <div className="shrink-0">
+                                    <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="7500" suffix="+" /></p>
+                                    <p className="text-xs sm:text-sm text-white/45">Implants Placed</p>
+                                </div>
+                                <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent shrink-0" />
+                                <div className="shrink-0">
+                                    <p className="text-3xl sm:text-4xl font-bold text-blaze-accent">70%</p>
+                                    <p className="text-xs sm:text-sm text-white/45">Cost Savings</p>
+                                </div>
                             </div>
                         </div>
 

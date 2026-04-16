@@ -3,8 +3,14 @@ import { motion } from "framer-motion";
 
 export default function VideoSection() {
     return (
-        <section id="video-section" className="py-24 bg-blaze-surface">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section id="video-section" className="relative overflow-hidden py-24 bg-gradient-to-b from-blaze-surface via-blaze-depth/35 to-blaze-surface">
+            <div
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_50%_-10%,rgba(58,143,183,0.12),transparent_55%)]"
+                aria-hidden
+            />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" aria-hidden />
+
+            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -12,6 +18,12 @@ export default function VideoSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
+                    <p className="text-blaze-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">Video</p>
+                    <div className="flex justify-center gap-1.5 mb-5" aria-hidden>
+                        <span className="h-1 w-1 rounded-full bg-blaze-accent/80" />
+                        <span className="h-1 w-8 rounded-full bg-blaze-accent" />
+                        <span className="h-1 w-1 rounded-full bg-blaze-accent/80" />
+                    </div>
                     <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
                         See Dr. Arias in Action
                     </h2>
@@ -27,7 +39,7 @@ export default function VideoSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="relative overflow-hidden rounded-xl border border-blaze-surface-border bg-blaze-depth shadow-xl"
+                        className="group relative overflow-hidden rounded-xl border border-white/10 bg-blaze-depth shadow-xl shadow-black/40 ring-1 ring-white/5 transition-all duration-300 hover:border-blaze-accent/35 hover:ring-blaze-accent/25 hover:shadow-[0_24px_48px_-12px_rgba(58,143,183,0.2)]"
                     >
                         <div className="relative aspect-video w-full">
                             <iframe
@@ -48,7 +60,7 @@ export default function VideoSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.15 }}
-                        className="relative overflow-hidden rounded-xl border border-blaze-surface-border bg-blaze-depth shadow-xl"
+                        className="group relative overflow-hidden rounded-xl border border-white/10 bg-blaze-depth shadow-xl shadow-black/40 ring-1 ring-white/5 transition-all duration-300 hover:border-blaze-accent/35 hover:ring-blaze-accent/25 hover:shadow-[0_24px_48px_-12px_rgba(58,143,183,0.2)]"
                     >
                         <div className="relative mx-auto aspect-[9/16] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]">
                             <iframe
