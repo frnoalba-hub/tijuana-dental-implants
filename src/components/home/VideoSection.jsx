@@ -21,39 +21,43 @@ export default function VideoSection() {
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+                    {/* Landscape embed — 16:9 box matches typical Vimeo; dark shell hides letterbox if any */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="relative rounded-xl overflow-hidden"
+                        className="relative overflow-hidden rounded-xl border border-blaze-surface-border bg-blaze-depth shadow-xl"
                     >
-                        <div style={{ position: 'relative', height: '500px' }}>
+                        <div className="relative aspect-video w-full">
                             <iframe
-                                src="https://player.vimeo.com/video/1170470738?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                                className="absolute inset-0 h-full w-full"
+                                src="https://player.vimeo.com/video/1170470738?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&background=1&color=3a8fb7"
                                 frameBorder="0"
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
-                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                                 title="Dr. Arias - Implant Institute"
+                                loading="lazy"
                             />
                         </div>
                     </motion.div>
 
+                    {/* Portrait-style embed — taller aspect so side pillarboxing from Vimeo isn’t in a wide 16:9 frame */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.15 }}
-                        className="relative rounded-xl overflow-hidden"
+                        className="relative overflow-hidden rounded-xl border border-blaze-surface-border bg-blaze-depth shadow-xl"
                     >
-                        <div style={{ position: 'relative', height: '500px' }}>
+                        <div className="relative mx-auto aspect-[9/16] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]">
                             <iframe
-                                src="https://player.vimeo.com/video/1167611464?badge=0&autopause=0&player_id=0&app_id=58479"
+                                className="absolute inset-0 h-full w-full"
+                                src="https://player.vimeo.com/video/1167611464?badge=0&autopause=0&player_id=0&app_id=58479&background=1&color=3a8fb7&title=0&byline=0&portrait=0"
                                 frameBorder="0"
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                                 title="BLAZE Dental - Dr. Arias"
+                                loading="lazy"
                             />
                         </div>
                     </motion.div>
