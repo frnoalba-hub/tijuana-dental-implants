@@ -70,7 +70,7 @@ export default function ContactSection() {
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
     return (
-        <section id="contact" className="py-24 bg-neutral-950">
+        <section id="contact" className="py-24 bg-blaze-surface">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -100,7 +100,7 @@ export default function ContactSection() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                                    className="flex items-start gap-4 p-5 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-blaze-accent/40 transition-colors"
+                                    className="flex items-start gap-4 p-5 bg-blaze-surface-elevated rounded-2xl border border-blaze-surface-border hover:border-blaze-accent/40 transition-colors"
                                 >
                                     <div className="w-11 h-11 bg-blaze-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <Icon className="w-5 h-5 text-blaze-accent" />
@@ -139,7 +139,7 @@ export default function ContactSection() {
                         transition={{ duration: 0.6 }}
                         className="lg:col-span-3"
                     >
-                        <div className="bg-neutral-900 rounded-3xl shadow-xl p-8 md:p-10 border border-neutral-800">
+                        <div className="bg-blaze-surface-elevated rounded-3xl shadow-xl p-8 md:p-10 border border-blaze-surface-border">
                             <h3 className="font-display text-xl font-semibold text-white mb-6">Tell Us About Your Smile</h3>
                             
                             <form onSubmit={handleSubmit} className="space-y-5">
@@ -150,7 +150,7 @@ export default function ContactSection() {
                                         placeholder="John Doe"
                                         value={formData.name}
                                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                        className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300"
+                                        className="h-12 rounded-xl bg-blaze-surface-muted border-blaze-surface-border text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300"
                                     />
                                 </div>
 
@@ -162,7 +162,7 @@ export default function ContactSection() {
                                             placeholder="john@email.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({...formData, email: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300"
+                                            className="h-12 rounded-xl bg-blaze-surface-muted border-blaze-surface-border text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300"
                                         />
                                     </div>
                                     <div>
@@ -172,7 +172,7 @@ export default function ContactSection() {
                                             placeholder="+1 (555) 000-0000"
                                             value={formData.phone}
                                             onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                                            className="h-12 rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300"
+                                            className="h-12 rounded-xl bg-blaze-surface-muted border-blaze-surface-border text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300"
                                         />
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@ export default function ContactSection() {
                                         placeholder="I'm interested in dental implants..."
                                         value={formData.message}
                                         onChange={(e) => setFormData({...formData, message: e.target.value})}
-                                        className="min-h-[120px] rounded-xl bg-neutral-800 border-neutral-700 text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300 resize-none"
+                                        className="min-h-[120px] rounded-xl bg-blaze-surface-muted border-blaze-surface-border text-white placeholder:text-gray-500 focus:border-blaze-accent focus:ring-blaze-accent focus:ring-2 transition-all duration-300 resize-none"
                                     />
                                 </div>
 

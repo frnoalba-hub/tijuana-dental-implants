@@ -6,7 +6,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-black text-white border-t border-white/10">
+        <footer className="bg-blaze-depth text-white border-t border-white/10">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-14">
                 <div className="grid md:grid-cols-4 gap-10">
                     {/* Brand */}

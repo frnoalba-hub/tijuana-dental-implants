@@ -26,7 +26,7 @@ function HeroSectionContent() {
     };
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-blaze-depth">
             {/* Background */}
             <div className="absolute inset-0">
                 <img 
@@ -82,7 +82,7 @@ function HeroSectionContent() {
                             <Button 
                                 onClick={scrollToContact}
                                 size="lg"
-                                className="bg-white text-neutral-900 hover:bg-white/90 px-7 py-6 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
+                                className="bg-white text-blaze-ink hover:bg-white/90 px-7 py-6 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
                             >
                                 Book Free Consultation
                             </Button>
@@ -117,7 +117,7 @@ function HeroSectionContent() {
                 </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neutral-950 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blaze-surface to-transparent" />
         </section>
     );
 }

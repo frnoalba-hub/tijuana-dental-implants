@@ -6,7 +6,7 @@ module.exports = {
   	extend: {
   		fontFamily: {
   			sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-  			display: ['Outfit', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  			display: ['Blaze Display', 'Outfit', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -68,6 +68,12 @@ module.exports = {
   				accent: 'hsl(var(--blaze-accent) / <alpha-value>)',
   				'accent-hover': 'hsl(var(--blaze-accent-hover) / <alpha-value>)',
   				'accent-soft': 'hsl(var(--blaze-accent-soft) / <alpha-value>)',
+  				depth: 'hsl(var(--blaze-depth) / <alpha-value>)',
+  				surface: 'hsl(var(--blaze-surface) / <alpha-value>)',
+  				'surface-elevated': 'hsl(var(--blaze-surface-elevated) / <alpha-value>)',
+  				'surface-muted': 'hsl(var(--blaze-surface-muted) / <alpha-value>)',
+  				'surface-border': 'hsl(var(--blaze-surface-border) / <alpha-value>)',
+  				ink: 'hsl(var(--blaze-ink) / <alpha-value>)',
   			},
   		},
   		keyframes: {

@@ -25,7 +25,7 @@ export default function ExpertiseSection() {
     ];
 
     return (
-        <section className="py-24 bg-black">
+        <section className="py-24 bg-blaze-depth">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -54,7 +54,7 @@ export default function ExpertiseSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="bg-neutral-900 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-neutral-800"
+                                className="bg-blaze-surface-elevated rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-blaze-surface-border"
                             >
                                 <div className="relative h-64 overflow-hidden">
                                     <img
@@ -79,7 +79,7 @@ export default function ExpertiseSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-16 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 md:p-12 text-center"
+                    className="mt-16 bg-blaze-surface-elevated border border-blaze-surface-border rounded-2xl p-8 md:p-12 text-center"
                 >
                     <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
                         When you choose Dr. Arias, you're choosing not just a surgeon, but an educator recognized internationally 

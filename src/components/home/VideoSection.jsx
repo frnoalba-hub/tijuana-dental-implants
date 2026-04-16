@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function VideoSection() {
     return (
-        <section id="video-section" className="py-24 bg-neutral-950">
+        <section id="video-section" className="py-24 bg-blaze-surface">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

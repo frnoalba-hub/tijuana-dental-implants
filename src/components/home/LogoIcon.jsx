@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 
-/** True PNG with transparency — white mark on transparent. Wrap in bg-black so it shows on any section. */
+/** True PNG with transparency — white mark on transparent. Use on dark surfaces (e.g. bg-blaze-depth). */
 const BLAZE_LOGO_SRC = '/blaze-dental-logo.png';
 
 export default function LogoIcon({ className, wrapperClassName }) {

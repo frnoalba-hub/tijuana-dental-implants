@@ -11,11 +11,11 @@ const VideoSection = lazy(() => import('@/components/home/VideoSection'));
 const ContactSection = lazy(() => import('@/components/home/ContactSection'));
 const Footer = lazy(() => import('@/components/home/Footer'));
 
-const LoadingFallback = () => <div className="h-screen bg-black" />;
+const LoadingFallback = () => <div className="h-screen bg-blaze-depth" />;
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-background">
             <Navbar />
             <HeroSection />
             <AboutSection />

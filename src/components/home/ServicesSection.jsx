@@ -70,7 +70,7 @@ export default function ServicesSection() {
     const currentCategory = serviceCategories[activeCategory];
 
     return (
-        <section id="services" className="py-16 sm:py-20 bg-neutral-950">
+        <section id="services" className="py-16 sm:py-20 bg-blaze-surface">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -117,7 +117,7 @@ export default function ServicesSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-neutral-900 rounded-2xl p-6 sm:p-10 md:p-14 border border-neutral-800"
+                    className="bg-blaze-surface-elevated rounded-2xl p-6 sm:p-10 md:p-14 border border-blaze-surface-border"
                 >
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-8">{currentCategory.title}</h3>
                     
