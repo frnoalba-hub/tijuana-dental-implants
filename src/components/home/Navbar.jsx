@@ -39,7 +39,7 @@ export default function Navbar() {
                 {/* No fixed height / vertical padding — bar hugs logo so it reads larger without extra headroom */}
                 <div className="flex items-center justify-between py-0">
                     <a href="#" className="flex items-center max-w-[52%] sm:max-w-none">
-                        <LogoIcon className="h-20 w-auto sm:h-[5.5rem] md:h-24 lg:h-28 xl:h-[7.5rem]" />
+                        <LogoIcon className="h-40 w-auto sm:h-[11rem] md:h-48 lg:h-56 xl:h-[15rem]" />
                     </a>
 
                     {/* Desktop Navigation */}
