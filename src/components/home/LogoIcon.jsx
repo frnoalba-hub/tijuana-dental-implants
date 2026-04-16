@@ -15,7 +15,7 @@ export default function LogoIcon({ className, wrapperClassName }) {
       <img
         src={BLAZE_LOGO_SRC}
         alt="Blaze Dental"
-        className={cn('object-contain', className)}
+        className={cn('object-contain object-left object-top', className)}
       />
     </span>
   );
