@@ -201,7 +201,7 @@ export default function GallerySection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
+                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                         Gallery
                     </h2>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">

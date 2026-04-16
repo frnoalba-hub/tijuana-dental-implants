@@ -35,7 +35,7 @@ export default function ExpertiseSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
                         Instructor & Leader in Advanced Implant Surgery
                     </h2>
                     <p className="text-gray-400 leading-relaxed">
@@ -65,7 +65,7 @@ export default function ExpertiseSection() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
+                                    <h3 className="font-display text-base font-semibold text-white mb-2">{item.title}</h3>
                                     <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                                 </div>
                             </motion.div>

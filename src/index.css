@@ -37,6 +37,11 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Blaze Dental — matches logo (high contrast) + clinical accent */
+    --blaze-accent: 199 52% 47%;
+    --blaze-accent-hover: 199 58% 38%;
+    --blaze-accent-soft: 199 42% 24%;
   }
 
   .dark {
@@ -72,6 +77,10 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --blaze-accent: 199 52% 47%;
+    --blaze-accent-hover: 199 58% 38%;
+    --blaze-accent-soft: 199 42% 24%;
   }
 }
 
@@ -83,6 +92,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }

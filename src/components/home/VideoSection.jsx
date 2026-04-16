@@ -12,7 +12,7 @@ export default function VideoSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
                         See Dr. Arias in Action
                     </h2>
                     <p className="text-gray-400 leading-relaxed">

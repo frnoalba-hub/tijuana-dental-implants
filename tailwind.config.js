@@ -4,6 +4,10 @@ module.exports = {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  			display: ['Outfit', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -59,7 +63,12 @@ module.exports = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+  			blaze: {
+  				accent: 'hsl(var(--blaze-accent) / <alpha-value>)',
+  				'accent-hover': 'hsl(var(--blaze-accent-hover) / <alpha-value>)',
+  				'accent-soft': 'hsl(var(--blaze-accent-soft) / <alpha-value>)',
+  			},
   		},
   		keyframes: {
   			'accordion-down': {

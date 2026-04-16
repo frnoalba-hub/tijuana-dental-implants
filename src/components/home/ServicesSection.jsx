@@ -80,7 +80,7 @@ export default function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-6">
+                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-6">
                         Services
                     </h2>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
@@ -119,7 +119,7 @@ export default function ServicesSection() {
                     transition={{ duration: 0.4 }}
                     className="bg-neutral-900 rounded-2xl p-6 sm:p-10 md:p-14 border border-neutral-800"
                 >
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-8">{currentCategory.title}</h3>
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-8">{currentCategory.title}</h3>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                         {currentCategory.services.map((service, index) => (
@@ -130,7 +130,7 @@ export default function ServicesSection() {
                                 transition={{ duration: 0.2, delay: index * 0.03 }}
                                 className="flex items-start gap-3 py-2.5 px-3"
                             >
-                                <span className="text-[#3A8FB7] mt-0.5">--</span>
+                                <span className="text-blaze-accent mt-0.5">--</span>
                                 <span className="text-base sm:text-lg text-gray-300">{service}</span>
                             </motion.div>
                         ))}
