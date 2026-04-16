@@ -32,7 +32,7 @@ export default function VideoSection() {
                         <div className="relative aspect-video w-full">
                             <iframe
                                 className="absolute inset-0 h-full w-full"
-                                src="https://player.vimeo.com/video/1170470738?autoplay=0&title=0&byline=0&portrait=0&badge=0&autopause=1&player_id=0&app_id=58479&background=1&color=3a8fb7"
+                                src="https://player.vimeo.com/video/1170470738?autoplay=0&title=0&byline=0&portrait=0&badge=0&autopause=1&player_id=0&app_id=58479&color=3a8fb7"
                                 frameBorder="0"
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
@@ -53,7 +53,7 @@ export default function VideoSection() {
                         <div className="relative mx-auto aspect-[9/16] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]">
                             <iframe
                                 className="absolute inset-0 h-full w-full"
-                                src="https://player.vimeo.com/video/1167611464?autoplay=0&badge=0&autopause=1&player_id=0&app_id=58479&background=1&color=3a8fb7&title=0&byline=0&portrait=0"
+                                src="https://player.vimeo.com/video/1167611464?autoplay=0&badge=0&autopause=1&player_id=0&app_id=58479&color=3a8fb7&title=0&byline=0&portrait=0"
                                 frameBorder="0"
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                                 title="BLAZE Dental - Dr. Arias"
