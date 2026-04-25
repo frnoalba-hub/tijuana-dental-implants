@@ -27,7 +27,8 @@ export default function ContactSection() {
                 base44.integrations.Core.SendEmail({
                     to: 'blaze.dental@gmail.com',
                     subject: `New Consultation Request from ${formData.name}`,
-                    body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+                    body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`,
+                    from_name: formData.name?.trim() || 'Blaze Dental website',
                 })
             ]);
             setSubmitStatus('success');
