@@ -38,8 +38,13 @@ export default function Navbar() {
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
                 {/* No fixed height / vertical padding — bar hugs logo so it reads larger without extra headroom */}
                 <div className="flex items-center justify-between gap-4 py-2">
-                    <a href="#" className="flex shrink-0 max-w-[48%] sm:max-w-none">
-                        <LogoIcon className="h-auto w-auto max-w-full max-h-11 sm:max-h-12 md:max-h-14 lg:max-h-16 xl:max-h-[4.75rem]" />
+                    <a href="#" className="flex shrink-0 max-w-[42%] sm:max-w-none">
+                        <LogoIcon
+                            variant="lockup"
+                            sizes="(max-width: 640px) 36vw, 150px"
+                            fetchPriority="high"
+                            className="h-auto w-auto max-w-full max-h-16 sm:max-h-[4.25rem] md:max-h-20 lg:max-h-[5.25rem] xl:max-h-24"
+                        />
                     </a>
 
                     {/* Desktop Navigation */}
