@@ -22,11 +22,14 @@ export default function ContactSection() {
         
         try {
             const { base44 } = await import('@/api/base44Client');
-            await base44.integrations.Core.SendEmail({
-                to: 'blaze.dental@gmail.com',
-                subject: `New Consultation Request from ${formData.name}`,
-                body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-            });
+            await Promise.all([
+                base44.entities.ContactSubmission.create(formData),
+                base44.integrations.Core.SendEmail({
+                    to: 'blaze.dental@gmail.com',
+                    subject: `New Consultation Request from ${formData.name}`,
+                    body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+                })
+            ]);
             setSubmitStatus('success');
             setFormData({ name: '', email: '', phone: '', message: '' });
             setTimeout(() => setSubmitStatus(''), 3000);

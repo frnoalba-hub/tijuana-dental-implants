@@ -1,0 +1,26 @@
+{
+  "name": "ContactSubmission",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the person"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "message": {
+      "type": "string",
+      "description": "Message from the contact form"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}
