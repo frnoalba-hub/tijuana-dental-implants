@@ -31,8 +31,8 @@ export default function Navbar() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
                 isScrolled 
-                    ? 'bg-blaze-depth/95 backdrop-blur-md shadow-lg border-b border-white/10' 
-                    : 'bg-transparent'
+                    ? 'bg-blaze-depth/90 shadow-2xl shadow-black/30 backdrop-blur-xl border-b border-white/10' 
+                    : 'bg-gradient-to-b from-black/70 via-black/25 to-transparent'
             }`}
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
@@ -43,24 +43,24 @@ export default function Navbar() {
                             variant="lockup"
                             sizes="(max-width: 640px) 36vw, 150px"
                             fetchPriority="high"
-                            className="h-auto w-auto max-w-full max-h-16 sm:max-h-[4.25rem] md:max-h-20 lg:max-h-[5.25rem] xl:max-h-24"
+                            className="h-auto w-auto max-w-full max-h-14 sm:max-h-16 md:max-h-[4.5rem] lg:max-h-20 xl:max-h-[5.5rem] drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
                         />
                     </a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center flex-1 justify-center gap-10 ml-8">
+                    <div className="hidden lg:flex items-center flex-1 justify-center gap-8 xl:gap-10 ml-8 rounded-full border border-white/10 bg-white/[0.035] px-5 py-2.5 shadow-inner shadow-white/[0.03] backdrop-blur-md">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-[1.15rem] font-medium tracking-wide transition-colors duration-300 hover:text-blaze-accent text-white/90`}
+                                className="text-[0.95rem] xl:text-[1.02rem] font-medium tracking-wide text-white/75 transition-colors duration-300 hover:text-white"
                             >
                                 {link.name}
                             </a>
                         ))}
                         <a href="#contact">
                             <Button 
-                                className="border border-white/30 bg-transparent hover:bg-white hover:text-black text-white px-5 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                                className="border border-blaze-accent/40 bg-blaze-accent/15 text-white hover:bg-blaze-accent hover:text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg shadow-blaze-accent/10 transition-all duration-200"
                             >
                                 Book Consultation
                             </Button>
@@ -71,7 +71,7 @@ export default function Navbar() {
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         type="button"
-                        className="lg:hidden rounded-lg border border-white/10 bg-white/5 p-2 text-white shadow-sm ring-1 ring-white/5 transition-colors hover:border-white/20 hover:bg-white/10"
+                        className="lg:hidden rounded-full border border-white/15 bg-white/10 p-2 text-white shadow-sm ring-1 ring-white/5 backdrop-blur-md transition-colors hover:border-white/25 hover:bg-white/15"
                     >
                         {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -85,7 +85,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-blaze-depth border-t border-white/10"
+                        className="lg:hidden bg-blaze-depth/95 border-t border-white/10 shadow-2xl shadow-black/40 backdrop-blur-xl"
                     >
                         <div className="px-6 py-6 space-y-4">
                             {navLinks.map((link) => (
@@ -93,14 +93,14 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block text-gray-300 font-medium py-2 hover:text-blaze-accent transition-colors"
+                                    className="block rounded-xl px-3 py-2 text-gray-300 font-medium hover:bg-white/5 hover:text-white transition-colors"
                                 >
                                     {link.name}
                                 </a>
                             ))}
                             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
                                 <Button 
-                                    className="w-full border border-white/30 bg-transparent hover:bg-white hover:text-black text-white py-3 rounded-md font-medium mt-4 transition-colors duration-200"
+                                    className="w-full border border-blaze-accent/40 bg-blaze-accent/15 hover:bg-blaze-accent text-white py-3 rounded-full font-semibold mt-4 transition-colors duration-200"
                                 >
                                     Book Consultation
                                 </Button>

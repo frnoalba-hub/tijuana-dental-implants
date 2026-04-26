@@ -36,6 +36,7 @@ function HeroSectionContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/50" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(58,143,183,0.22),transparent_32%),radial-gradient(circle_at_85%_20%,rgba(255,255,255,0.09),transparent_24%)]" />
             </div>
 
             {/* Content */}
@@ -46,7 +47,9 @@ function HeroSectionContent() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                     >
-                        <p className="text-blaze-accent text-sm font-semibold tracking-wider uppercase mb-6">Board Certified Implant Specialist</p>
+                        <p className="inline-flex items-center rounded-full border border-blaze-accent/30 bg-blaze-accent/10 px-4 py-2 text-blaze-accent text-xs sm:text-sm font-semibold tracking-wider uppercase mb-6 shadow-lg shadow-blaze-accent/10">
+                            Board Certified Implant Specialist
+                        </p>
 
                         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 sm:mb-8 tracking-tight">
                             World-Class
@@ -54,7 +57,7 @@ function HeroSectionContent() {
                             <span className="text-white/50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">in Tijuana</span>
                         </h1>
 
-                        <p className="text-lg sm:text-xl text-white/50 mb-10 max-w-lg leading-relaxed">
+                        <p className="text-lg sm:text-xl text-white/60 mb-10 max-w-lg leading-relaxed">
                             Exceptional dental care with a renowned implant surgeon. 
                             Save up to <span className="text-blaze-accent font-semibold">70%</span> compared to US prices.
                         </p>
@@ -84,12 +87,14 @@ function HeroSectionContent() {
                             <Button 
                                 onClick={scrollToContact}
                                 size="lg"
-                                className="bg-white text-blaze-ink hover:bg-white/90 px-7 py-6 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
+                                className="bg-white text-blaze-ink hover:bg-white/90 px-7 py-6 rounded-full text-sm font-semibold tracking-wide uppercase shadow-2xl shadow-white/10 transition-all duration-200 hover:-translate-y-0.5"
                             >
                                 Book Free Consultation
                             </Button>
-                            <button onClick={handleWatchStory} className="flex items-center gap-2.5 text-white/60 hover:text-white/90 transition-colors">
-                                <Play className="w-4 h-4" />
+                            <button onClick={handleWatchStory} className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-white/70 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/[0.07] hover:text-white">
+                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blaze-accent/15 text-blaze-accent">
+                                    <Play className="w-4 h-4 fill-current" />
+                                </span>
                                 <span className="text-sm">Watch Our Story</span>
                             </button>
                         </div>
@@ -102,14 +107,14 @@ function HeroSectionContent() {
                         transition={{ duration: 1, delay: 0.3 }}
                         className="hidden lg:block"
                     >
-                        <div className="relative rounded-2xl overflow-hidden">
+                        <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-black/40">
                             <img 
                                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/3b2183d9c_7f14ec98e_image9.png"
                                 alt="Dr. Jose Luis Arias"
-                                className="w-full aspect-[4/5] object-cover rounded-2xl"
+                                className="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
                             />
                             
-                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                            <div className="absolute bottom-2 left-2 right-2 rounded-b-[1.5rem] p-6 bg-gradient-to-t from-black/95 via-black/60 to-transparent">
                                 <p className="text-blaze-accent text-xs font-semibold tracking-wider uppercase mb-1">Lead Surgeon</p>
                                 <h3 className="font-display text-xl font-bold text-white">Dr. Jose Luis Arias</h3>
                                 <p className="text-white/50 text-sm mt-0.5">DDS, Implant Specialist</p>

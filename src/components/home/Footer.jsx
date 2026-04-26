@@ -6,37 +6,38 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-blaze-depth text-white border-t border-white/10">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-14">
-                <div className="grid md:grid-cols-4 gap-10">
+        <footer className="relative overflow-hidden bg-blaze-depth text-white border-t border-white/10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(58,143,183,0.12),transparent_28%)]" />
+            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
+                <div className="grid md:grid-cols-4 gap-10 lg:gap-14">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <div className="mb-4">
+                        <div className="mb-5">
                             <LogoIcon
                                 variant="lockup"
                                 sizes="(max-width: 768px) 78vw, 320px"
-                                className="h-auto w-auto max-w-[260px] sm:max-w-[300px] md:max-w-[320px]"
+                                className="h-auto w-auto max-w-[230px] sm:max-w-[270px] md:max-w-[300px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.4)]"
                             />
                         </div>
-                        <p className="text-white/60 leading-relaxed max-w-sm mb-6">
+                        <p className="text-white/60 leading-relaxed max-w-sm mb-7">
                             World-class dental implants in Tijuana, Mexico. 
                             Experience exceptional care at affordable prices.
                         </p>
                         {/* Social links — update hrefs when accounts are confirmed */}
                         <div className="flex gap-3">
-                            <a href="https://www.instagram.com/blaze.dental" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
+                            <a href="https://www.instagram.com/blaze.dental" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white/75 hover:bg-white hover:text-black transition-all duration-300">
                                 <Instagram className="w-4 h-4" />
                             </a>
-                            <a href="https://www.facebook.com/blazedental" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
+                            <a href="https://www.facebook.com/blazedental" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white/75 hover:bg-white hover:text-black transition-all duration-300">
                                 <Facebook className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
 
                     {/* Quick Links */}
-                    <div>
-                        <h4 className="font-semibold mb-4">Quick Links</h4>
-                        <ul className="space-y-3">
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5">
+                        <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
+                        <ul className="space-y-3 text-sm">
                             <li><a href="#about" className="text-white/60 hover:text-blaze-accent transition-colors">About</a></li>
                             <li><a href="#services" className="text-white/60 hover:text-blaze-accent transition-colors">Services</a></li>
                             <li><a href="#gallery" className="text-white/60 hover:text-blaze-accent transition-colors">Gallery</a></li>
@@ -45,20 +46,20 @@ export default function Footer() {
                     </div>
 
                     {/* Contact */}
-                    <div>
-                        <h4 className="font-semibold mb-4">Contact</h4>
-                        <ul className="space-y-3">
-                            <li className="flex items-center gap-3 text-white/60">
-                                <Phone className="w-4 h-4 text-blaze-accent" />
-                                +52 664 385 49 87
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5">
+                        <h4 className="font-semibold mb-4 text-white">Contact</h4>
+                        <ul className="space-y-3 text-sm">
+                            <li className="flex items-start gap-3 text-white/60">
+                                <Phone className="w-4 h-4 text-blaze-accent mt-0.5 shrink-0" />
+                                <span>+52 664 385 49 87</span>
                             </li>
-                            <li className="flex items-center gap-3 text-white/60">
-                                <Mail className="w-4 h-4 text-blaze-accent" />
-                                blaze.dental@gmail.com
+                            <li className="flex items-start gap-3 text-white/60">
+                                <Mail className="w-4 h-4 text-blaze-accent mt-0.5 shrink-0" />
+                                <span>blaze.dental@gmail.com</span>
                             </li>
-                            <li className="flex items-center gap-3 text-white/60">
-                                <MapPin className="w-4 h-4 text-blaze-accent" />
-                                Paseo del Centenario 10310, Edificio Cazzar, Tijuana B.C
+                            <li className="flex items-start gap-3 text-white/60">
+                                <MapPin className="w-4 h-4 text-blaze-accent mt-0.5 shrink-0" />
+                                <span>Paseo del Centenario 10310, Edificio Cazzar, Tijuana B.C</span>
                             </li>
                         </ul>
                     </div>
