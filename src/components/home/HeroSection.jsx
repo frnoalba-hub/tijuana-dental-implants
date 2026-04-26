@@ -47,9 +47,12 @@ function HeroSectionContent() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                     >
-                        <p className="inline-flex items-center rounded-full border border-blaze-accent/30 bg-blaze-accent/10 px-4 py-2 text-blaze-accent text-xs sm:text-sm font-semibold tracking-wider uppercase mb-6 shadow-lg shadow-blaze-accent/10">
-                            Board Certified Implant Specialist
-                        </p>
+                        <div className="mb-6 flex items-center gap-3">
+                            <span className="h-8 w-px bg-gradient-to-b from-transparent via-blaze-accent to-transparent" aria-hidden="true" />
+                            <p className="text-blaze-accent text-xs sm:text-sm font-semibold tracking-[0.28em] uppercase">
+                                Board Certified Implant Specialist
+                            </p>
+                        </div>
 
                         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 sm:mb-8 tracking-tight">
                             World-Class

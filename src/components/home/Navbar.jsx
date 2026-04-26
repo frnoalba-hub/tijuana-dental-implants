@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LogoIcon from "./LogoIcon";
 
@@ -59,11 +58,9 @@ export default function Navbar() {
                             </a>
                         ))}
                         <a href="#contact">
-                            <Button 
-                                className="border border-blaze-accent/40 bg-blaze-accent/15 text-white hover:bg-blaze-accent hover:text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg shadow-blaze-accent/10 transition-all duration-200"
-                            >
+                            <span className="inline-flex items-center rounded-full border border-blaze-accent/40 bg-blaze-accent/15 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blaze-accent/10 transition-all duration-200 hover:bg-blaze-accent hover:text-white">
                                 Book Consultation
-                            </Button>
+                            </span>
                         </a>
                     </div>
 
@@ -71,9 +68,18 @@ export default function Navbar() {
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         type="button"
-                        className="lg:hidden rounded-full border border-white/15 bg-white/10 p-2 text-white shadow-sm ring-1 ring-white/5 backdrop-blur-md transition-colors hover:border-white/25 hover:bg-white/15"
+                        aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                        className="group lg:hidden grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-black/35 text-white shadow-lg shadow-black/25 ring-1 ring-white/5 backdrop-blur-md transition-all hover:border-blaze-accent/40 hover:bg-white/10"
                     >
-                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        {isMobileMenuOpen ? (
+                            <X className="w-5 h-5" />
+                        ) : (
+                            <span className="flex w-5 flex-col gap-1.5" aria-hidden="true">
+                                <span className="h-px w-5 rounded-full bg-white transition-colors group-hover:bg-blaze-accent" />
+                                <span className="h-px w-3.5 rounded-full bg-white/80 transition-colors group-hover:bg-blaze-accent" />
+                                <span className="h-px w-5 rounded-full bg-white transition-colors group-hover:bg-blaze-accent" />
+                            </span>
+                        )}
                     </button>
                 </div>
             </div>
@@ -99,11 +105,9 @@ export default function Navbar() {
                                 </a>
                             ))}
                             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
-                                <Button 
-                                    className="w-full border border-blaze-accent/40 bg-blaze-accent/15 hover:bg-blaze-accent text-white py-3 rounded-full font-semibold mt-4 transition-colors duration-200"
-                                >
+                                <span className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-blaze-accent/40 bg-blaze-accent/15 py-3 font-semibold text-white transition-colors duration-200 hover:bg-blaze-accent">
                                     Book Consultation
-                                </Button>
+                                </span>
                             </a>
                         </div>
                     </motion.div>
