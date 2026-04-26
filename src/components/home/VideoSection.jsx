@@ -33,7 +33,7 @@ export default function VideoSection() {
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
-                    {/* Landscape embed — 16:9 box matches typical Vimeo; dark shell hides letterbox if any */}
+                    {/* Landscape embed. 16:9 box matches typical Vimeo; dark shell hides letterbox if any. */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -54,7 +54,7 @@ export default function VideoSection() {
                         </div>
                     </motion.div>
 
-                    {/* Portrait-style embed — taller aspect so side pillarboxing from Vimeo isn’t in a wide 16:9 frame */}
+                    {/* Portrait-style embed. Taller aspect keeps side pillarboxing out of a wide 16:9 frame. */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97 }}
                         whileInView={{ opacity: 1, scale: 1 }}

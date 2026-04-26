@@ -23,7 +23,7 @@ export default function Footer() {
                             World-class dental implants in Tijuana, Mexico. 
                             Experience exceptional care at affordable prices.
                         </p>
-                        {/* Social links — update hrefs when accounts are confirmed */}
+                        {/* Social links. Update hrefs when accounts are confirmed. */}
                         <div className="flex gap-3">
                             <a href="https://www.instagram.com/blaze.dental" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white/75 hover:bg-white hover:text-black transition-all duration-300">
                                 <Instagram className="w-4 h-4" />

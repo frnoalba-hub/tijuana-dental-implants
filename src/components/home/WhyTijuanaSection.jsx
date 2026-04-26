@@ -12,7 +12,7 @@ export default function WhyTijuanaSection() {
         {
             icon: MapPin,
             title: "Minutes from San Diego",
-            description: "Tijuana is just a short drive from the US border—no expensive flights required."
+            description: "Tijuana is just a short drive from the US border, with no expensive flights required."
         },
         {
             icon: Shield,

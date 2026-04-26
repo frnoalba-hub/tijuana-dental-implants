@@ -39,7 +39,7 @@ export default function ExpertiseSection() {
                         Instructor & Leader in Advanced Implant Surgery
                     </h2>
                     <p className="text-gray-400 leading-relaxed">
-                        Dr. Arias doesn't just perform surgeries—he teaches them. As an instructor with University Implant Educators, 
+                        Dr. Arias doesn't just perform surgeries. He teaches them. As an instructor with University Implant Educators, 
                         he trains dentists from around the world in advanced surgical techniques, demonstrating the depth of his expertise.
                     </p>
                 </motion.div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { Stethoscope, Sparkles, Smile, Package } from "lucide-react";
+import { Check, Stethoscope, Sparkles, Smile, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
@@ -84,7 +84,7 @@ export default function ServicesSection() {
                         Services
                     </h2>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                        From surgical implants to cosmetic enhancements -- a full range of dental services.
+                        From surgical implants to cosmetic enhancements, all under one treatment plan.
                     </p>
                 </motion.div>
 
@@ -130,7 +130,9 @@ export default function ServicesSection() {
                                 transition={{ duration: 0.2, delay: index * 0.03 }}
                                 className="flex items-start gap-3 py-2.5 px-3"
                             >
-                                <span className="text-blaze-accent mt-0.5">--</span>
+                                <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blaze-accent/15 text-blaze-accent">
+                                    <Check className="h-3 w-3" />
+                                </span>
                                 <span className="text-base sm:text-lg text-gray-300">{service}</span>
                             </motion.div>
                         ))}

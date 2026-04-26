@@ -35,7 +35,7 @@ export default function Navbar() {
             }`}
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
-                {/* No fixed height / vertical padding — bar hugs logo so it reads larger without extra headroom */}
+                {/* No fixed height or vertical padding. Bar hugs logo so it reads larger without extra headroom. */}
                 <div className="flex items-center justify-between gap-4 py-2">
                     <a href="#" className="flex shrink-0 max-w-[42%] sm:max-w-none">
                         <LogoIcon

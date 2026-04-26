@@ -65,7 +65,7 @@ function HeroSectionContent() {
                             Save up to <span className="text-blaze-accent font-semibold">70%</span> compared to US prices.
                         </p>
 
-                        {/* Stats — glass panel for clearer structure (icons/counters unchanged) */}
+                        {/* Stats glass panel for clearer structure. Icons/counters unchanged. */}
                         <div className="mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/10">
                             <div className="flex items-center gap-4 sm:gap-8 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-5 sm:px-7 sm:py-6 shadow-inner shadow-black/20 backdrop-blur-sm ring-1 ring-white/5">
                                 <div className="shrink-0">

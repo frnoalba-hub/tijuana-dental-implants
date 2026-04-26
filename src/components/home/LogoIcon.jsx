@@ -2,14 +2,14 @@ import React from 'react';
 import { cn } from "@/lib/utils";
 
 const VARIANTS = {
-  /** Wide mark — best for compact nav bar */
+  /** Wide mark, best for compact nav bar */
   default: {
     src: '/blaze-dental-logo.png',
     srcSet: '/blaze-dental-logo.png 433w, /blaze-dental-logo@2x.png 866w',
     width: 433,
     height: 305,
   },
-  /** Full vertical lockup (icon + BLAZE + DENTAL) — higher-res for large footer */
+  /** Full vertical lockup (icon + BLAZE + DENTAL), higher-res for large footer */
   lockup: {
     src: '/blaze-dental-lockup.png',
     srcSet: '/blaze-dental-lockup.png 386w, /blaze-dental-lockup@2x.png 772w',
