@@ -18,12 +18,7 @@ export default function VideoSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <p className="text-blaze-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">Video</p>
-                    <div className="flex justify-center gap-1.5 mb-5" aria-hidden>
-                        <span className="h-1 w-1 rounded-full bg-blaze-accent/80" />
-                        <span className="h-1 w-8 rounded-full bg-blaze-accent" />
-                        <span className="h-1 w-1 rounded-full bg-blaze-accent/80" />
-                    </div>
+                    <p className="text-blaze-accent text-xs font-semibold tracking-[0.24em] uppercase mb-4">Video</p>
                     <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
                         See Dr. Arias in Action
                     </h2>

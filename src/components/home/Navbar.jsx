@@ -20,6 +20,7 @@ export default function Navbar() {
         { name: 'Services', href: '#services' },
         { name: 'Gallery', href: '#gallery' },
         { name: 'Why Tijuana', href: '#why-tijuana' },
+        { name: 'SoCal Patients', href: '#southern-california' },
         { name: 'Contact', href: '#contact' },
     ];
 

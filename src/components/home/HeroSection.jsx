@@ -61,8 +61,8 @@ function HeroSectionContent() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-white/60 mb-10 max-w-lg leading-relaxed">
-                            Exceptional dental care with a renowned implant surgeon. 
-                            Save up to <span className="text-blaze-accent font-semibold">70%</span> compared to US prices.
+                            Implant care for patients from San Diego, Orange County, Los Angeles, Riverside, and Southern California. 
+                            English and Spanish consultations available. Save up to <span className="text-blaze-accent font-semibold">70%</span> compared to US prices.
                         </p>
 
                         {/* Stats glass panel for clearer structure. Icons/counters unchanged. */}

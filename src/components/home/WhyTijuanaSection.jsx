@@ -48,10 +48,10 @@ export default function WhyTijuanaSection() {
                     className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
                 >
                     <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
-                        Why Patients Choose Tijuana
+                        Why Southern California Patients Choose Tijuana
                     </h2>
                     <p className="text-sm sm:text-base text-white/70 leading-relaxed">
-                        Thousands of Americans cross the border each year for quality dental care. 
+                        Patients from San Diego, Chula Vista, Orange County, Los Angeles, and Riverside cross the border each year for quality dental care. 
                         Here's why Tijuana has become a top destination for dental implants.
                     </p>
                 </motion.div>

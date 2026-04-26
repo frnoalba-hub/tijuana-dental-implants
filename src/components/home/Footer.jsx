@@ -41,6 +41,7 @@ export default function Footer() {
                             <li><a href="#about" className="text-white/60 hover:text-blaze-accent transition-colors">About</a></li>
                             <li><a href="#services" className="text-white/60 hover:text-blaze-accent transition-colors">Services</a></li>
                             <li><a href="#gallery" className="text-white/60 hover:text-blaze-accent transition-colors">Gallery</a></li>
+                            <li><a href="#southern-california" className="text-white/60 hover:text-blaze-accent transition-colors">SoCal Patients</a></li>
                             <li><a href="#contact" className="text-white/60 hover:text-blaze-accent transition-colors">Contact</a></li>
                         </ul>
                     </div>

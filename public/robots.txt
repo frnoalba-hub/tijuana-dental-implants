@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tijuana-dental-implants.base44.app/sitemap.xml
