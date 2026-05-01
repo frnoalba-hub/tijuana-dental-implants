@@ -13,7 +13,7 @@ export default function AboutSection() {
 
     const stats = [
         { icon: Award, value: "10+", label: "Years Experience" },
-        { icon: Users, value: "7,500+", label: "Successful Implants" },
+        { icon: Users, value: "Thousands", label: "Procedures Through Care + Training" },
         { icon: GraduationCap, value: "100+", label: "Doctors Trained" },
     ];
 
@@ -60,8 +60,9 @@ export default function AboutSection() {
                             </p>
 
                             <p>
-                            Using state-of-the-art technology and premium materials from leading manufacturers, 
-                            Dr. Arias delivers results that meet and exceed US standards at a fraction of the cost.
+                            Through direct patient care, advanced training, and teaching environments, Dr. Arias
+                            has been involved in thousands of implant procedures while using premium materials
+                            from leading manufacturers at a fraction of typical US pricing.
                             </p>
                         </div>
 
