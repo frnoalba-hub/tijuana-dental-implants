@@ -25,7 +25,7 @@ export default function ContactSection() {
             await Promise.all([
                 base44.entities.ContactSubmission.create(formData),
                 base44.integrations.Core.SendEmail({
-                    to: 'blaze.dental@gmail.com',
+                    to: 'dr.arias.coei@gmail.com',
                     subject: `New Consultation Request from ${formData.name}`,
                     body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`,
                     from_name: formData.name?.trim() || 'Blaze Dental website',
@@ -52,7 +52,7 @@ export default function ContactSection() {
         {
             icon: Mail,
             label: "Email",
-            value: "blaze.dental@gmail.com",
+            value: "dr.arias.coei@gmail.com",
             subtext: "We reply within 24 hours"
         },
         {
