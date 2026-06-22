@@ -1,6 +1,5 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
-import LogoIcon from "./LogoIcon";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -13,15 +12,14 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <div className="mb-5">
-                            <LogoIcon
-                                variant="lockup"
-                                sizes="(max-width: 768px) 78vw, 320px"
-                                className="h-auto w-auto max-w-[230px] sm:max-w-[270px] md:max-w-[300px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.4)]"
+                            <img
+                                src="/brand/blaze-lockup.png"
+                                alt="Blaze Dental"
+                                className="h-auto w-auto max-w-[170px] sm:max-w-[190px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
                             />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-7">
-                            World-class dental implants in Tijuana, Mexico. 
-                            Experience exceptional care at affordable prices.
+                            Modern implant and cosmetic care in Tijuana for patients from both sides of the border.
                         </p>
                         {/* Social links. Update hrefs when accounts are confirmed. */}
                         <div className="flex gap-3">

@@ -91,13 +91,26 @@ export default function WhyTijuanaSection() {
                         </div>
                         <div className="text-center p-6 sm:p-8 bg-blaze-surface-elevated border-2 border-blaze-accent/50 rounded-2xl transform sm:scale-105 relative z-10">
                             <p className="text-blaze-accent text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
-                            <p className="text-3xl sm:text-4xl font-bold text-white mb-1">$1,299</p>
+                            <p className="text-3xl sm:text-4xl font-bold text-white mb-1">From $899</p>
                             <p className="text-blaze-accent font-semibold">Save 65-70%</p>
                         </div>
                         <div className="text-center p-6 sm:p-8 bg-blaze-surface-muted/50 rounded-2xl border border-blaze-surface-border/50">
-                            <p className="text-gray-400 text-xs sm:text-sm mb-3">All-on-4 in USA</p>
-                            <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$20,000 - $35,000</p>
-                            <p className="text-xs text-gray-500 mt-3">Full mouth implants</p>
+                            <p className="text-gray-400 text-xs sm:text-sm mb-3">All-on-4 at Blaze Dental</p>
+                            <p className="text-2xl sm:text-3xl font-bold text-white">$8,899</p>
+                            <p className="text-xs text-gray-500 mt-3">From price</p>
+                        </div>
+                    </div>
+                    <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-center text-xs sm:text-sm text-gray-400">
+                        CT scans (tomographic studies) and IV sedation are not included.
+                    </div>
+                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="text-center p-5 bg-blaze-surface-muted/40 rounded-2xl border border-blaze-surface-border/40">
+                            <p className="text-gray-400 text-xs sm:text-sm mb-2">Veneers at Blaze Dental</p>
+                            <p className="text-2xl sm:text-3xl font-bold text-white">From $499</p>
+                        </div>
+                        <div className="text-center p-5 bg-blaze-surface-muted/40 rounded-2xl border border-blaze-surface-border/40">
+                            <p className="text-gray-400 text-xs sm:text-sm mb-2">Root Canal at Blaze Dental</p>
+                            <p className="text-2xl sm:text-3xl font-bold text-white">From $299</p>
                         </div>
                     </div>
                 </motion.div>

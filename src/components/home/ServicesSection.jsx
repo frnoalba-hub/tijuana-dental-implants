@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { Check, Stethoscope, Sparkles, Smile, Package } from "lucide-react";
+import { Check, Stethoscope, Sparkles, Smile, Bone, CreditCard, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
-    const [activeCategory, setActiveCategory] = useState("surgical");
+    const [activeCategory, setActiveCategory] = useState("implant");
 
     const scrollToContact = () => {
         const contactSection = document.getElementById("contact");
@@ -14,21 +14,23 @@ export default function ServicesSection() {
     };
 
     const serviceCategories = {
-        surgical: {
+        implant: {
             icon: Stethoscope,
-            title: "Surgical Services",
+            title: "Implant Services",
             services: [
-                "Implant for individual Crown",
-                "Implant w/ temporary Crown",
-                "Immediate implants",
-                "ALL ON 4 / ALL ON 5 / ALL ON 6",
-                "Guided Bone Regeneration",
-                "Wisdom tooth extractions",
-                "Ridge split",
-                "Sinus lift",
-                "Bone grafting",
-                "Soft tissue graft",
-                "Implants for overdenture"
+                "Dental implants",
+                "All-on-4 / All-on-6 full arch implants",
+                "Implant planning and restoration",
+                "Long-term implant maintenance"
+            ]
+        },
+        cosmetic: {
+            icon: Sparkles,
+            title: "Smile Design & Restorative",
+            services: [
+                "Dental veneers (Smile Design)",
+                "Dental crowns",
+                "Whitening treatments"
             ]
         },
         general: {
@@ -37,37 +39,49 @@ export default function ServicesSection() {
             services: [
                 "Professional cleaning",
                 "Deep cleaning",
-                "Fillings",
-                "Crowns",
-                "Root canal",
-                "Build ups"
+                "Root canal treatment (endodontics)",
+                "Extractions"
             ]
         },
-        cosmetic: {
-            icon: Sparkles,
-            title: "Cosmetic Services",
+        reconstruction: {
+            icon: Bone,
+            title: "Bone Reconstruction",
             services: [
-                "Veneers",
-                "Digital Smile Design",
-                "Full mouth rehabilitation",
-                "Teeth whitening"
-            ]
-        },
-        prosthesis: {
-            icon: Package,
-            title: "Prosthesis",
-            services: [
-                "Screw retained crowns",
-                "Cemented retained crowns",
-                "Acrylic dentures",
-                "Hybrid prosthesis",
-                "Zirconia prosthesis",
-                "Toronto prosthesis"
+                "Bone graft",
+                "Guided Bone Regeneration",
+                "Sinus lift"
             ]
         }
     };
 
     const currentCategory = serviceCategories[activeCategory];
+
+    const featuredServices = [
+        "All-on-4 / All-on-6",
+        "Dental veneers (Smile Design)",
+        "Dental implants",
+        "Teeth whitening",
+        "Bone graft"
+    ];
+
+    const pricingItems = [
+        { name: "Dental implants", price: "From $899" },
+        { name: "Crown", price: "From $499" },
+        { name: "Dental veneers", price: "From $499" },
+        { name: "Root canal treatment", price: "From $299" },
+        { name: "Teeth whitening", price: "From $399" },
+        { name: "All-on-4", price: "From $8,899" }
+    ];
+
+    const promoOptions = [
+        "Consultation discount",
+        "Free first X-ray",
+        "Special implant pricing",
+        "Whitening special",
+        "New patient offers",
+        "Cash payment discount",
+        "Limited-time promotions"
+    ];
 
     return (
         <section id="services" className="py-16 sm:py-20 bg-blaze-surface">
@@ -81,11 +95,29 @@ export default function ServicesSection() {
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
                     <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-6">
-                        Services
+                        Services & Pricing
                     </h2>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                        From surgical implants to cosmetic enhancements, all under one treatment plan.
+                        From advanced implant surgery to smile design and preventive care, all in one clinic.
                     </p>
+                </motion.div>
+
+                {/* Featured Services */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-8 sm:mb-12 rounded-2xl border border-blaze-accent/30 bg-blaze-surface-elevated p-6 sm:p-8"
+                >
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blaze-accent mb-4">Most Requested</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                        {featuredServices.map((item, index) => (
+                            <div key={index} className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/90 text-center">
+                                {item}
+                            </div>
+                        ))}
+                    </div>
                 </motion.div>
 
                 {/* Category Tabs */}
@@ -120,7 +152,7 @@ export default function ServicesSection() {
                     className="bg-blaze-surface-elevated rounded-2xl p-6 sm:p-10 md:p-14 border border-blaze-surface-border"
                 >
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-8">{currentCategory.title}</h3>
-                    
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                         {currentCategory.services.map((service, index) => (
                             <motion.div
@@ -139,6 +171,79 @@ export default function ServicesSection() {
                     </div>
                 </motion.div>
 
+                {/* Pricing */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-8 sm:mt-12 rounded-2xl border border-white/10 bg-blaze-surface-elevated p-6 sm:p-8 md:p-10"
+                >
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-6">Prices From</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                        {pricingItems.map((item, index) => (
+                            <div key={index} className="rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
+                                <p className="text-sm text-gray-400">{item.name}</p>
+                                <p className="text-xl font-bold text-white mt-1">{item.price}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-xs sm:text-sm text-gray-500 mt-5">
+                        CT scans (tomographic studies) and IV sedation are not included. Final cost depends on diagnosis and treatment plan.
+                    </p>
+                </motion.div>
+
+                {/* Payment Options */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-8 sm:mt-10 rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8"
+                >
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-5">Payment Options</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                            <Wallet className="w-4 h-4 text-blaze-accent" />
+                            <span className="text-sm text-gray-300">Cash accepted</span>
+                        </div>
+                        <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                            <CreditCard className="w-4 h-4 text-blaze-accent" />
+                            <span className="text-sm text-gray-300">Credit card accepted</span>
+                        </div>
+                        <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                            <CreditCard className="w-4 h-4 text-blaze-accent" />
+                            <span className="text-sm text-gray-300">Debit card accepted</span>
+                        </div>
+                        <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                            <Check className="w-4 h-4 text-blaze-accent" />
+                            <span className="text-sm text-gray-300">Payment plans: ask our team</span>
+                        </div>
+                    </div>
+                    <p className="text-xs sm:text-sm text-gray-500 mt-5">
+                        US and Mexican insurance are not currently accepted.
+                    </p>
+                </motion.div>
+
+                {/* Promotions */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-8 sm:mt-10 rounded-2xl border border-white/10 bg-blaze-surface-elevated p-6 sm:p-8"
+                >
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-5">Ask About Current Offers</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {promoOptions.map((offer, index) => (
+                            <div key={index} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                                <Check className="w-4 h-4 text-blaze-accent shrink-0" />
+                                <span className="text-sm text-gray-300">{offer}</span>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+
                 {/* CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -152,7 +257,7 @@ export default function ServicesSection() {
                         size="lg"
                         className="border border-white/20 bg-transparent text-white hover:bg-white hover:text-black h-12 px-8 rounded-md text-sm font-medium tracking-wide uppercase transition-colors duration-200"
                     >
-                        Request Consultation & Pricing
+                        Request Consultation & Custom Quote
                     </Button>
                 </motion.div>
             </div>
