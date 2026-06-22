@@ -13,7 +13,7 @@ export default function AboutSection() {
 
     const stats = [
         { icon: Award, value: "10+", label: "Years Experience" },
-        { icon: Users, value: "Thousands", label: "Procedures Through Care + Training" },
+        { icon: Users, value: "Global", label: "Surgical Education Network" },
         { icon: GraduationCap, value: "100+", label: "Doctors Trained" },
     ];
 

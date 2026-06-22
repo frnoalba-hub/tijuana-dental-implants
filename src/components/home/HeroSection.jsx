@@ -74,8 +74,8 @@ function HeroSectionContent() {
                                 </div>
                                 <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent shrink-0" />
                                 <div className="shrink-0">
-                                    <p className="text-3xl sm:text-4xl font-bold text-white">Thousands</p>
-                                    <p className="text-xs sm:text-sm text-white/45">Procedures &amp; Training</p>
+                                    <p className="text-3xl sm:text-4xl font-bold text-white"><AnimatedCounter value="100" suffix="+" /></p>
+                                    <p className="text-xs sm:text-sm text-white/45">Doctors Trained</p>
                                 </div>
                                 <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent shrink-0" />
                                 <div className="shrink-0">

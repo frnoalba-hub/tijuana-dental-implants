@@ -15,7 +15,7 @@ export default function Footer() {
                             <img
                                 src="/brand/blaze-lockup.png"
                                 alt="Blaze Dental"
-                                className="h-auto w-auto max-w-[200px] sm:max-w-[240px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
+                                className="h-auto w-auto max-w-[220px] sm:max-w-[260px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
                             />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-7">
