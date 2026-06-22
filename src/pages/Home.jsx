@@ -6,6 +6,7 @@ import ServicesSection from '@/components/home/ServicesSection';
 
 const GallerySection = lazy(() => import('@/components/home/GallerySection'));
 const ExpertiseSection = lazy(() => import('@/components/home/ExpertiseSection'));
+const TrainingGallerySection = lazy(() => import('@/components/home/TrainingGallerySection'));
 const WhyTijuanaSection = lazy(() => import('@/components/home/WhyTijuanaSection'));
 const SouthernCaliforniaSection = lazy(() => import('@/components/home/SouthernCaliforniaSection'));
 const VideoSection = lazy(() => import('@/components/home/VideoSection'));
@@ -26,6 +27,9 @@ export default function Home() {
             </Suspense>
             <Suspense fallback={<LoadingFallback />}>
                 <ExpertiseSection />
+            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>
+                <TrainingGallerySection />
             </Suspense>
             <Suspense fallback={<LoadingFallback />}>
                 <VideoSection />

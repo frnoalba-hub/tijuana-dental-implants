@@ -25,7 +25,7 @@ export default function ExpertiseSection() {
     ];
 
     return (
-        <section className="py-24 bg-blaze-depth">
+        <section id="expertise" className="py-24 bg-blaze-depth">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div

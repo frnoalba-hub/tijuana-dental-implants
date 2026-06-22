@@ -15,7 +15,7 @@ export default function Footer() {
                             <img
                                 src="/brand/blaze-lockup.png"
                                 alt="Blaze Dental"
-                                className="h-auto w-auto max-w-[170px] sm:max-w-[190px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
+                                className="h-auto w-auto max-w-[200px] sm:max-w-[240px] drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
                             />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-7">
@@ -38,7 +38,8 @@ export default function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li><a href="#about" className="text-white/60 hover:text-blaze-accent transition-colors">About</a></li>
                             <li><a href="#services" className="text-white/60 hover:text-blaze-accent transition-colors">Services</a></li>
-                            <li><a href="#gallery" className="text-white/60 hover:text-blaze-accent transition-colors">Gallery</a></li>
+                            <li><a href="#gallery" className="text-white/60 hover:text-blaze-accent transition-colors">Office</a></li>
+                            <li><a href="#training" className="text-white/60 hover:text-blaze-accent transition-colors">Training</a></li>
                             <li><a href="#southern-california" className="text-white/60 hover:text-blaze-accent transition-colors">SoCal Patients</a></li>
                             <li><a href="#contact" className="text-white/60 hover:text-blaze-accent transition-colors">Contact</a></li>
                         </ul>

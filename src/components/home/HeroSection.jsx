@@ -30,9 +30,9 @@ function HeroSectionContent() {
             {/* Background */}
             <div className="absolute inset-0">
                 <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/776406629_image6.png"
-                    alt="Dr. Arias performing surgery"
-                    className="w-full h-full object-cover object-center opacity-40"
+                    src="/office/bz-office-8.png"
+                    alt="Blaze Dental reception and treatment suites"
+                    className="w-full h-full object-cover object-[center_35%] opacity-45"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/50" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />

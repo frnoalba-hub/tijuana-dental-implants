@@ -17,9 +17,9 @@ export default function Navbar() {
     const navLinks = [
         { name: 'About', href: '#about' },
         { name: 'Services', href: '#services' },
-        { name: 'Gallery', href: '#gallery' },
+        { name: 'Office', href: '#gallery' },
+        { name: 'Training', href: '#training' },
         { name: 'Why Tijuana', href: '#why-tijuana' },
-        { name: 'SoCal Patients', href: '#southern-california' },
         { name: 'Contact', href: '#contact' },
     ];
 
@@ -36,12 +36,12 @@ export default function Navbar() {
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
                 <div className="flex items-center justify-between gap-4 py-3">
-                    <a href="#" className="inline-flex items-center gap-2.5">
+                    <a href="#" className="inline-flex items-center gap-3">
                         <img
                             src="/brand/blaze-icon.png"
                             alt="Blaze Dental"
                             fetchPriority="high"
-                            className="h-10 w-auto sm:h-11 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
+                            className="h-11 w-auto sm:h-12 drop-shadow-[0_8px_24px_rgba(255,255,255,0.15)]"
                         />
                         <span className="leading-none">
                             <span className="block font-display text-sm sm:text-base font-semibold tracking-[0.24em] text-white">BLAZE</span>
