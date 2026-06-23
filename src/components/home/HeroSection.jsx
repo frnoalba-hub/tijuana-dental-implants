@@ -7,7 +7,9 @@ const heroPrices = priceComparisons.filter((p) =>
     ["Dental Implant", "Crown", "All-on-4"].includes(p.name)
 );
 
+// Hero surgery photo: training gallery image9 (team procedure, Dr. Arias right)
 const HERO_SURGERY_IMAGE = "/doctor/dr-arias-surgery-hero.png";
+const HERO_SURGERY_IMAGE_2X = "/doctor/dr-arias-surgery-hero@2x.png";
 
 function HeroSectionContent() {
     const scrollToContact = () => {
@@ -92,8 +94,10 @@ function HeroSectionContent() {
                         <div className="hero-surgery-frame">
                             <img
                                 src={HERO_SURGERY_IMAGE}
+                                srcSet={`${HERO_SURGERY_IMAGE} 1x, ${HERO_SURGERY_IMAGE_2X} 2x`}
                                 alt="Dr. Jose Luis Arias performing implant surgery"
                                 fetchPriority="high"
+                                decoding="async"
                                 className="hero-surgery-frame__img"
                             />
                             <div className="hero-surgery-frame__shade" aria-hidden="true" />
