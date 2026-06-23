@@ -91,17 +91,19 @@ export default function Navbar() {
                 >
                     <Link
                         to="/"
-                        className="navbar-scroll-lockup flex w-full max-w-[13.5rem] items-center gap-2 sm:max-w-[16rem] sm:gap-2.5"
+                        className="navbar-scroll-lockup flex w-full max-w-[11rem] items-center gap-2 sm:max-w-[14rem] sm:gap-2.5"
                         aria-label="Blaze Dental home"
                     >
                         <span className="navbar-scroll-lockup__line" aria-hidden="true" />
-                        <img
-                            src="/brand/blaze-lockup-clear.png"
-                            srcSet="/brand/blaze-lockup-clear.png 1x, /brand/blaze-lockup-clear@2x.png 2x"
-                            alt="Blaze Dental"
-                            decoding="async"
-                            className="navbar-scroll-lockup__img"
-                        />
+                        <span className="navbar-scroll-lockup__frame">
+                            <img
+                                src="/brand/blaze-lockup-clear.png"
+                                srcSet="/brand/blaze-lockup-clear.png 1x, /brand/blaze-lockup-clear@2x.png 2x"
+                                alt=""
+                                decoding="async"
+                                className="navbar-scroll-lockup__img"
+                            />
+                        </span>
                         <span className="navbar-scroll-lockup__line" aria-hidden="true" />
                     </Link>
                 </div>

@@ -27,7 +27,7 @@ function HeroSectionContent() {
     };
 
     return (
-        <section className="page-section-over-office relative min-h-[100svh] flex items-center overflow-hidden">
+        <section className="page-section-over-office relative flex min-h-[100svh] items-center overflow-hidden max-lg:bg-blaze-depth">
             <div className="pointer-events-none absolute inset-0 lg:hidden bg-gradient-to-b from-black/78 via-black/45 to-black/40" />
             <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
 
@@ -35,8 +35,8 @@ function HeroSectionContent() {
                 <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 xl:gap-16">
                     <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
                         <div
-                            className={`mb-6 flex flex-col items-center sm:mb-8 lg:items-start transition-opacity duration-300 ${
-                                lockupInHeader ? 'max-lg:opacity-0 max-lg:pointer-events-none' : 'opacity-100'
+                            className={`mb-6 flex flex-col items-center sm:mb-8 lg:items-start ${
+                                lockupInHeader ? 'max-lg:hidden' : ''
                             }`}
                         >
                             <img

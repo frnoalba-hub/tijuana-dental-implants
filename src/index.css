@@ -137,6 +137,10 @@
   }
 
   @media (max-width: 1023px) {
+    .office-backdrop {
+      display: none;
+    }
+
     .office-backdrop__photo {
       object-position: 72% 18%;
     }
@@ -167,20 +171,28 @@
     height: auto;
   }
 
-  .navbar-scroll-lockup__img {
-    display: block;
+  .navbar-scroll-lockup__frame {
+    display: flex;
+    height: 1.5rem;
+    width: 6.75rem;
     flex-shrink: 0;
-    height: 1.375rem;
-    width: auto;
-    max-width: min(38vw, 8.75rem);
-    object-fit: contain;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (min-width: 640px) {
-    .navbar-scroll-lockup__img {
-      height: 2rem;
-      max-width: min(44vw, 10.5rem);
+    .navbar-scroll-lockup__frame {
+      height: 2.125rem;
+      width: 9.25rem;
     }
+  }
+
+  .navbar-scroll-lockup__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
   }
 
   .navbar-scroll-lockup__line {

@@ -23,7 +23,7 @@ export default function Home() {
                 <HeroSection />
 
                 {/* Mobile: breathing room between hero surgery photo and About portrait */}
-                <div className="page-section-over-office relative border-t border-white/10 bg-blaze-depth/92 px-6 py-8 lg:hidden">
+                <div className="page-section-over-office relative border-t border-white/10 bg-blaze-depth px-6 py-8 lg:hidden">
                     <div className="mx-auto max-w-md text-center">
                         <p className="section-label mb-2">About the Doctor</p>
                         <p className="text-sm leading-relaxed text-white/75">
