@@ -56,7 +56,7 @@ export default function Navbar() {
 
                 <a
                     href="#contact"
-                    className="hidden lg:inline-flex items-center rounded-sm bg-blaze-accent px-5 py-2.5 text-[0.8125rem] font-semibold text-blaze-ink shadow-md shadow-black/25 transition-colors hover:bg-blaze-accent-hover shrink-0"
+                    className="hidden lg:inline-flex items-center rounded-sm bg-blaze-accent px-5 py-2.5 text-[0.8125rem] font-semibold text-blaze-ink shadow-lg shadow-black/40 ring-1 ring-white/20 transition-colors hover:bg-blaze-accent-hover shrink-0"
                 >
                     Book Consultation
                 </a>

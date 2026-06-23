@@ -79,7 +79,7 @@ export default function ContactSection() {
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <p className="section-label mb-4">Private Consultation</p>
+                    <p className="section-label section-label--on-dark mb-4">Private Consultation</p>
                     <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
                         Start With a Clear Treatment Plan
                     </h2>
