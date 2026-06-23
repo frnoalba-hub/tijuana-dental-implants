@@ -30,13 +30,23 @@ export default function Navbar() {
             }`}
         >
             <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
-                <a href="#" className="shrink-0">
+                <a href="#" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group" aria-label="Blaze Dental home">
                     <img
-                        src="/brand/blaze-lockup.png"
-                        alt="Blaze Dental"
+                        src="/brand/blaze-icon.png"
+                        alt=""
+                        aria-hidden="true"
                         fetchPriority="high"
-                        className="h-9 w-auto sm:h-10"
+                        decoding="async"
+                        className="h-10 w-10 sm:h-11 sm:w-11 object-contain shrink-0"
                     />
+                    <span className="flex flex-col leading-none">
+                        <span className="text-lg sm:text-xl font-bold tracking-tight text-white">
+                            BLAZE
+                        </span>
+                        <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] uppercase text-white/45 mt-0.5">
+                            Dental
+                        </span>
+                    </span>
                 </a>
 
                 <nav className="hidden lg:flex items-center gap-8">

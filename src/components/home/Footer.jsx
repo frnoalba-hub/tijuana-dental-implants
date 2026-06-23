@@ -10,12 +10,21 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-10 lg:gap-14">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <div className="mb-5">
+                        <div className="mb-5 flex items-center gap-3">
                             <img
-                                src="/brand/blaze-lockup.png"
-                                alt="Blaze Dental"
-                                className="h-auto w-auto max-w-[180px] sm:max-w-[200px]"
+                                src="/brand/blaze-icon.png"
+                                alt=""
+                                aria-hidden="true"
+                                className="h-11 w-11 object-contain"
                             />
+                            <div className="leading-none">
+                                <p className="text-xl font-bold tracking-tight text-white">
+                                    BLAZE
+                                </p>
+                                <p className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/45 mt-1">
+                                    Dental
+                                </p>
+                            </div>
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-7">
                             Modern implant and cosmetic care in Tijuana for patients from both sides of the border.
