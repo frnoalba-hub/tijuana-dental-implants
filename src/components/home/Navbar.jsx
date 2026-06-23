@@ -36,18 +36,13 @@ export default function Navbar() {
         >
             <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
                 <div className="flex items-center justify-between gap-4 py-3">
-                    <a href="#" className="inline-flex items-center gap-3 shrink-0">
+                    <a href="#" className="inline-flex items-center shrink-0">
                         <img
-                            src="/brand/blaze-icon.png"
-                            alt=""
-                            aria-hidden="true"
+                            src="/brand/blaze-lockup.png"
+                            alt="Blaze Dental"
                             fetchPriority="high"
-                            className="h-11 w-auto sm:h-12"
+                            className="h-10 w-auto sm:h-11"
                         />
-                        <span className="leading-none">
-                            <span className="block font-display text-sm sm:text-base font-semibold tracking-[0.24em] text-white">BLAZE</span>
-                            <span className="mt-1 block text-[0.58rem] sm:text-[0.62rem] font-medium tracking-[0.35em] text-white/60">DENTAL</span>
-                        </span>
                     </a>
 
                     {/* Desktop Navigation */}
