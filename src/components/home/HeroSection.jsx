@@ -130,7 +130,7 @@ function HeroSectionContent() {
                                 src={HERO_SURGERY_IMAGE}
                                 alt="Dr. Jose Luis Arias performing implant surgery"
                                 fetchPriority="high"
-                                className="w-full rounded-[1.15rem] object-cover aspect-[4/5] object-[62%_28%]"
+                                className="w-full rounded-[1.15rem] object-cover aspect-[4/5] object-[52%_40%]"
                             />
                         </div>
                     </motion.div>
