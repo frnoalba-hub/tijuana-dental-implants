@@ -36,9 +36,10 @@ function HeroSectionContent() {
                         >
                             <img
                                 src="/brand/blaze-lockup.png"
+                                srcSet="/brand/blaze-lockup.png 1x, /brand/blaze-lockup@2x.png 2x"
                                 alt="Blaze Dental"
                                 fetchPriority="high"
-                                className="hidden sm:block w-[10.5rem] md:w-[12.5rem] lg:w-[14rem] h-auto"
+                                className="hero-brand-lockup hidden sm:block w-[10.5rem] md:w-[12.5rem] lg:w-[14rem]"
                             />
                             <img
                                 src="/brand/blaze-icon.png"
@@ -124,14 +125,15 @@ function HeroSectionContent() {
                         transition={{ duration: 0.9, delay: 0.2 }}
                         className="relative mx-auto w-full max-w-md lg:max-w-none lg:pt-2"
                     >
-                        <div className="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-blaze-accent/20 via-white/5 to-transparent blur-2xl" />
-                        <div className="relative overflow-hidden rounded-[1.5rem] border border-white/12 bg-black/15 p-1.5 shadow-2xl shadow-black/35">
+                        <div className="hero-surgery-frame">
                             <img
                                 src={HERO_SURGERY_IMAGE}
                                 alt="Dr. Jose Luis Arias performing implant surgery"
                                 fetchPriority="high"
-                                className="w-full rounded-[1.15rem] object-cover aspect-[4/5] object-[52%_40%]"
+                                className="hero-surgery-frame__img"
                             />
+                            <div className="hero-surgery-frame__shade" aria-hidden="true" />
+                            <div className="hero-surgery-frame__edge" aria-hidden="true" />
                         </div>
                     </motion.div>
                 </div>

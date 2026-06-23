@@ -13,8 +13,9 @@ export default function Footer() {
                         <div className="mb-6">
                             <img
                                 src="/brand/blaze-lockup.png"
+                                srcSet="/brand/blaze-lockup.png 1x, /brand/blaze-lockup@2x.png 2x"
                                 alt="Blaze Dental"
-                                className="h-auto w-[10.5rem] sm:w-48"
+                                className="hero-brand-lockup h-auto w-[10.5rem] sm:w-48"
                             />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-7">
