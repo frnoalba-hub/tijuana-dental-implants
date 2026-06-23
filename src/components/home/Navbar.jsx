@@ -91,7 +91,7 @@ export default function Navbar() {
                 >
                     <Link
                         to="/"
-                        className="navbar-scroll-lockup flex w-full max-w-[11rem] items-center gap-2 sm:max-w-[14rem] sm:gap-2.5"
+                        className="navbar-scroll-lockup flex w-full max-w-[13rem] items-center gap-2 sm:max-w-[16.5rem] sm:gap-2.5"
                         aria-label="Blaze Dental home"
                     >
                         <span className="navbar-scroll-lockup__line" aria-hidden="true" />

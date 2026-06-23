@@ -45,7 +45,7 @@ function HeroSectionContent() {
                                 alt="Blaze Dental"
                                 fetchPriority="high"
                                 decoding="sync"
-                                className="hero-brand-lockup w-[9.5rem] sm:w-[10.5rem] md:w-[12.5rem] lg:w-[14rem]"
+                                className="hero-brand-lockup w-[11.5rem] sm:w-[12.5rem] md:w-[15rem] lg:w-[14rem]"
                             />
                         </div>
 
