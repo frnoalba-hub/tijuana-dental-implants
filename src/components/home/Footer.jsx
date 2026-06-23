@@ -15,6 +15,7 @@ export default function Footer() {
                                 src="/brand/blaze-lockup.png"
                                 srcSet="/brand/blaze-lockup.png 1x, /brand/blaze-lockup@2x.png 2x"
                                 alt="Blaze Dental"
+                                decoding="sync"
                                 className="hero-brand-lockup h-auto w-[10.5rem] sm:w-48"
                             />
                         </div>

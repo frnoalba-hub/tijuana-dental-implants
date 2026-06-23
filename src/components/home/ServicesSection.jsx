@@ -110,7 +110,7 @@ export default function ServicesSection() {
                     transition={{ duration: 0.5 }}
                     className="mb-8 sm:mb-12 border border-white/[0.08] bg-blaze-surface p-6 sm:p-8"
                 >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blaze-accent mb-4">Most Requested</p>
+                    <p className="section-label mb-4">Most Requested</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                         {featuredServices.map((item, index) => (
                             <div key={index} className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/90 text-center">

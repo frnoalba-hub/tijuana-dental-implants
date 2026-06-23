@@ -8,7 +8,6 @@ export default function VideoSection() {
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_50%_-10%,rgba(58,143,183,0.12),transparent_55%)]"
                 aria-hidden
             />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" aria-hidden />
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
                 <motion.div
@@ -18,7 +17,7 @@ export default function VideoSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <p className="text-blaze-accent text-xs font-semibold tracking-[0.24em] uppercase mb-4">Video</p>
+                    <p className="section-label mb-4">Video</p>
                     <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
                         See Dr. Arias in Action
                     </h2>

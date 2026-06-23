@@ -25,7 +25,7 @@ export default function GallerySection() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
                 >
-                    <p className="text-blaze-accent text-xs font-semibold tracking-[0.24em] uppercase mb-4">Our Office</p>
+                    <p className="section-label mb-4">Our Office</p>
                     <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                         Inside Blaze Dental
                     </h2>

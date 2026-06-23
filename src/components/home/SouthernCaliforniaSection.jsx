@@ -42,7 +42,7 @@ export default function SouthernCaliforniaSection() {
                     transition={{ duration: 0.6 }}
                     className="mx-auto mb-14 max-w-3xl text-center"
                 >
-                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-blaze-accent">
+                    <p className="section-label mb-4">
                         Southern California Patients
                     </p>
                     <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">

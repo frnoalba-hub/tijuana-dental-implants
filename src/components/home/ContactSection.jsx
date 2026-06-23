@@ -79,7 +79,7 @@ export default function ContactSection() {
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <p className="text-blaze-accent text-xs font-semibold tracking-[0.24em] uppercase mb-4">Private Consultation</p>
+                    <p className="section-label mb-4">Private Consultation</p>
                     <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
                         Start With a Clear Treatment Plan
                     </h2>
@@ -146,7 +146,6 @@ export default function ContactSection() {
                         className="lg:col-span-3"
                     >
                         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/30 backdrop-blur-sm md:p-10">
-                            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blaze-accent/60 to-transparent" />
                             <div className="mb-7">
                                 <h3 className="font-display text-2xl font-semibold text-white">Tell Us About Your Smile</h3>
                                 <p className="mt-2 text-sm leading-relaxed text-gray-500">

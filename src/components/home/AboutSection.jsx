@@ -44,7 +44,7 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="mb-4 text-blaze-accent font-semibold tracking-[0.24em] text-xs uppercase">About the Doctor</p>
+                        <p className="section-label mb-4">About the Doctor</p>
                         <h2 className="font-display max-w-2xl text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.04] mb-7">
                             Meet Dr. Jose Luis Arias,
                             <span className="block text-blaze-accent/95 font-semibold mt-2">Your Implant Specialist</span>
