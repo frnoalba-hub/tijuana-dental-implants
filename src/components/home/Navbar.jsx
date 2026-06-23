@@ -54,8 +54,8 @@ export default function Navbar() {
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:bg-blaze-depth/40 lg:backdrop-blur-sm ${
                 isScrolled
-                    ? 'border-b border-white/[0.08] bg-blaze-depth shadow-lg shadow-black/30 lg:bg-blaze-depth/97 lg:backdrop-blur-md'
-                    : 'bg-blaze-depth lg:bg-blaze-depth/40'
+                    ? 'max-lg:border-b max-lg:border-white/[0.08] max-lg:bg-blaze-depth max-lg:shadow-lg max-lg:shadow-black/30 lg:border-b lg:border-white/[0.08] lg:bg-blaze-depth/97 lg:backdrop-blur-md lg:shadow-lg lg:shadow-black/25'
+                    : 'max-lg:bg-transparent max-lg:shadow-none lg:bg-blaze-depth/40'
             }`}
         >
             {/* Desktop */}
@@ -76,18 +76,22 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            {/* Mobile + tablet: solid bar, lockup slides into center when scrolled */}
-            <div className="grid h-14 grid-cols-[2.25rem_1fr_2.25rem] items-center gap-2 px-5 sm:px-6 lg:hidden">
+            {/* Mobile + tablet: transparent at top; compact lockup bar when scrolled */}
+            <div
+                className={`grid grid-cols-[2.25rem_1fr_2.25rem] items-center gap-2 px-5 transition-all duration-300 sm:px-6 lg:hidden ${
+                    isScrolled ? 'h-14' : 'h-12'
+                }`}
+            >
                 <div aria-hidden="true" />
 
                 <div
-                    className={`flex min-w-0 items-center justify-center transition-all duration-300 ${
-                        isScrolled ? 'scale-100 opacity-100' : 'pointer-events-none scale-95 opacity-0'
+                    className={`flex min-w-0 items-center justify-center overflow-hidden transition-all duration-300 ${
+                        isScrolled ? 'opacity-100' : 'pointer-events-none opacity-0'
                     }`}
                 >
                     <Link
                         to="/"
-                        className="navbar-scroll-lockup flex w-full max-w-[15rem] items-center gap-2 sm:max-w-[17rem] sm:gap-2.5"
+                        className="navbar-scroll-lockup flex w-full max-w-[13.5rem] items-center gap-2 sm:max-w-[16rem] sm:gap-2.5"
                         aria-label="Blaze Dental home"
                     >
                         <span className="navbar-scroll-lockup__line" aria-hidden="true" />
@@ -96,7 +100,7 @@ export default function Navbar() {
                             srcSet="/brand/blaze-lockup-clear.png 1x, /brand/blaze-lockup-clear@2x.png 2x"
                             alt="Blaze Dental"
                             decoding="async"
-                            className="hero-brand-lockup h-[1.65rem] w-auto shrink-0 sm:h-[1.85rem]"
+                            className="navbar-scroll-lockup__img"
                         />
                         <span className="navbar-scroll-lockup__line" aria-hidden="true" />
                     </Link>

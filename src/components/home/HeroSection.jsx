@@ -35,7 +35,7 @@ function HeroSectionContent() {
                 <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 xl:gap-16">
                     <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
                         <div
-                            className={`hero-lockup-shell mb-6 flex flex-col items-center sm:mb-8 lg:items-start transition-opacity duration-300 ${
+                            className={`mb-6 flex flex-col items-center sm:mb-8 lg:items-start transition-opacity duration-300 ${
                                 lockupInHeader ? 'max-lg:opacity-0 max-lg:pointer-events-none' : 'opacity-100'
                             }`}
                         >
@@ -45,7 +45,7 @@ function HeroSectionContent() {
                                 alt="Blaze Dental"
                                 fetchPriority="high"
                                 decoding="sync"
-                                className="hero-brand-lockup relative z-[1] w-[9.5rem] sm:w-[10.5rem] md:w-[12.5rem] lg:w-[14rem]"
+                                className="hero-brand-lockup w-[9.5rem] sm:w-[10.5rem] md:w-[12.5rem] lg:w-[14rem]"
                             />
                         </div>
 
