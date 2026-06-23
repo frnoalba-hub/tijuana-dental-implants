@@ -7,9 +7,9 @@ const heroPrices = priceComparisons.filter((p) =>
     ["Dental Implant", "Crown", "All-on-4"].includes(p.name)
 );
 
-// Hero surgery photo: training gallery image9 (team procedure, Dr. Arias right)
-const HERO_SURGERY_IMAGE = "/doctor/dr-arias-surgery-hero.png";
-const HERO_SURGERY_IMAGE_2X = "/doctor/dr-arias-surgery-hero@2x.png";
+// Hero surgery photo: training gallery image9 only — do not swap for image42/loupes solo shot
+const HERO_SURGERY_IMAGE = "/doctor/dr-arias-surgery-image9.png";
+const HERO_SURGERY_IMAGE_2X = "/doctor/dr-arias-surgery-image9@2x.png";
 
 function HeroSectionContent() {
     const scrollToContact = () => {
