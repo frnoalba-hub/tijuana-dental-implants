@@ -1,5 +1,4 @@
-"""Blaze lockup export — flood-remove outer black only; keep full metallic fill."""
-from collections import deque
+"""Sharpen Blaze lockup from original removebg asset at display-ready resolution."""
 from pathlib import Path
 
 import numpy as np
@@ -9,91 +8,61 @@ BRAND = Path("public/brand")
 SRC = BRAND / "blaze-lockup-original.png"
 OUT = BRAND / "blaze-lockup.png"
 OUT_2X = BRAND / "blaze-lockup@2x.png"
+TARGET_W = 480
+TARGET_W_2X = 640
 
 
-def luminance(rgb: np.ndarray) -> np.ndarray:
-    return 0.2126 * rgb[..., 0] + 0.7152 * rgb[..., 1] + 0.0722 * rgb[..., 2]
-
-
-def flatten_on_black(rgba: Image.Image) -> np.ndarray:
-    bg = Image.new("RGBA", rgba.size, (0, 0, 0, 255))
-    return np.array(Image.alpha_composite(bg, rgba).convert("RGB"), dtype=np.uint8)
-
-
-def flood_alpha(rgb: np.ndarray, thresh: float = 24.0) -> np.ndarray:
-    h, w = rgb.shape[:2]
-    lum = luminance(rgb.astype(np.float32))
-    alpha = np.full((h, w), 255, dtype=np.uint8)
-    visited = np.zeros((h, w), dtype=bool)
-    q: deque[tuple[int, int]] = deque()
-
-    for x in range(w):
-        for y in (0, h - 1):
-            if lum[y, x] <= thresh:
-                q.append((y, x))
-    for y in range(h):
-        for x in (0, w - 1):
-            if lum[y, x] <= thresh:
-                q.append((y, x))
-
-    while q:
-        y, x = q.popleft()
-        if y < 0 or y >= h or x < 0 or x >= w or visited[y, x]:
-            continue
-        if lum[y, x] > thresh:
-            continue
-        visited[y, x] = True
-        alpha[y, x] = 0
-        q.extend(((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)))
-
-    # Drop only near-transparent removebg fringe, not letter shading
-    alpha = np.where(alpha < 12, 0, alpha)
-    return alpha
-
-
-def autocrop(rgba: Image.Image, pad: int = 8) -> Image.Image:
+def autocrop(rgba: Image.Image, pad: int = 6) -> Image.Image:
     a = np.asarray(rgba)[..., 3]
-    ys, xs = np.where(a > 16)
+    ys, xs = np.where(a > 12)
     if len(xs) == 0:
         return rgba
     x0, x1 = xs.min(), xs.max()
     y0, y1 = ys.min(), ys.max()
-    return rgba.crop((
-        max(0, x0 - pad),
-        max(0, y0 - pad),
-        min(rgba.width, x1 + pad + 1),
-        min(rgba.height, y1 + pad + 1),
-    ))
+    x0 = max(0, x0 - pad)
+    y0 = max(0, y0 - pad)
+    x1 = min(rgba.width - 1, x1 + pad)
+    y1 = min(rgba.height - 1, y1 + pad)
+    return rgba.crop((x0, y0, x1 + 1, y1 + 1))
+
+
+def harden_alpha(rgba: Image.Image, cutoff: int = 24) -> Image.Image:
+    arr = np.array(rgba)
+    a = arr[..., 3].astype(np.float32)
+    a = np.clip((a - cutoff) / (255 - cutoff), 0, 1) * 255
+    arr[..., 3] = a.astype(np.uint8)
+    return Image.fromarray(arr, "RGBA")
 
 
 def sharpen_rgba(img: Image.Image) -> Image.Image:
     r, g, b, a = img.split()
-    rgb = Image.merge("RGB", (r, g, b)).filter(
-        ImageFilter.UnsharpMask(radius=0.7, percent=120, threshold=2)
-    )
+    rgb = Image.merge("RGB", (r, g, b))
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=1.0, percent=140, threshold=2))
     r, g, b = rgb.split()
     return Image.merge("RGBA", (r, g, b, a))
 
 
-def build() -> Image.Image:
+def resize_to_width(img: Image.Image, width: int) -> Image.Image:
+    if img.width >= width:
+        return img
+    scale = width / img.width
+    height = max(1, int(round(img.height * scale)))
+    return img.resize((width, height), Image.LANCZOS)
+
+
+def export(width: int, path: Path) -> None:
     src = Image.open(SRC).convert("RGBA")
-    rgb = flatten_on_black(src)
-    alpha = flood_alpha(rgb)
-    rgba = Image.fromarray(np.dstack([rgb, alpha]).astype(np.uint8), "RGBA")
-    return sharpen_rgba(autocrop(rgba, pad=10))
-
-
-def export(width: int, path: Path, base: Image.Image) -> None:
-    h = max(1, int(round(base.height * width / base.width)))
-    out = base.resize((width, h), Image.LANCZOS) if width != base.width else base
-    out.save(path, optimize=True)
-    print("saved", path, out.size)
+    cropped = autocrop(src)
+    cropped = harden_alpha(cropped)
+    sized = resize_to_width(cropped, width)
+    sharp = sharpen_rgba(sized)
+    sharp.save(path, optimize=True)
+    print("saved", path, sharp.size)
 
 
 def main() -> None:
-    base = build()
-    export(500, OUT, base)
-    export(1000, OUT_2X, base)
+    export(TARGET_W, OUT)
+    export(TARGET_W_2X, OUT_2X)
 
 
 if __name__ == "__main__":
