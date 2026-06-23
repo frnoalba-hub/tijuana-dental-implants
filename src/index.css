@@ -118,6 +118,38 @@
 }
 
 @layer utilities {
+  .office-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .office-backdrop__photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 24%;
+    transform: scale(1.02);
+  }
+
+  /* Light wash so copy stays readable without burying the clinic photo */
+  .office-backdrop__tint {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(105deg, hsl(var(--blaze-depth) / 0.58) 0%, hsl(var(--blaze-depth) / 0.28) 45%, hsl(var(--blaze-depth) / 0.14) 100%),
+      linear-gradient(180deg, hsl(var(--blaze-depth) / 0.28) 0%, transparent 42%, hsl(var(--blaze-depth) / 0.38) 100%);
+  }
+
+  .page-section-over-office {
+    position: relative;
+    z-index: 1;
+  }
+
   /* Subtle grain echoing the full lockup texture */
   .hero-surface-texture::after {
     content: "";

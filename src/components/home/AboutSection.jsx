@@ -18,7 +18,7 @@ export default function AboutSection() {
     ];
 
     return (
-        <section id="about" className="relative py-24 bg-blaze-depth">
+        <section id="about" className="page-section-over-office relative py-24 bg-blaze-depth/45 backdrop-blur-[3px] border-t border-white/[0.06]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="relative grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
                     {/* Image Side */}

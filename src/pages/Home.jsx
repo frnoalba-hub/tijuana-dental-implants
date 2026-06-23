@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import Navbar from '@/components/home/Navbar';
+import OfficeBackdrop from '@/components/home/OfficeBackdrop';
 import HeroSection from '@/components/home/HeroSection';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
@@ -17,7 +18,9 @@ const LoadingFallback = () => <div className="h-screen bg-blaze-depth" />;
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-background">
+        <div className="relative min-h-screen bg-blaze-depth">
+            <OfficeBackdrop />
+            <div className="relative z-[1]">
             <Navbar />
             <HeroSection />
             <AboutSection />
@@ -46,6 +49,7 @@ export default function Home() {
             <Suspense fallback={<LoadingFallback />}>
                 <Footer />
             </Suspense>
+            </div>
         </div>
     );
 }

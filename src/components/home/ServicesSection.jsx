@@ -84,7 +84,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="py-20 sm:py-28 bg-blaze-depth">
+        <section id="services" className="page-section-over-office relative py-20 sm:py-28 bg-blaze-depth/72 backdrop-blur-sm border-t border-white/[0.05]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div

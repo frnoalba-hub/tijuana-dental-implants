@@ -9,7 +9,7 @@ const heroPrices = priceComparisons.filter((p) =>
 );
 
 const HERO_SURGERY_IMAGE =
-    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/9a3ac0a5a_028eb11c-2f57-4114-913f-864468b4c0ad.jpg";
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/430c8fee4_image26.png";
 
 function HeroSectionContent() {
     const scrollToContact = () => {
@@ -21,17 +21,10 @@ function HeroSectionContent() {
     };
 
     return (
-        <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-blaze-depth hero-surface-texture">
-            <div className="absolute inset-0">
-                <img
-                    src="/office/bz-office-7.png"
-                    alt=""
-                    aria-hidden="true"
-                    className="h-full w-full object-cover object-[center_30%]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/25" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/35" />
-            </div>
+        <section className="page-section-over-office relative min-h-[100svh] flex items-center overflow-hidden hero-surface-texture">
+            {/* Local scrim for copy only — office photo comes from fixed OfficeBackdrop */}
+            <div className="pointer-events-none absolute inset-0 lg:hidden bg-gradient-to-b from-black/45 via-black/15 to-black/35" />
+            <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-24 lg:pb-20">
                 <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 xl:gap-16">
@@ -92,7 +85,7 @@ function HeroSectionContent() {
                             className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]"
                         >
                             {heroPrices.map((item) => (
-                                <div key={item.name} className="bg-black/45 px-4 py-4 sm:px-5 sm:py-5 backdrop-blur-[2px]">
+                                <div key={item.name} className="bg-black/40 px-4 py-4 sm:px-5 sm:py-5 backdrop-blur-sm">
                                     <p className="text-[0.65rem] uppercase tracking-[0.22em] text-white/50 mb-2">{item.name}</p>
                                     <p className="text-xl sm:text-2xl font-semibold text-white">{formatUsd(item.blaze)}</p>
                                     <p className="mt-1 text-xs text-white/45 line-through">
@@ -132,13 +125,13 @@ function HeroSectionContent() {
                         transition={{ duration: 0.9, delay: 0.2 }}
                         className="relative mx-auto w-full max-w-md lg:max-w-none lg:pt-2"
                     >
-                        <div className="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-blaze-accent/25 via-white/5 to-transparent blur-2xl" />
-                        <div className="relative overflow-hidden rounded-[1.5rem] border border-white/12 bg-black/20 p-1.5 shadow-2xl shadow-black/45">
+                        <div className="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-blaze-accent/20 via-white/5 to-transparent blur-2xl" />
+                        <div className="relative overflow-hidden rounded-[1.5rem] border border-white/12 bg-black/15 p-1.5 shadow-2xl shadow-black/35">
                             <img
                                 src={HERO_SURGERY_IMAGE}
                                 alt="Dr. Jose Luis Arias performing implant surgery"
                                 fetchPriority="high"
-                                className="w-full rounded-[1.15rem] object-cover aspect-[5/6] sm:aspect-[4/5] object-[50%_58%]"
+                                className="w-full rounded-[1.15rem] object-cover aspect-[4/5] object-[center_38%]"
                             />
                         </div>
                     </motion.div>
