@@ -153,7 +153,6 @@
   .hero-brand-lockup {
     display: block;
     height: auto;
-    image-rendering: -webkit-optimize-contrast;
   }
 
   .hero-surgery-frame {

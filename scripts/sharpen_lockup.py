@@ -1,4 +1,4 @@
-"""Sharpen Blaze lockup from original removebg asset at display-ready resolution."""
+"""Export crisp Blaze lockup PNGs — metallic strokes, no gray halo box."""
 from pathlib import Path
 
 import numpy as np
@@ -8,13 +8,15 @@ BRAND = Path("public/brand")
 SRC = BRAND / "blaze-lockup-original.png"
 OUT = BRAND / "blaze-lockup.png"
 OUT_2X = BRAND / "blaze-lockup@2x.png"
-TARGET_W = 480
-TARGET_W_2X = 640
 
 
-def autocrop(rgba: Image.Image, pad: int = 6) -> Image.Image:
+def luminance(rgb: np.ndarray) -> np.ndarray:
+    return 0.2126 * rgb[..., 0] + 0.7152 * rgb[..., 1] + 0.0722 * rgb[..., 2]
+
+
+def autocrop(rgba: Image.Image, pad: int = 8) -> Image.Image:
     a = np.asarray(rgba)[..., 3]
-    ys, xs = np.where(a > 12)
+    ys, xs = np.where(a > 24)
     if len(xs) == 0:
         return rgba
     x0, x1 = xs.min(), xs.max()
@@ -26,43 +28,66 @@ def autocrop(rgba: Image.Image, pad: int = 6) -> Image.Image:
     return rgba.crop((x0, y0, x1 + 1, y1 + 1))
 
 
-def harden_alpha(rgba: Image.Image, cutoff: int = 24) -> Image.Image:
-    arr = np.array(rgba)
-    a = arr[..., 3].astype(np.float32)
-    a = np.clip((a - cutoff) / (255 - cutoff), 0, 1) * 255
-    arr[..., 3] = a.astype(np.uint8)
-    return Image.fromarray(arr, "RGBA")
+def clean_alpha(arr: np.ndarray) -> np.ndarray:
+    rgb = arr[..., :3]
+    lum = luminance(rgb)
+    src_a = arr[..., 3]
+
+    # Keep metallic strokes; drop dark gray removebg fringe
+    keep = (lum >= 44) & (src_a >= 18)
+    alpha = np.where(keep, np.clip(np.maximum(src_a, lum * 0.92), 0, 255), 0)
+
+    # Hard-cut wispy semi-transparent box pixels
+    alpha = np.where(alpha < 36, 0, alpha)
+    alpha = np.where(alpha > 220, 255, alpha)
+    return alpha.astype(np.uint8)
+
+
+def defringe_rgb(arr: np.ndarray, alpha: np.ndarray) -> np.ndarray:
+    out = arr[..., :3].astype(np.float32).copy()
+    a = alpha.astype(np.float32) / 255.0
+    mask = a > 0.14
+    for c in range(3):
+        ch = out[..., c]
+        ch = np.where(mask, np.clip(ch / np.maximum(a, 1e-3), 0, 255), 0)
+        out[..., c] = ch
+    return out.astype(np.uint8)
 
 
 def sharpen_rgba(img: Image.Image) -> Image.Image:
     r, g, b, a = img.split()
     rgb = Image.merge("RGB", (r, g, b))
-    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=1.0, percent=140, threshold=2))
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=0.85, percent=130, threshold=2))
     r, g, b = rgb.split()
     return Image.merge("RGBA", (r, g, b, a))
 
 
-def resize_to_width(img: Image.Image, width: int) -> Image.Image:
-    if img.width >= width:
-        return img
-    scale = width / img.width
-    height = max(1, int(round(img.height * scale)))
-    return img.resize((width, height), Image.LANCZOS)
+def build_lockup() -> Image.Image:
+    arr = np.array(Image.open(SRC).convert("RGBA")).astype(np.float32)
+    alpha = clean_alpha(arr)
+    rgb = defringe_rgb(arr, alpha)
+    rgba = Image.fromarray(np.dstack([rgb, alpha]).astype(np.uint8), "RGBA")
+    rgba = autocrop(rgba, pad=10)
+    a = rgba.split()[3].filter(ImageFilter.MedianFilter(size=3))
+    rgba.putalpha(a)
+    return sharpen_rgba(rgba)
 
 
-def export(width: int, path: Path) -> None:
-    src = Image.open(SRC).convert("RGBA")
-    cropped = autocrop(src)
-    cropped = harden_alpha(cropped)
-    sized = resize_to_width(cropped, width)
-    sharp = sharpen_rgba(sized)
-    sharp.save(path, optimize=True)
-    print("saved", path, sharp.size)
+def export(width: int, path: Path, base: Image.Image) -> None:
+    if base.width != width:
+        height = max(1, int(round(base.height * width / base.width)))
+        out = base.resize((width, height), Image.LANCZOS)
+    else:
+        out = base.copy()
+    out = sharpen_rgba(out)
+    out.save(path, optimize=True)
+    print("saved", path, out.size)
 
 
 def main() -> None:
-    export(TARGET_W, OUT)
-    export(TARGET_W_2X, OUT_2X)
+    base = build_lockup()
+    export(480, OUT, base)
+    export(640, OUT_2X, base)
 
 
 if __name__ == "__main__":
