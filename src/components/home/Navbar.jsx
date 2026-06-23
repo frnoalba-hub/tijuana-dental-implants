@@ -25,36 +25,32 @@ export default function Navbar() {
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 isScrolled
-                    ? 'border-b border-white/[0.06] bg-blaze-depth/95 backdrop-blur-md'
+                    ? 'border-b border-white/[0.06] bg-blaze-depth/92 backdrop-blur-md'
                     : 'bg-transparent'
             }`}
         >
-            <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
-                <a href="#" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group" aria-label="Blaze Dental home">
+            <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 lg:px-8 lg:py-4">
+                {/* Mobile: large icon mark only — full lockup lives in hero */}
+                <a href="#" className="lg:hidden shrink-0" aria-label="Blaze Dental home">
                     <img
                         src="/brand/blaze-icon.png"
                         alt=""
                         aria-hidden="true"
                         fetchPriority="high"
                         decoding="async"
-                        className="h-10 w-10 sm:h-11 sm:w-11 object-contain shrink-0"
+                        className="h-16 w-16 object-contain"
                     />
-                    <span className="flex flex-col leading-none">
-                        <span className="text-lg sm:text-xl font-bold tracking-tight text-white">
-                            BLAZE
-                        </span>
-                        <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] uppercase text-white/45 mt-0.5">
-                            Dental
-                        </span>
-                    </span>
                 </a>
 
-                <nav className="hidden lg:flex items-center gap-8">
+                {/* Desktop: no corner logo — nav is the header */}
+                <div className="hidden lg:block w-32 shrink-0" aria-hidden="true" />
+
+                <nav className="hidden lg:flex items-center justify-center gap-8 flex-1">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-[0.8125rem] font-medium tracking-wide text-white/55 transition-colors hover:text-white"
+                            className="text-[0.8125rem] font-medium tracking-wide text-white/60 transition-colors hover:text-white"
                         >
                             {link.name}
                         </a>
@@ -63,7 +59,7 @@ export default function Navbar() {
 
                 <a
                     href="#contact"
-                    className="hidden lg:inline-flex items-center border border-blaze-accent/35 px-5 py-2 text-[0.8125rem] font-medium tracking-wide text-blaze-accent transition-colors hover:bg-blaze-accent/10"
+                    className="hidden lg:inline-flex items-center border border-blaze-accent/35 px-5 py-2 text-[0.8125rem] font-medium tracking-wide text-blaze-accent transition-colors hover:bg-blaze-accent/10 shrink-0"
                 >
                     Book Consultation
                 </a>
@@ -72,9 +68,9 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     type="button"
                     aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-                    className="lg:hidden text-white/80 hover:text-white"
+                    className="lg:hidden text-white/85 hover:text-white p-1"
                 >
-                    {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
                 </button>
             </div>
 
@@ -84,7 +80,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="border-t border-white/[0.06] bg-blaze-depth lg:hidden"
+                        className="border-t border-white/[0.06] bg-blaze-depth/98 lg:hidden"
                     >
                         <div className="space-y-1 px-6 py-5">
                             {navLinks.map((link) => (

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
 const officeImages = [
-    { src: "/office/bz-office-7.png", alt: "Blaze Dental interior and branding wall", caption: "Signature interior and lighting" },
+    { src: "/office/bz-office-8.png", alt: "Blaze Dental reception and branding wall", caption: "Reception and signature branding" },
     { src: "/office/bz-office-2.png", alt: "Private operatory at Blaze Dental", caption: "Private operatories with natural light" },
     { src: "/office/bz-office-4.png", alt: "Treatment chair at Blaze Dental", caption: "Comfort-focused treatment rooms" },
     { src: "/office/bz-office-3.png", alt: "Blaze Dental front desk", caption: "Welcoming check-in area" },
