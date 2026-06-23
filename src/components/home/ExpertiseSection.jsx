@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-export default function ExpertiseSection() {
+export default function ExpertiseSection({ showHeader = true }) {
     const credentials = [
         {
             title: "Advanced Implant Educator",
@@ -25,9 +25,10 @@ export default function ExpertiseSection() {
     ];
 
     return (
-        <section id="expertise" className="py-24 bg-blaze-depth">
+        <section id="expertise" className={`bg-blaze-depth ${showHeader ? 'py-24' : 'pb-24 pt-8'}`}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
+                {showHeader && (
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -43,6 +44,7 @@ export default function ExpertiseSection() {
                         he trains dentists from around the world in advanced surgical techniques, demonstrating the depth of his expertise.
                     </p>
                 </motion.div>
+                )}
 
                 {/* Credentials Grid */}
                 <div className="grid md:grid-cols-2 gap-8">

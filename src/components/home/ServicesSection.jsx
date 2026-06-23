@@ -7,11 +7,30 @@ export default function ServicesSection() {
     const [activeCategory, setActiveCategory] = useState("implant");
 
     const scrollToContact = () => {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
-        }
+        window.location.assign('/Contact');
     };
+
+    const featuredServices = [
+        "All-on-4 / All-on-6",
+        "Dental veneers (Smile Design)",
+        "Dental implants",
+        "Teeth whitening",
+        "Bone graft"
+    ];
+    const featuredHighlight = "All-on-4 / All-on-6";
+    const featuredRest = featuredServices.filter((item) => item !== featuredHighlight);
+
+    const promoOptions = [
+        "Special implant pricing",
+        "Consultation discount",
+        "Free first X-ray",
+        "Whitening special",
+        "New patient offers",
+        "Cash payment discount",
+        "Limited-time promotions"
+    ];
+    const promoHighlight = "Special implant pricing";
+    const promoRest = promoOptions.filter((item) => item !== promoHighlight);
 
     const serviceCategories = {
         implant: {
@@ -56,14 +75,6 @@ export default function ServicesSection() {
 
     const currentCategory = serviceCategories[activeCategory];
 
-    const featuredServices = [
-        "All-on-4 / All-on-6",
-        "Dental veneers (Smile Design)",
-        "Dental implants",
-        "Teeth whitening",
-        "Bone graft"
-    ];
-
     const pricingItems = [
         { name: "Dental implants", price: "From $899" },
         { name: "Crown", price: "From $499" },
@@ -71,16 +82,6 @@ export default function ServicesSection() {
         { name: "Root canal treatment", price: "From $299" },
         { name: "Teeth whitening", price: "From $399" },
         { name: "All-on-4", price: "From $8,899" }
-    ];
-
-    const promoOptions = [
-        "Consultation discount",
-        "Free first X-ray",
-        "Special implant pricing",
-        "Whitening special",
-        "New patient offers",
-        "Cash payment discount",
-        "Limited-time promotions"
     ];
 
     return (
@@ -106,10 +107,25 @@ export default function ServicesSection() {
                     transition={{ duration: 0.5 }}
                     className="mb-8 border border-white/12 bg-blaze-surface/95 p-6 sm:mb-12 sm:p-8"
                 >
-                    <p className="section-label mb-4">Most Requested</p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-                        {featuredServices.map((item, index) => (
-                            <div key={index} className="rounded-xl border border-white/12 bg-black/35 px-4 py-3 text-center text-sm text-white/90">
+                    <p className="section-label mb-4 text-center">Most Requested</p>
+                    <div className="mx-auto w-full max-w-md xl:hidden">
+                        <div className="mb-3 rounded-xl border border-white/12 bg-black/35 px-4 py-3 text-center text-sm font-medium text-white/90">
+                            {featuredHighlight}
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                            {featuredRest.map((item) => (
+                                <div
+                                    key={item}
+                                    className="rounded-xl border border-white/12 bg-black/35 px-3 py-3 text-center text-sm text-white/90"
+                                >
+                                    {item}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="hidden gap-3 xl:grid xl:grid-cols-5">
+                        {featuredServices.map((item) => (
+                            <div key={item} className="rounded-xl border border-white/12 bg-black/35 px-4 py-3 text-center text-sm text-white/90">
                                 {item}
                             </div>
                         ))}
@@ -229,11 +245,28 @@ export default function ServicesSection() {
                     transition={{ duration: 0.5 }}
                     className="mt-8 sm:mt-10 rounded-2xl border border-white/10 bg-blaze-surface-elevated p-6 sm:p-8"
                 >
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-5">Ask About Current Offers</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                        {promoOptions.map((offer, index) => (
-                            <div key={index} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                                <Check className="w-4 h-4 text-blaze-accent shrink-0" />
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-5 text-center">Ask About Current Offers</h3>
+                    <div className="mx-auto w-full max-w-md xl:hidden">
+                        <div className="mb-3 flex items-center justify-center gap-3 rounded-xl border border-white/12 bg-white/[0.03] px-4 py-3 text-center">
+                            <Check className="h-4 w-4 shrink-0 text-blaze-accent" />
+                            <span className="text-sm text-gray-300">{promoHighlight}</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                            {promoRest.map((offer) => (
+                                <div
+                                    key={offer}
+                                    className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-3 text-center"
+                                >
+                                    <Check className="h-4 w-4 shrink-0 text-blaze-accent" />
+                                    <span className="text-xs sm:text-sm text-gray-300">{offer}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="hidden grid-cols-1 gap-3 sm:grid-cols-2 xl:grid xl:grid-cols-3">
+                        {promoOptions.map((offer) => (
+                            <div key={offer} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                                <Check className="h-4 w-4 shrink-0 text-blaze-accent" />
                                 <span className="text-sm text-gray-300">{offer}</span>
                             </div>
                         ))}

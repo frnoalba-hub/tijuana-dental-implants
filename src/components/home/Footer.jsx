@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
@@ -40,9 +41,9 @@ export default function Footer() {
                             <li><a href="#about" className="text-white/60 hover:text-blaze-accent transition-colors">About</a></li>
                             <li><a href="#services" className="text-white/60 hover:text-blaze-accent transition-colors">Services</a></li>
                             <li><a href="#gallery" className="text-white/60 hover:text-blaze-accent transition-colors">Office</a></li>
-                            <li><a href="#training" className="text-white/60 hover:text-blaze-accent transition-colors">Training</a></li>
+                            <li><Link to="/Training" className="text-white/60 hover:text-blaze-accent transition-colors">Training</Link></li>
                             <li><a href="#southern-california" className="text-white/60 hover:text-blaze-accent transition-colors">SoCal Patients</a></li>
-                            <li><a href="#contact" className="text-white/60 hover:text-blaze-accent transition-colors">Contact</a></li>
+                            <li><Link to="/Contact" className="text-white/60 hover:text-blaze-accent transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 

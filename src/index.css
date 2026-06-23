@@ -136,6 +136,18 @@
     transform: scale(1.02);
   }
 
+  @media (max-width: 1023px) {
+    .office-backdrop__photo {
+      object-position: 72% 18%;
+    }
+
+    .office-backdrop__tint {
+      background:
+        linear-gradient(105deg, hsl(var(--blaze-depth) / 0.82) 0%, hsl(var(--blaze-depth) / 0.55) 48%, hsl(var(--blaze-depth) / 0.35) 100%),
+        linear-gradient(180deg, hsl(var(--blaze-depth) / 0.72) 0%, hsl(var(--blaze-depth) / 0.42) 38%, hsl(var(--blaze-depth) / 0.48) 100%);
+    }
+  }
+
   /* Light wash so copy stays readable without burying the clinic photo */
   .office-backdrop__tint {
     position: absolute;
@@ -153,6 +165,38 @@
   .hero-brand-lockup {
     display: block;
     height: auto;
+  }
+
+  .hero-lockup-shell {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero-lockup-shell::before {
+    content: "";
+    position: absolute;
+    inset: -1.25rem -2rem;
+    z-index: 0;
+    border-radius: 9999px;
+    background: radial-gradient(ellipse at center, hsl(var(--blaze-depth) / 0.92) 0%, hsl(var(--blaze-depth) / 0.55) 55%, transparent 100%);
+    pointer-events: none;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-lockup-shell::before {
+      display: none;
+    }
+  }
+
+  .navbar-scroll-lockup__line {
+    height: 1px;
+    min-width: 1.25rem;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.28));
+  }
+
+  .navbar-scroll-lockup__line:last-child {
+    background: linear-gradient(270deg, transparent, hsl(0 0% 100% / 0.28));
   }
 
   .section-label {

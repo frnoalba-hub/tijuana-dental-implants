@@ -9,9 +9,7 @@ const trainingImages = [
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/754213e63_image10.png", alt: "Team surgery", caption: "International surgical collaboration" },
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/1848d3f02_image5.png", alt: "Surgical demonstration", caption: "Hands-on training session" },
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/57c56acf6_image4.png", alt: "Teaching session", caption: "Instructing advanced techniques" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/b8f550e1c_image12.png", alt: "University Implant Educators course", caption: "Advanced course instruction" },
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/7988d856c_image14.png", alt: "Team surgical training", caption: "Collaborative surgical learning" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/064d11c59_image21.png", alt: "Advanced Implant Education certification", caption: "AIE certification achievement" },
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/757ade1b1_image22.png", alt: "Supervised surgical training", caption: "Mentoring dental professionals" },
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/8e14e2aad_image23.png", alt: "Dr. Arias with team and patient", caption: "Patient care excellence" },
     { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/eb2e9e610_image24.png", alt: "Professional networking dinner", caption: "Building international connections" },
@@ -44,7 +42,7 @@ const trainingImages = [
 
 export default function TrainingGallerySection() {
     const [selectedImage, setSelectedImage] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(9);
+    const [visibleCount, setVisibleCount] = useState(8);
 
     const visibleImages = trainingImages.slice(0, visibleCount);
 
@@ -99,7 +97,7 @@ export default function TrainingGallerySection() {
                     <div className="flex justify-center mt-8 sm:mt-12">
                         <Button
                             variant="outline"
-                            onClick={() => setVisibleCount((prev) => Math.min(prev + 9, trainingImages.length))}
+                            onClick={() => setVisibleCount((prev) => Math.min(prev + 8, trainingImages.length))}
                             className="border border-white/20 bg-transparent text-white hover:bg-white hover:text-black px-6 py-3 rounded-md text-sm transition-colors duration-200"
                         >
                             Load More Photos

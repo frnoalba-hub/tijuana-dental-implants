@@ -58,6 +58,16 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
+      <Route path="/training" element={
+        <LayoutWrapper currentPageName="Training">
+          <Pages.Training />
+        </LayoutWrapper>
+      } />
+      <Route path="/contact" element={
+        <LayoutWrapper currentPageName="Contact">
+          <Pages.Contact />
+        </LayoutWrapper>
+      } />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

@@ -52,7 +52,7 @@ export default function GallerySection() {
                         Inside Blaze Dental
                     </h2>
                     <p className="text-sm leading-relaxed text-gray-400 sm:text-base">
-                        A look inside our upgraded clinic — private suites, modern equipment, and a calm patient experience.
+                        A look inside our upgraded clinic: private suites, modern equipment, and a calm patient experience.
                     </p>
                 </div>
 

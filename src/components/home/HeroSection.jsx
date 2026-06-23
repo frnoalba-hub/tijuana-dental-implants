@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { formatUsd, priceComparisons } from "@/data/pricing";
@@ -12,9 +13,14 @@ const HERO_SURGERY_IMAGE = "/doctor/dr-arias-surgery-image9.png";
 const HERO_SURGERY_IMAGE_2X = "/doctor/dr-arias-surgery-image9@2x.png";
 
 function HeroSectionContent() {
-    const scrollToContact = () => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    };
+    const [lockupInHeader, setLockupInHeader] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setLockupInHeader(window.scrollY > 56);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     const scrollToServices = () => {
         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
@@ -22,26 +28,24 @@ function HeroSectionContent() {
 
     return (
         <section className="page-section-over-office relative min-h-[100svh] flex items-center overflow-hidden">
-            <div className="pointer-events-none absolute inset-0 lg:hidden bg-gradient-to-b from-black/45 via-black/15 to-black/35" />
+            <div className="pointer-events-none absolute inset-0 lg:hidden bg-gradient-to-b from-black/78 via-black/45 to-black/40" />
             <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-24 lg:pb-20">
                 <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 xl:gap-16">
                     <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
-                        <div className="flex flex-col items-center lg:items-start mb-6 sm:mb-8">
+                        <div
+                            className={`hero-lockup-shell mb-6 flex flex-col items-center sm:mb-8 lg:items-start transition-opacity duration-300 ${
+                                lockupInHeader ? 'max-lg:opacity-0 max-lg:pointer-events-none' : 'opacity-100'
+                            }`}
+                        >
                             <img
                                 src="/brand/blaze-lockup-clear.png"
                                 srcSet="/brand/blaze-lockup-clear.png 1x, /brand/blaze-lockup-clear@2x.png 2x"
                                 alt="Blaze Dental"
                                 fetchPriority="high"
                                 decoding="sync"
-                                className="hero-brand-lockup hidden sm:block w-[10.5rem] md:w-[12.5rem] lg:w-[14rem]"
-                            />
-                            <img
-                                src="/brand/blaze-icon.png"
-                                alt="Blaze Dental"
-                                fetchPriority="high"
-                                className="sm:hidden w-24 h-24 object-contain"
+                                className="hero-brand-lockup relative z-[1] w-[9.5rem] sm:w-[10.5rem] md:w-[12.5rem] lg:w-[14rem]"
                             />
                         </div>
 
@@ -73,11 +77,11 @@ function HeroSectionContent() {
 
                         <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                             <Button
-                                onClick={scrollToContact}
+                                asChild
                                 size="lg"
                                 className="h-12 rounded-sm bg-white px-8 text-sm font-semibold tracking-wide text-blaze-ink shadow-lg shadow-black/30 hover:bg-white/92"
                             >
-                                Book Free Consultation
+                                <Link to="/Contact">Book Free Consultation</Link>
                             </Button>
                             <button
                                 onClick={scrollToServices}
@@ -90,7 +94,7 @@ function HeroSectionContent() {
                         </div>
                     </div>
 
-                    <div className="relative mx-auto w-full max-w-md lg:max-w-none lg:pt-2">
+                    <div className="relative mx-auto mb-2 w-full max-w-md lg:mb-0 lg:max-w-none lg:pt-2">
                         <div className="hero-surgery-frame">
                             <img
                                 src={HERO_SURGERY_IMAGE}

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Send, Clock, CheckCircle2, MessageCircle } from "lucide-react";
 
-export default function ContactSection() {
+export default function ContactSection({ showHeader = true }) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -74,10 +74,11 @@ export default function ContactSection() {
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
     return (
-        <section id="contact" className="relative overflow-hidden py-24 bg-blaze-surface">
+        <section id="contact" className={`relative overflow-hidden bg-blaze-surface ${showHeader ? 'py-24' : 'pb-24 pt-8'}`}>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(58,143,183,0.16),transparent_28%),radial-gradient(circle_at_82%_68%,rgba(255,255,255,0.06),transparent_25%)]" />
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
+                {showHeader && (
                 <div className="text-center mb-12">
                     <p className="section-label section-label--on-dark mb-4">Private Consultation</p>
                     <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
@@ -87,6 +88,7 @@ export default function ContactSection() {
                         Tell us what you need and our team will follow up with next steps, pricing guidance, and travel-friendly scheduling options.
                     </p>
                 </div>
+                )}
 
                 <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-start">
                     {/* Contact Info Cards */}

@@ -1,71 +1,113 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from "lucide-react";
+
+const navLinks = [
+    { name: 'About', href: '/#about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Office', href: '/#gallery' },
+    { name: 'Why Tijuana', href: '/#why-tijuana' },
+    { name: 'Training', href: '/Training', route: true },
+    { name: 'Contact', href: '/Contact', route: true },
+];
+
+const SCROLL_LOCKUP_THRESHOLD = 56;
+
+function NavItem({ link, className, onClick }) {
+    if (link.route) {
+        return (
+            <Link to={link.href} onClick={onClick} className={className}>
+                {link.name}
+            </Link>
+        );
+    }
+
+    return (
+        <a href={link.href} onClick={onClick} className={className}>
+            {link.name}
+        </a>
+    );
+}
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 24);
-        window.addEventListener('scroll', handleScroll);
+        const handleScroll = () => setIsScrolled(window.scrollY > SCROLL_LOCKUP_THRESHOLD);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Services', href: '#services' },
-        { name: 'Office', href: '#gallery' },
-        { name: 'Training', href: '#training' },
-        { name: 'Why Tijuana', href: '#why-tijuana' },
-        { name: 'Contact', href: '#contact' },
-    ];
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [location.pathname]);
+
+    const linkClass =
+        "text-[0.8125rem] font-medium text-white/85 transition-colors hover:text-white";
+    const mobileLinkClass =
+        "block py-2.5 text-sm font-medium text-white/85 hover:text-white";
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:bg-blaze-depth/40 lg:backdrop-blur-sm ${
                 isScrolled
-                    ? 'border-b border-white/[0.08] bg-blaze-depth/95 backdrop-blur-md'
-                    : 'bg-blaze-depth/40 backdrop-blur-sm'
+                    ? 'border-b border-white/[0.08] bg-blaze-depth shadow-lg shadow-black/30 lg:bg-blaze-depth/97 lg:backdrop-blur-md'
+                    : 'bg-blaze-depth lg:bg-blaze-depth/40'
             }`}
         >
-            <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 lg:px-8 lg:py-3.5">
-                <a href="#" className="lg:hidden shrink-0" aria-label="Blaze Dental home">
-                    <img
-                        src="/brand/blaze-icon.png"
-                        alt=""
-                        aria-hidden="true"
-                        fetchPriority="high"
-                        decoding="async"
-                        className="h-14 w-14 object-contain"
-                    />
-                </a>
+            {/* Desktop */}
+            <div className="mx-auto hidden max-w-7xl items-center justify-between gap-4 px-8 py-3.5 lg:flex">
+                <div className="w-32 shrink-0" aria-hidden="true" />
 
-                <div className="hidden lg:block w-32 shrink-0" aria-hidden="true" />
-
-                <nav className="hidden lg:flex items-center justify-center gap-7 flex-1">
+                <nav className="flex flex-1 items-center justify-center gap-7">
                     {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-[0.8125rem] font-medium text-white/85 transition-colors hover:text-white"
-                        >
-                            {link.name}
-                        </a>
+                        <NavItem key={link.name} link={link} className={linkClass} />
                     ))}
                 </nav>
 
-                <a
-                    href="#contact"
-                    className="hidden lg:inline-flex items-center rounded-sm bg-blaze-accent px-5 py-2.5 text-[0.8125rem] font-semibold text-blaze-ink shadow-lg shadow-black/40 ring-1 ring-white/20 transition-colors hover:bg-blaze-accent-hover shrink-0"
+                <Link
+                    to="/Contact"
+                    className="inline-flex shrink-0 items-center rounded-sm bg-blaze-accent px-5 py-2.5 text-[0.8125rem] font-semibold text-blaze-ink shadow-lg shadow-black/40 ring-1 ring-white/20 transition-colors hover:bg-blaze-accent-hover"
                 >
                     Book Consultation
-                </a>
+                </Link>
+            </div>
+
+            {/* Mobile + tablet: solid bar, lockup slides into center when scrolled */}
+            <div className="grid h-14 grid-cols-[2.25rem_1fr_2.25rem] items-center gap-2 px-5 sm:px-6 lg:hidden">
+                <div aria-hidden="true" />
+
+                <div
+                    className={`flex min-w-0 items-center justify-center transition-all duration-300 ${
+                        isScrolled ? 'scale-100 opacity-100' : 'pointer-events-none scale-95 opacity-0'
+                    }`}
+                >
+                    <Link
+                        to="/"
+                        className="navbar-scroll-lockup flex w-full max-w-[15rem] items-center gap-2 sm:max-w-[17rem] sm:gap-2.5"
+                        aria-label="Blaze Dental home"
+                    >
+                        <span className="navbar-scroll-lockup__line" aria-hidden="true" />
+                        <img
+                            src="/brand/blaze-lockup-clear.png"
+                            srcSet="/brand/blaze-lockup-clear.png 1x, /brand/blaze-lockup-clear@2x.png 2x"
+                            alt="Blaze Dental"
+                            decoding="async"
+                            className="hero-brand-lockup h-[1.65rem] w-auto shrink-0 sm:h-[1.85rem]"
+                        />
+                        <span className="navbar-scroll-lockup__line" aria-hidden="true" />
+                    </Link>
+                </div>
 
                 <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     type="button"
                     aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-                    className="lg:hidden text-white hover:text-white/90 p-1"
+                    aria-expanded={isMobileMenuOpen}
+                    className="flex h-9 w-9 items-center justify-center justify-self-end text-white hover:text-white/90"
                 >
                     {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
                 </button>
@@ -75,22 +117,20 @@ export default function Navbar() {
                 <div className="border-t border-white/[0.08] bg-blaze-depth lg:hidden">
                     <div className="space-y-1 px-6 py-5">
                         {navLinks.map((link) => (
-                            <a
+                            <NavItem
                                 key={link.name}
-                                href={link.href}
+                                link={link}
+                                className={mobileLinkClass}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="block py-2.5 text-sm font-medium text-white/85 hover:text-white"
-                            >
-                                {link.name}
-                            </a>
+                            />
                         ))}
-                        <a
-                            href="#contact"
+                        <Link
+                            to="/Contact"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="mt-4 block rounded-sm bg-blaze-accent py-3 text-center text-sm font-semibold text-blaze-ink"
                         >
                             Book Consultation
-                        </a>
+                        </Link>
                     </div>
                 </div>
             )}
