@@ -1,0 +1,25 @@
+# Blaze Dental — frozen hero & logo (do not touch)
+
+Unless the user **explicitly** asks to change these in the current message, do **not** edit, regenerate, revert, or "improve":
+
+## Logo (frozen)
+- `public/brand/blaze-lockup-clear.png`
+- `public/brand/blaze-lockup-clear@2x.png`
+- `public/brand/blaze-lockup-original.png`
+- `scripts/sharpen_lockup.py` — **never run** unless user explicitly requests logo re-export
+
+## Hero surgery photo (frozen — image9 only)
+- `public/doctor/dr-arias-surgery-image9.png`
+- `public/doctor/dr-arias-surgery-image9@2x.png`
+- `src/components/home/HeroSection.jsx` — image paths, layout, copy
+- `src/index.css` — `.hero-surgery-frame`, `.hero-surgery-frame__shade`, `.hero-surgery-frame__edge`, `.hero-brand-lockup`
+
+Do **not** swap to image42, image26, or other training gallery images.
+
+## Office backdrop (frozen)
+- `src/components/home/OfficeBackdrop.jsx`
+
+## Known-good commit reference
+`ce27b50` on `main` — image9 hero, transparent lockup, surgery frame vignette edges.
+
+If something looks broken locally, `git restore .` from `main` — do not re-process assets.

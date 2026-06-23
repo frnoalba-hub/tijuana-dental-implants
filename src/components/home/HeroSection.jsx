@@ -30,8 +30,8 @@ function HeroSectionContent() {
                     <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
                         <div className="flex flex-col items-center lg:items-start mb-6 sm:mb-8">
                             <img
-                                src="/brand/blaze-lockup.png"
-                                srcSet="/brand/blaze-lockup.png 1x, /brand/blaze-lockup@2x.png 2x"
+                                src="/brand/blaze-lockup-clear.png"
+                                srcSet="/brand/blaze-lockup-clear.png 1x, /brand/blaze-lockup-clear@2x.png 2x"
                                 alt="Blaze Dental"
                                 fetchPriority="high"
                                 decoding="sync"
