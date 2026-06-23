@@ -8,8 +8,7 @@ const heroPrices = priceComparisons.filter((p) =>
     ["Dental Implant", "Crown", "All-on-4"].includes(p.name)
 );
 
-const HERO_SURGERY_IMAGE =
-    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695b0e23c5556d6ae22b3a01/430c8fee4_image26.png";
+const HERO_SURGERY_IMAGE = "/doctor/dr-arias-surgery-hero.png";
 
 function HeroSectionContent() {
     const scrollToContact = () => {
@@ -131,7 +130,7 @@ function HeroSectionContent() {
                                 src={HERO_SURGERY_IMAGE}
                                 alt="Dr. Jose Luis Arias performing implant surgery"
                                 fetchPriority="high"
-                                className="w-full rounded-[1.15rem] object-cover aspect-[4/5] object-[center_38%]"
+                                className="w-full rounded-[1.15rem] object-cover aspect-[4/5] object-[62%_28%]"
                             />
                         </div>
                     </motion.div>
