@@ -47,17 +47,16 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Blaze Dental — matches logo (high contrast) + clinical accent */
-    --blaze-accent: 199 52% 47%;
-    --blaze-accent-hover: 199 58% 38%;
-    --blaze-accent-soft: 199 42% 24%;
-    /* Surfaces (replaces ad-hoc neutral-* on marketing pages) */
-    --blaze-depth: 0 0% 3.9%;
-    --blaze-surface: 0 0% 6%;
-    --blaze-surface-elevated: 0 0% 9%;
-    --blaze-surface-muted: 0 0% 15%;
-    --blaze-surface-border: 0 0% 22%;
-    --blaze-ink: 0 0% 9%;
+    /* Blaze Dental — warm charcoal + logo metallic accent */
+    --blaze-accent: 36 24% 72%;
+    --blaze-accent-hover: 36 28% 62%;
+    --blaze-accent-soft: 36 18% 22%;
+    --blaze-depth: 220 14% 5%;
+    --blaze-surface: 220 12% 8%;
+    --blaze-surface-elevated: 220 10% 11%;
+    --blaze-surface-muted: 220 8% 16%;
+    --blaze-surface-border: 220 6% 20%;
+    --blaze-ink: 220 20% 7%;
   }
 
   .dark {
@@ -94,15 +93,15 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --blaze-accent: 199 52% 47%;
-    --blaze-accent-hover: 199 58% 38%;
-    --blaze-accent-soft: 199 42% 24%;
-    --blaze-depth: 0 0% 3.9%;
-    --blaze-surface: 0 0% 6%;
-    --blaze-surface-elevated: 0 0% 9%;
-    --blaze-surface-muted: 0 0% 15%;
-    --blaze-surface-border: 0 0% 22%;
-    --blaze-ink: 0 0% 9%;
+    --blaze-accent: 36 24% 72%;
+    --blaze-accent-hover: 36 28% 62%;
+    --blaze-accent-soft: 36 18% 22%;
+    --blaze-depth: 220 14% 5%;
+    --blaze-surface: 220 12% 8%;
+    --blaze-surface-elevated: 220 10% 11%;
+    --blaze-surface-muted: 220 8% 16%;
+    --blaze-surface-border: 220 6% 20%;
+    --blaze-ink: 220 20% 7%;
   }
 }
 

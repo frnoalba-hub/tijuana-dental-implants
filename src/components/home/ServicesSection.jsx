@@ -84,7 +84,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="py-16 sm:py-20 bg-blaze-surface">
+        <section id="services" className="py-20 sm:py-28 bg-blaze-depth">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -108,7 +108,7 @@ export default function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="mb-8 sm:mb-12 rounded-2xl border border-blaze-accent/30 bg-blaze-surface-elevated p-6 sm:p-8"
+                    className="mb-8 sm:mb-12 border border-white/[0.08] bg-blaze-surface p-6 sm:p-8"
                 >
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blaze-accent mb-4">Most Requested</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
@@ -130,10 +130,10 @@ export default function ServicesSection() {
                             <button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
-                                className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-md text-sm font-medium transition-colors duration-200 ${
+                                className={`px-4 sm:px-5 py-2 sm:py-2.5 text-sm font-medium transition-colors duration-200 ${
                                     isActive
-                                        ? 'bg-white text-black'
-                                        : 'text-gray-400 hover:text-white'
+                                        ? 'bg-blaze-accent text-blaze-ink'
+                                        : 'text-white/45 hover:text-white'
                                 }`}
                             >
                                 <span className="hidden sm:inline">{cat.title}</span>
@@ -149,7 +149,7 @@ export default function ServicesSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-blaze-surface-elevated rounded-2xl p-6 sm:p-10 md:p-14 border border-blaze-surface-border"
+                    className="border border-white/[0.08] bg-blaze-surface p-6 sm:p-10 md:p-14"
                 >
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-8">{currentCategory.title}</h3>
 
@@ -177,7 +177,7 @@ export default function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="mt-8 sm:mt-12 rounded-2xl border border-white/10 bg-blaze-surface-elevated p-6 sm:p-8 md:p-10"
+                    className="mt-8 sm:mt-12 border border-white/[0.08] bg-blaze-surface p-6 sm:p-8 md:p-10"
                 >
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-6">Prices From</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
@@ -255,7 +255,7 @@ export default function ServicesSection() {
                     <Button 
                         onClick={scrollToContact}
                         size="lg"
-                        className="border border-white/20 bg-transparent text-white hover:bg-white hover:text-black h-12 px-8 rounded-md text-sm font-medium tracking-wide uppercase transition-colors duration-200"
+                        className="border border-blaze-accent/40 bg-transparent text-blaze-accent hover:bg-blaze-accent/10 h-12 px-8 text-sm font-medium tracking-wide transition-colors duration-200"
                     >
                         Request Consultation & Custom Quote
                     </Button>

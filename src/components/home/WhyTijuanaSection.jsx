@@ -1,120 +1,132 @@
-import React from 'react';
-import { motion } from "framer-motion";
-import { DollarSign, MapPin, Clock, Shield, Plane, Star } from "lucide-react";
-
-export default function WhyTijuanaSection() {
-    const reasons = [
-        {
-            icon: DollarSign,
-            title: "Save Up to 70%",
-            description: "Get the same quality implants and materials used in the US at a fraction of the cost."
-        },
-        {
-            icon: MapPin,
-            title: "Minutes from San Diego",
-            description: "Tijuana is just a short drive from the US border, with no expensive flights required."
-        },
-        {
-            icon: Shield,
-            title: "US-Grade Quality",
-            description: "We use premium implant systems from Nobel Biocare, Straumann, and other top brands."
-        },
-        {
-            icon: Clock,
-            title: "No Wait Times",
-            description: "Get treated within days, not months. We value your time as much as you do."
-        },
-        {
-            icon: Star,
-            title: "Personalized Care",
-            description: "Receive one-on-one attention from your surgeon throughout your entire journey."
-        },
-        {
-            icon: Plane,
-            title: "Concierge Service",
-            description: "We assist with transportation, accommodation, and make your visit stress-free."
-        }
-    ];
-
-    return (
-        <section id="why-tijuana" className="py-24 bg-blaze-depth">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
-                >
-                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
-                        Why Southern California Patients Choose Tijuana
-                    </h2>
-                    <p className="text-sm sm:text-base text-white/70 leading-relaxed">
-                        Patients from San Diego, Chula Vista, Orange County, Los Angeles, and Riverside cross the border each year for quality dental care. 
-                        Here's why Tijuana has become a top destination for dental implants.
-                    </p>
-                </motion.div>
-
-                {/* Reasons Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                    {reasons.map((reason, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-blaze-surface-elevated border border-blaze-surface-border rounded-xl p-6"
-                        >
-                            <reason.icon className="w-5 h-5 text-blaze-accent mb-4" />
-                            <h3 className="font-display text-base font-semibold text-white mb-2">{reason.title}</h3>
-                            <p className="text-white/50 text-sm leading-relaxed">{reason.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Price Comparison */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-12 sm:mt-16 bg-gradient-to-b from-blaze-surface-elevated to-blaze-surface border border-blaze-surface-border/50 rounded-3xl p-6 sm:p-10 md:p-12"
-                >
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-white text-center mb-8 sm:mb-10">Price Comparison</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-                        <div className="text-center p-6 sm:p-8 bg-blaze-surface-muted/50 rounded-2xl border border-blaze-surface-border/50">
-                            <p className="text-gray-400 text-xs sm:text-sm mb-3">Single Implant in USA</p>
-                            <p className="text-2xl sm:text-3xl font-bold text-gray-500 line-through">$3,500 - $6,000</p>
-                            <p className="text-xs text-gray-500 mt-3">Average market price</p>
-                        </div>
-                        <div className="text-center p-6 sm:p-8 bg-blaze-surface-elevated border-2 border-blaze-accent/50 rounded-2xl transform sm:scale-105 relative z-10">
-                            <p className="text-blaze-accent text-xs font-bold uppercase tracking-widest mb-2">Our Price</p>
-                            <p className="text-3xl sm:text-4xl font-bold text-white mb-1">From $899</p>
-                            <p className="text-blaze-accent font-semibold">Save 65-70%</p>
-                        </div>
-                        <div className="text-center p-6 sm:p-8 bg-blaze-surface-muted/50 rounded-2xl border border-blaze-surface-border/50">
-                            <p className="text-gray-400 text-xs sm:text-sm mb-3">All-on-4 at Blaze Dental</p>
-                            <p className="text-2xl sm:text-3xl font-bold text-white">$8,899</p>
-                            <p className="text-xs text-gray-500 mt-3">From price</p>
-                        </div>
-                    </div>
-                    <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-center text-xs sm:text-sm text-gray-400">
-                        CT scans (tomographic studies) and IV sedation are not included.
-                    </div>
-                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="text-center p-5 bg-blaze-surface-muted/40 rounded-2xl border border-blaze-surface-border/40">
-                            <p className="text-gray-400 text-xs sm:text-sm mb-2">Veneers at Blaze Dental</p>
-                            <p className="text-2xl sm:text-3xl font-bold text-white">From $499</p>
-                        </div>
-                        <div className="text-center p-5 bg-blaze-surface-muted/40 rounded-2xl border border-blaze-surface-border/40">
-                            <p className="text-gray-400 text-xs sm:text-sm mb-2">Root Canal at Blaze Dental</p>
-                            <p className="text-2xl sm:text-3xl font-bold text-white">From $299</p>
-                        </div>
-                    </div>
-                </motion.div>
-            </div>
-        </section>
-    );
-}
+import React from 'react';
+import { motion } from "framer-motion";
+import { DollarSign, MapPin, Clock, Shield, Plane, Star } from "lucide-react";
+import { formatUsd, priceComparisons, savingsPercent, usaRange } from "@/data/pricing";
+
+export default function WhyTijuanaSection() {
+    const reasons = [
+        {
+            icon: DollarSign,
+            title: "Transparent Pricing",
+            description: "Clear from-prices on implants, crowns, veneers, and full-arch solutions — no surprise US billing."
+        },
+        {
+            icon: MapPin,
+            title: "Minutes from San Diego",
+            description: "Tijuana is a short drive from the border. No flights, no week-long trips."
+        },
+        {
+            icon: Shield,
+            title: "Premium Materials",
+            description: "Nobel Biocare, Straumann, and other top-tier implant systems used in US clinics."
+        },
+        {
+            icon: Clock,
+            title: "Fast Scheduling",
+            description: "Consultations and treatment timelines built around cross-border patients."
+        },
+        {
+            icon: Star,
+            title: "Surgeon-Led Care",
+            description: "Dr. Arias performs and oversees your treatment — not a rotating associate model."
+        },
+        {
+            icon: Plane,
+            title: "Cross-Border Support",
+            description: "English and Spanish team. We help make your visit straightforward from start to finish."
+        }
+    ];
+
+    return (
+        <section id="why-tijuana" className="py-20 sm:py-28 bg-blaze-surface">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="max-w-2xl mb-14 sm:mb-16"
+                >
+                    <p className="text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-blaze-accent mb-4">
+                        Why Tijuana
+                    </p>
+                    <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">
+                        US quality. A fraction of the cost.
+                    </h2>
+                    <p className="text-base text-white/50 leading-relaxed">
+                        Southern California patients routinely save 60–75% on implants, crowns, and full-mouth rehabilitation —
+                        with the same materials and specialist-level care.
+                    </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] mb-16 sm:mb-20">
+                    {reasons.map((reason, index) => (
+                        <motion.div
+                            key={reason.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.05 }}
+                            className="bg-blaze-depth p-6 sm:p-7"
+                        >
+                            <reason.icon className="w-4 h-4 text-blaze-accent mb-4" strokeWidth={1.5} />
+                            <h3 className="font-display text-base font-medium text-white mb-2">{reason.title}</h3>
+                            <p className="text-sm text-white/45 leading-relaxed">{reason.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+                        <div>
+                            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-blaze-accent mb-3">
+                                Price Comparison
+                            </p>
+                            <h3 className="font-display text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+                                Blaze Dental vs. typical US pricing
+                            </h3>
+                        </div>
+                        <p className="text-xs text-white/35 max-w-sm">
+                            US ranges reflect common market rates. CT scans and IV sedation are not included.
+                        </p>
+                    </div>
+
+                    <div className="border border-white/[0.08] overflow-hidden">
+                        <div className="hidden sm:grid grid-cols-[1.2fr_1fr_1fr_0.6fr] gap-4 px-5 py-3 bg-white/[0.03] text-[0.65rem] uppercase tracking-[0.2em] text-white/35">
+                            <span>Treatment</span>
+                            <span>United States</span>
+                            <span>Blaze Dental</span>
+                            <span className="text-right">You Save</span>
+                        </div>
+                        {priceComparisons.map((item, index) => (
+                            <div
+                                key={item.name}
+                                className={`grid grid-cols-1 sm:grid-cols-[1.2fr_1fr_1fr_0.6fr] gap-2 sm:gap-4 px-5 py-4 sm:py-5 items-center ${
+                                    index > 0 ? 'border-t border-white/[0.06]' : ''
+                                } ${item.name === 'All-on-4' ? 'bg-blaze-accent/[0.04]' : ''}`}
+                            >
+                                <p className="text-sm font-medium text-white">{item.name}</p>
+                                <p className="text-sm text-white/40 sm:order-none">
+                                    <span className="sm:hidden text-white/30 text-xs uppercase tracking-wider mr-2">US</span>
+                                    {usaRange(item)}
+                                </p>
+                                <p className="text-base font-semibold text-blaze-accent">
+                                    <span className="sm:hidden text-white/30 text-xs uppercase tracking-wider mr-2 font-normal">Blaze</span>
+                                    From {formatUsd(item.blaze)}
+                                </p>
+                                <p className="text-sm text-white/50 sm:text-right">
+                                    ~{savingsPercent(item)}%
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+            </div>
+        </section>
+    );
+}

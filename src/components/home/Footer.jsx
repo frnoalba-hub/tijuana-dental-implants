@@ -5,9 +5,8 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="relative overflow-hidden bg-blaze-depth text-white border-t border-white/10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(58,143,183,0.12),transparent_28%)]" />
-            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
+        <footer className="relative bg-blaze-depth text-white border-t border-white/[0.06]">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
                 <div className="grid md:grid-cols-4 gap-10 lg:gap-14">
                     {/* Brand */}
                     <div className="md:col-span-2">
@@ -15,7 +14,7 @@ export default function Footer() {
                             <img
                                 src="/brand/blaze-lockup.png"
                                 alt="Blaze Dental"
-                                className="h-auto w-auto max-w-[220px] sm:max-w-[260px]"
+                                className="h-auto w-auto max-w-[180px] sm:max-w-[200px]"
                             />
                         </div>
                         <p className="text-white/60 leading-relaxed max-w-sm mb-7">

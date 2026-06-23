@@ -18,8 +18,7 @@ export default function AboutSection() {
     ];
 
     return (
-        <section id="about" className="relative overflow-hidden py-24 bg-blaze-surface">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_24%,rgba(58,143,183,0.12),transparent_28%)]" />
+        <section id="about" className="relative py-24 bg-blaze-depth">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="relative grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
                     {/* Image Side */}
