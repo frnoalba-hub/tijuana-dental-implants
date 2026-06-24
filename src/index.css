@@ -136,18 +136,6 @@
     transform: scale(1.02);
   }
 
-  @media (max-width: 1023px) {
-    .office-backdrop__photo {
-      object-position: 78% 22%;
-    }
-
-    .office-backdrop__tint {
-      background:
-        linear-gradient(105deg, hsl(var(--blaze-depth) / 0.7) 0%, hsl(var(--blaze-depth) / 0.42) 50%, hsl(var(--blaze-depth) / 0.22) 100%),
-        linear-gradient(180deg, hsl(var(--blaze-depth) / 0.62) 0%, hsl(var(--blaze-depth) / 0.32) 38%, hsl(var(--blaze-depth) / 0.38) 100%);
-    }
-  }
-
   /* Light wash so copy stays readable without burying the clinic photo */
   .office-backdrop__tint {
     position: absolute;
@@ -155,6 +143,18 @@
     background:
       linear-gradient(105deg, hsl(var(--blaze-depth) / 0.58) 0%, hsl(var(--blaze-depth) / 0.28) 45%, hsl(var(--blaze-depth) / 0.14) 100%),
       linear-gradient(180deg, hsl(var(--blaze-depth) / 0.28) 0%, transparent 42%, hsl(var(--blaze-depth) / 0.38) 100%);
+  }
+
+  @media (max-width: 1023px) {
+    .office-backdrop__photo {
+      object-position: 78% 22%;
+    }
+
+    .office-backdrop__tint {
+      background:
+        linear-gradient(105deg, hsl(var(--blaze-depth) / 0.62) 0%, hsl(var(--blaze-depth) / 0.3) 48%, hsl(var(--blaze-depth) / 0.14) 100%),
+        linear-gradient(180deg, hsl(var(--blaze-depth) / 0.38) 0%, transparent 40%, hsl(var(--blaze-depth) / 0.34) 100%);
+    }
   }
 
   .page-section-over-office {
