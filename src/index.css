@@ -137,18 +137,14 @@
   }
 
   @media (max-width: 1023px) {
-    .office-backdrop {
-      display: none;
-    }
-
     .office-backdrop__photo {
-      object-position: 72% 18%;
+      object-position: 78% 22%;
     }
 
     .office-backdrop__tint {
       background:
-        linear-gradient(105deg, hsl(var(--blaze-depth) / 0.82) 0%, hsl(var(--blaze-depth) / 0.55) 48%, hsl(var(--blaze-depth) / 0.35) 100%),
-        linear-gradient(180deg, hsl(var(--blaze-depth) / 0.72) 0%, hsl(var(--blaze-depth) / 0.42) 38%, hsl(var(--blaze-depth) / 0.48) 100%);
+        linear-gradient(105deg, hsl(var(--blaze-depth) / 0.7) 0%, hsl(var(--blaze-depth) / 0.42) 50%, hsl(var(--blaze-depth) / 0.22) 100%),
+        linear-gradient(180deg, hsl(var(--blaze-depth) / 0.62) 0%, hsl(var(--blaze-depth) / 0.32) 38%, hsl(var(--blaze-depth) / 0.38) 100%);
     }
   }
 

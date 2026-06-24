@@ -27,8 +27,8 @@ function HeroSectionContent() {
     };
 
     return (
-        <section className="page-section-over-office relative flex min-h-[100svh] items-center overflow-hidden max-lg:bg-blaze-depth">
-            <div className="pointer-events-none absolute inset-0 lg:hidden bg-gradient-to-b from-black/78 via-black/45 to-black/40" />
+        <section className="page-section-over-office relative flex min-h-[100svh] items-center overflow-hidden">
+            <div className="pointer-events-none absolute inset-0 lg:hidden bg-gradient-to-b from-black/82 via-black/38 to-black/28" />
             <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-24 lg:pb-20">
