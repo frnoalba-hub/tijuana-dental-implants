@@ -40,10 +40,10 @@ export default function Home() {
                 <AboutSection />
                 <ServicesSection />
                 <Suspense fallback={<LoadingFallback />}>
-                    <GallerySection />
+                    <VideoSection />
                 </Suspense>
                 <Suspense fallback={<LoadingFallback />}>
-                    <VideoSection />
+                    <GallerySection />
                 </Suspense>
                 <Suspense fallback={<LoadingFallback />}>
                     <WhyTijuanaSection />
